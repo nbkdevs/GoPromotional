@@ -1,0 +1,18 @@
+# Event Snapshot (Microsoft Edge)
+
+Plan an upcoming event from your toolbar: countdown, prioritized checklist, notes, and a copyable summary.
+
+## Install
+
+### Firefox
+1. Open `about:debugging#/runtime/this-firefox`
+2. **Load Temporary Add-on…**
+3. Select `manifest.json`
+
+### Edge
+1. Open `edge://extensions`
+2. Enable Developer mode
+3. **Load unpacked** → this folder
+
+## Privacy
+Uses `storage` only for local data on your device. No accounts. No tracking. No remote calls.

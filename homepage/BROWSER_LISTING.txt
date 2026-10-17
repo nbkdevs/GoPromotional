@@ -1,0 +1,37 @@
+================================================================================
+Event Snapshot (Firefox + Edge extension)
+================================================================================
+
+Description
+Event Snapshot is a toolbar planner for one upcoming event. Set the name, date,
+time, and venue; keep a prioritized checklist; write agenda notes; and copy a
+ready-made summary to the clipboard. Starter tasks help you begin quickly.
+Everything stays in local browser storage.
+
+Single purpose summary
+Help users plan one upcoming event with a checklist, countdown, and copyable summary.
+
+Permissions
+- storage
+  Justification: Saves event details, checklist items, and notes on the device
+  so they remain available after the popup closes. Data is not sent to a remote
+  server by this extension.
+
+Not used: host permissions, tabs, browsing history, downloads, identity,
+notifications, or clipboard permission APIs (copy uses the popup user gesture).
+
+
+================================================================================
+Harbor Dusk (Chrome theme)
+================================================================================
+
+Description
+Harbor Dusk is a photographic dusk harbor Chrome theme: moonlit water, warm pier
+lights, a quiet shoreline town, and a calm evening sky on the new tab page. It
+changes colours and theme images only.
+
+Single purpose summary
+Provide a calm visual theme for Chrome’s new tab and browser chrome.
+
+Permissions
+None. Chrome themes do not request extension permissions.

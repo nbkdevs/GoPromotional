@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sip Quick</title>
+  <link rel="stylesheet" href="popup.css" />
+  <style>:root { --accent: #0E7490; }</style>
+</head>
+<body>
+  <header>
+    <h1>Sip Quick</h1>
+    <p>Track today’s water intake and see your weekly pattern.</p>
+  </header>
+  <main class="stack">
+    <div class="card stack">
+      <div class="row">
+        <div class="stat" id="total">0</div>
+        <div class="muted">ml today</div>
+        <span class="chip" id="pct">0%</span>
+      </div>
+      <div class="progress"><i id="bar"></i></div>
+      <div class="muted" id="goalLabel">Goal 2000 ml</div>
+    </div>
+
+    <div class="row wrap">
+      <button data-ml="150" type="button">+150</button>
+      <button data-ml="250" type="button">+250</button>
+      <button data-ml="330" type="button">+330</button>
+      <button data-ml="500" type="button">+500</button>
+    </div>
+    <div class="row">
+      <input id="custom" type="number" min="1" max="2000" placeholder="Custom ml" />
+      <button id="addCustom" type="button">Add</button>
+      <button id="undo" class="secondary" type="button">Undo</button>
+    </div>
+
+    <div class="card stack">
+      <strong>Last 7 days</strong>
+      <ul id="week"></ul>
+    </div>
+
+    <div class="row">
+      <input id="goal" type="number" min="500" max="6000" placeholder="Daily goal ml" />
+      <button id="saveGoal" class="secondary" type="button">Set goal</button>
+    </div>
+    <div class="row wrap">
+      <button id="reset" class="secondary" type="button">Clear today</button>
+      <button id="copyStats" type="button">Copy stats</button>
+    </div>
+    <div id="toast" class="toast">Copied</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+================================================================================
+Mug Tap (Firefox + Edge extension)
+================================================================================
+
+Description
+Mug Tap is a toolbar habit counter for drinkware choices. Log a reusable or
+disposable cup, optionally add a short drink note, see today’s count, weekly
+totals, reusable rate, and streak, then copy a week summary. Entries stay local.
+
+Single purpose summary
+Track reusable versus disposable cup use and show a simple weekly habit summary.
+
+Permissions
+- storage
+  Justification: Saves drink log entries locally so daily totals, weekly rates,
+  and streaks remain accurate after the popup closes. This extension does not
+  send that data anywhere.
+
+Not used: host permissions, tabs, browsing history, downloads, identity,
+notifications, or clipboard permission APIs (copy uses the popup user gesture).
+
+
+================================================================================
+Ember Steam (Chrome theme)
+================================================================================
+
+Description
+Ember Steam is a photographic rainy-window evening Chrome theme: amber light,
+soft street bokeh, and warm interior glow on the new tab page. It changes
+colours and theme images only.
+
+Single purpose summary
+Provide a warm visual theme for Chrome’s new tab and browser chrome.
+
+Permissions
+None. Chrome themes do not request extension permissions.

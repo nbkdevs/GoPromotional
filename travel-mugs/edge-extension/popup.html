@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mug Tap</title>
+  <link rel="stylesheet" href="popup.css" />
+  <style>:root { --accent: #7C2D12; }</style>
+</head>
+<body>
+  <header>
+    <h1>Mug Tap</h1>
+    <p>Count reusable cups and keep a simple weekly habit log.</p>
+  </header>
+  <main class="stack">
+    <div class="card stack">
+      <div class="row">
+        <div class="stat" id="today">0</div>
+        <div class="muted">reusable today</div>
+        <span class="chip" id="streak">streak 0</span>
+      </div>
+      <div class="muted" id="week">Last 7 days: 0 reusable · 0 disposable</div>
+      <div class="muted tiny" id="rate">Reusable rate this week: —</div>
+    </div>
+
+    <input id="drink" type="text" placeholder="Drink note (optional) e.g. coffee" maxlength="40" />
+    <div class="row">
+      <button id="reusable" type="button">Used reusable cup</button>
+    </div>
+    <div class="row">
+      <button id="disposable" class="secondary" type="button">Disposable cup</button>
+      <button id="undo" class="secondary" type="button">Undo</button>
+    </div>
+
+    <div class="card stack">
+      <strong>Recent</strong>
+      <ul id="log"></ul>
+    </div>
+
+    <div class="row wrap">
+      <button id="copySummary" type="button">Copy week summary</button>
+      <button id="clearWeek" class="danger" type="button">Clear week</button>
+    </div>
+    <div id="toast" class="toast">Copied</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

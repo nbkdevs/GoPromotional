@@ -1,0 +1,103 @@
+
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1c2430;
+  --muted: #5f6b7a;
+  --accent: #1B5E4B;
+  --line: #d7dde5;
+  --ok: #1f7a4d;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 340px;
+  max-height: 560px;
+  overflow: auto;
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+header {
+  padding: 12px 14px 10px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header h1 { margin: 0; font-size: 15px; font-weight: 650; }
+header p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+main { padding: 12px 14px 16px; }
+.stack { display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; gap: 8px; align-items: center; }
+.wrap { flex-wrap: wrap; }
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover { filter: brightness(0.96); }
+button.secondary { background: #e8eef2; color: var(--text); }
+button.ghost { background: transparent; color: var(--muted); padding: 4px 6px; }
+button.danger { background: #f3e8e8; color: #8a1f1a; }
+input[type="text"], input[type="number"], input[type="date"], select, textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  background: #fff;
+}
+textarea { min-height: 64px; resize: vertical; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+.muted { color: var(--muted); }
+.stat { font-size: 24px; font-weight: 700; line-height: 1.1; }
+.tiny { font-size: 11px; }
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+li:last-child { border-bottom: 0; }
+li span { flex: 1; word-break: break-word; }
+.progress {
+  height: 8px;
+  background: #e6ecea;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress > i { display: block; height: 100%; background: var(--accent); width: 0%; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef3f1;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.toast {
+  display: none;
+  margin-top: 6px;
+  color: var(--ok);
+  font-size: 12px;
+  font-weight: 600;
+}
+.toast.show { display: block; }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ept_primary">#1B5E4B</color>
+    <color name="ept_primary_dark">#0F3D31</color>
+    <color name="ept_on_primary">#FFFFFF</color>
+    <color name="ept_secondary">#C45C26</color>
+    <color name="ept_background">#F3F6F5</color>
+    <color name="ept_surface">#FFFFFF</color>
+    <color name="ept_splash_background">#1B5E4B</color>
+    <color name="ic_launcher_background">#1B5E4B</color>
+</resources>

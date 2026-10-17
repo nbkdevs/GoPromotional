@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "Ember Steam",
+  "version": "2.0.0",
+  "description": "A photographic rainy-window evening theme with amber light, soft bokeh, and warm interior glow.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png"
+    },
+    "colors": {
+      "frame": [
+        48,
+        32,
+        26
+      ],
+      "frame_inactive": [
+        38,
+        26,
+        22
+      ],
+      "toolbar": [
+        36,
+        26,
+        22
+      ],
+      "tab_text": [
+        255,
+        236,
+        210
+      ],
+      "tab_background_text": [
+        210,
+        180,
+        150
+      ],
+      "bookmark_text": [
+        255,
+        200,
+        140
+      ],
+      "ntp_background": [
+        18,
+        12,
+        10
+      ],
+      "ntp_text": [
+        255,
+        236,
+        210
+      ],
+      "ntp_link": [
+        255,
+        200,
+        140
+      ],
+      "ntp_section": [
+        48,
+        32,
+        26
+      ],
+      "button_background": [
+        48,
+        32,
+        26
+      ],
+      "omnibox_background": [
+        52,
+        36,
+        30
+      ],
+      "omnibox_text": [
+        255,
+        236,
+        210
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "Alpine Mist",
+  "version": "2.0.0",
+  "description": "A photographic alpine lake theme with misty turquoise water and cool morning light.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png"
+    },
+    "colors": {
+      "frame": [
+        236,
+        244,
+        250
+      ],
+      "frame_inactive": [
+        236,
+        244,
+        250
+      ],
+      "toolbar": [
+        255,
+        255,
+        255
+      ],
+      "tab_text": [
+        18,
+        58,
+        72
+      ],
+      "tab_background_text": [
+        18,
+        58,
+        72
+      ],
+      "bookmark_text": [
+        14,
+        100,
+        120
+      ],
+      "ntp_background": [
+        120,
+        180,
+        190
+      ],
+      "ntp_text": [
+        12,
+        45,
+        58
+      ],
+      "ntp_link": [
+        14,
+        100,
+        120
+      ],
+      "ntp_section": [
+        255,
+        255,
+        255
+      ],
+      "button_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_text": [
+        18,
+        58,
+        72
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

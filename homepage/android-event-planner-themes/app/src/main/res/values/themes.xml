@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EventPlannerThemes" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/ept_primary_dark</item>
+        <item name="android:navigationBarColor">@color/ept_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorBackground">@color/ept_background</item>
+    </style>
+
+    <style name="Theme.EventPlannerThemes.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/ept_splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Theme.EventPlannerThemes</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+App name
+MugDay
+
+Package name
+uk.co.softrank.mugday
+
+Short description
+Offline reusable-cup tracker—log travel mug uses and see your weekly count.
+
+Long description
+MugDay is a simple offline tracker for noticing how often you use a reusable travel mug instead of a disposable cup.
+
+After each drink, tap “Used travel mug” or “Disposable cup,” optionally add a short drink label such as coffee or tea, and keep a running record. MugDay shows how many reusable uses you have logged today, plus reusable and disposable totals for the last seven days, so you can see patterns in your commute or office routine at a glance. Recent entries appear in a clear log, and you can delete a mistaken tap anytime.
+
+MugDay works without an account and without an internet connection. Everything stays on your device, making it easy to log a drink in a café queue, on the train, or at your desk.
+
+If you are trying to build a reusable-cup habit, cut down on disposable cups, or simply stay aware of your weekly pattern, MugDay keeps tracking light and practical—one tap per drink, useful totals, and no clutter.
+
+Feature bullets
+- Log each drink as travel mug or disposable cup
+- Add an optional drink label such as coffee or tea
+- See how many reusable uses you logged today
+- Review reusable totals for the last seven days
+- Compare disposable cup counts over the same week
+- Browse a recent log of your drink entries
+- Delete mistaken log entries in one tap
+- Build awareness of your reusable-cup habit over time
+- Use the app without signing in or creating an account
+- Works fully offline with data stored only on your device

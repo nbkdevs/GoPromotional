@@ -1,0 +1,45 @@
+App name
+Event Planner & Themes
+
+Package name
+uk.co.softrank.eventplanner
+
+Short description
+Offline event planner with checklists, themes, budgets, and merchandise lists.
+
+Long description
+Event Planner & Themes is an offline event planning app for organising gatherings of any size—conferences, exhibitions, trade shows, corporate days, networking evenings, product launches, charity events, university events, birthdays, weddings, and more.
+
+Plan everything in one place without creating an account or connecting to the internet. Your events, tasks, budgets, theme favourites, and merchandise lists are stored on your device and remain available after you close or reopen the app.
+
+Events
+Create and manage your events with a clear set of details: name, event type, date, time, venue, expected attendees, notes, and overall budget. Open an event to review everything at a glance, edit when plans change, or delete with confirmation when you no longer need it. Set one event as active so checklists, budgets, and merchandise stay tied to the gathering you are working on.
+
+Checklist
+Break planning into practical tasks. Add your own items or load a starter checklist covering common needs such as venue, catering, invitations, marketing, equipment, staffing, entertainment, decorations, merchandise, and transport. Set priority and due date, add notes, mark tasks complete, and keep unfinished work easy to spot.
+
+Themes
+Browse a curated offline library of event themes—including Modern & Minimal, Corporate, Luxury, Eco-Friendly, Retro, Tropical, Tech / Futuristic, Seasonal, Sports, Creative, Networking, and Custom. Each theme includes useful planning suggestions for décor, colour and style direction, invitations, signage, activities, and merchandise ideas. Favourite the themes you want to revisit.
+
+Budget
+Set a total budget for your active event, then add expenses by category with estimated and actual amounts. Instantly see total budget, estimated spending, actual spending, and remaining balance—calculated locally on your device so you can stay in control as costs change.
+
+Merchandise
+Plan giveaways and useful guest items such as water bottles, tote bags, travel mugs, notebooks, pens, lanyards, and badges. Record quantity, estimated unit cost, running total, status (from idea through distribution), and notes so your merchandise plan stays organised alongside the rest of the event.
+
+Designed to stay out of the way
+The interface is simple and focused: empty states when you are starting fresh, confirmation before deletes, and no forced registration, ads, or required network features. Optional resource links are only shown where they are contextually useful; the app remains fully usable without them.
+
+Whether you are running a formal conference or a personal celebration, Event Planner & Themes keeps your planning structured, private, and available offline whenever you need it.
+
+Feature bullets
+- Create and edit events with type, date, time, venue, attendees, and notes
+- Organise checklists with priority, category, due date, and completion status
+- Load a starter planning checklist for common event tasks
+- Browse an offline library of curated event themes
+- Get décor, invitation, signage, activity, and merchandise ideas per theme
+- Save favourite themes for quick reference later
+- Set an event budget and track estimated versus actual spending
+- See remaining budget as expenses are updated
+- Plan merchandise with quantity, unit cost, total, notes, and status
+- Works fully offline with data stored only on your device

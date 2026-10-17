@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Snapshot</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Event Snapshot</h1>
+    <p>Plan an event, track tasks, and copy a ready summary.</p>
+  </header>
+  <main class="stack">
+    <div class="card stack">
+      <input id="eventName" type="text" placeholder="Event name" maxlength="80" />
+      <div class="row">
+        <input id="eventDate" type="date" />
+        <input id="eventTime" type="text" placeholder="Time e.g. 14:00" maxlength="20" />
+      </div>
+      <input id="venue" type="text" placeholder="Venue or link" maxlength="120" />
+      <div class="row">
+        <div class="stat" id="countdown">—</div>
+        <div class="muted" id="countdownLabel">set a date</div>
+        <span class="chip" id="doneChip">0/0 done</span>
+      </div>
+    </div>
+
+    <div class="card stack">
+      <div class="row">
+        <strong style="flex:1">Checklist</strong>
+        <button id="seed" class="secondary" type="button">Starter</button>
+      </div>
+      <div class="row">
+        <select id="priority" style="max-width:110px">
+          <option value="normal">Normal</option>
+          <option value="high">High</option>
+        </select>
+        <input id="taskInput" type="text" placeholder="Add a task" maxlength="100" />
+        <button id="addTask" type="button">Add</button>
+      </div>
+      <ul id="tasks"></ul>
+    </div>
+
+    <div class="card stack">
+      <label class="muted">Notes / agenda</label>
+      <textarea id="notes" placeholder="Agenda points, speakers, reminders…" maxlength="1000"></textarea>
+    </div>
+
+    <div class="row wrap">
+      <button id="copySummary" type="button">Copy summary</button>
+      <button id="clearDone" class="secondary" type="button">Clear done</button>
+      <button id="resetAll" class="danger" type="button">Reset</button>
+    </div>
+    <div id="toast" class="toast">Copied</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

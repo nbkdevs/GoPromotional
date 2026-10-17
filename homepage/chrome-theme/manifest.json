@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "Harbor Dusk",
+  "version": "2.0.0",
+  "description": "A photographic dusk harbor theme with moonlit water, warm pier lights, and a calm evening sky.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png"
+    },
+    "colors": {
+      "frame": [
+        179,
+        184,
+        195
+      ],
+      "frame_inactive": [
+        179,
+        184,
+        195
+      ],
+      "toolbar": [
+        255,
+        255,
+        255
+      ],
+      "tab_text": [
+        28,
+        36,
+        56
+      ],
+      "tab_background_text": [
+        28,
+        36,
+        56
+      ],
+      "bookmark_text": [
+        36,
+        48,
+        78
+      ],
+      "ntp_background": [
+        18,
+        28,
+        48
+      ],
+      "ntp_text": [
+        255,
+        255,
+        255
+      ],
+      "ntp_link": [
+        255,
+        214,
+        170
+      ],
+      "ntp_section": [
+        255,
+        255,
+        255
+      ],
+      "button_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_text": [
+        28,
+        36,
+        56
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

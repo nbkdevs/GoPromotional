@@ -1,0 +1,36 @@
+================================================================================
+Pack Quick (Firefox + Edge extension)
+================================================================================
+
+Description
+Pack Quick is a toolbar packing-list manager. Create multiple lists, rename
+them, add items, mark items packed, filter the list, use work-day or travel
+templates, and copy a checklist to the clipboard. Lists stay in local storage.
+
+Single purpose summary
+Help users manage packing checklists for trips, work days, and errands.
+
+Permissions
+- storage
+  Justification: Keeps lists and packed/unpacked state on the device so
+  checklists remain available the next time the popup opens. Data is not
+  transmitted by this extension.
+
+Not used: host permissions, tabs, browsing history, downloads, identity,
+notifications, or clipboard permission APIs (copy uses the popup user gesture).
+
+
+================================================================================
+Canvas Trail (Chrome theme)
+================================================================================
+
+Description
+Canvas Trail is a photographic golden-hour trail Chrome theme: warm grass, soft
+hills, and open sky on the new tab page. It changes colours and theme images
+only.
+
+Single purpose summary
+Provide a warm visual theme for Chrome’s new tab and browser chrome.
+
+Permissions
+None. Chrome themes do not request extension permissions.

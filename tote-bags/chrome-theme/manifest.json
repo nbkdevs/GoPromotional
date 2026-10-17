@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas Trail",
+  "version": "2.0.0",
+  "description": "A photographic golden-hour trail theme with warm grass, soft hills, and open sky.",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png"
+    },
+    "colors": {
+      "frame": [
+        239,
+        239,
+        237
+      ],
+      "frame_inactive": [
+        239,
+        239,
+        237
+      ],
+      "toolbar": [
+        255,
+        252,
+        245
+      ],
+      "tab_text": [
+        58,
+        42,
+        28
+      ],
+      "tab_background_text": [
+        58,
+        42,
+        28
+      ],
+      "bookmark_text": [
+        120,
+        72,
+        32
+      ],
+      "ntp_background": [
+        210,
+        190,
+        150
+      ],
+      "ntp_text": [
+        48,
+        36,
+        24
+      ],
+      "ntp_link": [
+        120,
+        72,
+        32
+      ],
+      "ntp_section": [
+        255,
+        252,
+        245
+      ],
+      "button_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_background": [
+        255,
+        255,
+        255
+      ],
+      "omnibox_text": [
+        58,
+        42,
+        28
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

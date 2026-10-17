@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pack Quick</title>
+  <link rel="stylesheet" href="popup.css" />
+  <style>:root { --accent: #92400E; }</style>
+</head>
+<body>
+  <header>
+    <h1>Pack Quick</h1>
+    <p>Keep packing lists for trips, work days, and errands.</p>
+  </header>
+  <main class="stack">
+    <div class="card stack">
+      <div class="row">
+        <select id="listSelect" style="flex:1"></select>
+        <button id="newList" class="secondary" type="button">New</button>
+      </div>
+      <div class="row">
+        <input id="listName" type="text" placeholder="Rename list" maxlength="40" />
+        <button id="renameList" class="secondary" type="button">Rename</button>
+      </div>
+      <div class="row">
+        <span class="chip" id="progress">0/0</span>
+        <button id="seedWork" class="secondary" type="button">Work day</button>
+        <button id="seedTravel" class="secondary" type="button">Travel</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <input id="itemInput" type="text" placeholder="Add item" maxlength="80" />
+      <button id="addItem" type="button">Add</button>
+    </div>
+    <input id="filter" type="text" placeholder="Filter items…" maxlength="40" />
+    <ul id="items" class="card"></ul>
+
+    <div class="row wrap">
+      <button id="copyList" type="button">Copy list</button>
+      <button id="clearDone" class="secondary" type="button">Clear packed</button>
+      <button id="deleteList" class="danger" type="button">Delete list</button>
+    </div>
+    <div id="toast" class="toast">Copied</div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

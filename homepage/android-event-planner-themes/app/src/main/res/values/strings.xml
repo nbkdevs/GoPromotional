@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Event Planner &amp; Themes</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_checklist">Checklist</string>
+    <string name="nav_themes">Themes</string>
+    <string name="nav_budget">Budget</string>
+    <string name="nav_merchandise">Merchandise</string>
+    <string name="merch_resource_prompt">Looking for ideas for branded merchandise for your event?</string>
+    <string name="merch_resource_link_label">branded merchandise</string>
+    <string name="merch_resource_url">https://www.gopromotional.co.uk</string>
+    <string name="privacy_summary">Your event plans stay on this device. No account required.</string>
+    <string name="delete_confirm_title">Delete?</string>
+    <string name="delete_confirm_message">This cannot be undone.</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_add">Add</string>
+    <string name="empty_events_title">No events yet</string>
+    <string name="empty_events_body">Create an event to start planning dates, venue, and attendees.</string>
+    <string name="empty_tasks_title">No tasks yet</string>
+    <string name="empty_tasks_body">Add planning tasks or load the starter checklist for a new event.</string>
+    <string name="empty_expenses_title">No expenses yet</string>
+    <string name="empty_expenses_body">Track estimated and actual costs against your event budget.</string>
+    <string name="empty_merch_title">No merchandise items</string>
+    <string name="empty_merch_body">Plan giveaways and branded items for your guests.</string>
+</resources>

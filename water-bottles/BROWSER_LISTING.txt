@@ -1,0 +1,36 @@
+================================================================================
+Sip Quick (Firefox + Edge extension)
+================================================================================
+
+Description
+Sip Quick is a toolbar hydration tracker. Log common or custom millilitre
+amounts, set a daily goal, undo the last entry, review the last seven days, and
+copy a short stats summary. Totals are stored locally by calendar day.
+
+Single purpose summary
+Let users log daily water intake, track a goal, and review weekly totals offline.
+
+Permissions
+- storage
+  Justification: Stores daily totals, entry history for undo, and the user’s
+  goal on the device so progress persists between popup opens. Nothing is
+  uploaded by this extension.
+
+Not used: host permissions, tabs, browsing history, downloads, identity,
+notifications, or clipboard permission APIs (copy uses the popup user gesture).
+
+
+================================================================================
+Alpine Mist (Chrome theme)
+================================================================================
+
+Description
+Alpine Mist is a photographic alpine lake Chrome theme: misty turquoise water,
+cool morning light, and soft mountain haze on the new tab page. It changes
+colours and theme images only.
+
+Single purpose summary
+Provide a calm visual theme for Chrome’s new tab and browser chrome.
+
+Permissions
+None. Chrome themes do not request extension permissions.

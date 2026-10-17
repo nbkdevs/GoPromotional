@@ -1,0 +1,29 @@
+App name
+BagPack
+
+Package name
+uk.co.softrank.bagpack
+
+Short description
+Offline packing lists for events, errands, and days out—tick items as you pack.
+
+Long description
+BagPack is an offline packing-list app for getting the right things into your bag before an event, errand run, or day out.
+
+Create a blank list or start from a practical template—conference day, grocery run, or day out—then add your own items and tick each one as it goes into the bag. See how many items are packed versus the total so you know when you are ready to leave. Edit lists as plans change, remove items you no longer need, and delete whole lists when a trip is over.
+
+BagPack does not require an account or internet connection. Your lists stay on your device, so you can check them at home, on the train, or at the venue without relying on a signal.
+
+Use it for conference kit checks, shopping runs with a reusable tote, family days out, or any situation where forgetting one item would waste time. BagPack keeps packing simple: open a list, tick as you go, and head out prepared.
+
+Feature bullets
+- Create packing lists for events, errands, and days out
+- Start from templates: conference day, grocery run, or day out
+- Add custom items to any list whenever plans change
+- Tick items as they go into your bag
+- See packed-versus-total progress for each list
+- Delete individual items you no longer need
+- Remove whole lists when a trip is finished
+- Keep multiple lists organised for different occasions
+- Use the app without signing in or creating an account
+- Works fully offline with data stored only on your device

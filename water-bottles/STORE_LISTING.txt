@@ -1,0 +1,29 @@
+App name
+SipLog
+
+Package name
+uk.co.softrank.siplog
+
+Short description
+Offline daily hydration log with goals, quick adds, and today’s drink history.
+
+Long description
+SipLog is a simple offline hydration tracker for logging what you drink each day and staying on track toward a personal water goal.
+
+Set a daily goal in millilitres, then add drinks with one tap—250 ml, 330 ml, 500 ml—or enter a custom amount. A clear progress bar shows how much you have logged so far and how much is left to reach your goal. Every drink appears in today’s history with the time you logged it, and you can delete a mistaken entry or clear the whole day when you need a fresh start.
+
+SipLog works without an account and without an internet connection. Your goal and drink history stay on your device using local storage, so your routine remains private and available offline at home, at work, or on the move.
+
+Whether you are building a healthier hydration habit, preparing for a busy conference day, or simply keeping an eye on how much you drink, SipLog keeps the process fast and focused—open the app, log a sip, and get back to your day.
+
+Feature bullets
+- Set a personal daily hydration goal in millilitres
+- Quick-add common amounts: 250 ml, 330 ml, and 500 ml
+- Enter custom drink amounts when you need precision
+- See today’s total against your goal at a glance
+- Track remaining millilitres with a clear progress bar
+- Review a timed history of drinks logged today
+- Delete individual entries if you log something by mistake
+- Clear today’s log when you want to start over
+- Change your daily goal anytime to match your routine
+- Works fully offline with data stored only on your device

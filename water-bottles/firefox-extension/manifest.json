@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Sip Quick",
+  "version": "1.1.0",
+  "description": "Log water intake from your toolbar, track a daily goal, review the last 7 days, and copy your stats.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sip Quick",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "64": "icons/icon64.png",
+      "96": "icons/icon96.png",
+      "114": "icons/icon114.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "96": "icons/icon96.png",
+    "114": "icons/icon114.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sip-quick@local",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
