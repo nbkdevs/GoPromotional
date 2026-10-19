@@ -7,7 +7,7 @@ sdk: static
 app_file: index.html
 pinned: false
 license: mit
-short_description: Caffeine tracker: half-life, sleep-ready time, cup stats
+short_description: "Caffeine tracker: half-life, sleep-ready time, cup stats"
 tags:
   - caffeine
   - coffee
