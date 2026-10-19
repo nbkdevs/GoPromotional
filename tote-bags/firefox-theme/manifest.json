@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Canvas Trail",
+  "version": "2.0.0",
+  "description": "A photographic golden-hour trail theme with warm grass, soft hills, and open sky.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "canvas-trail@gopromotional.co.uk",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/header.png"
+    },
+    "colors": {
+      "frame": "rgb(239, 239, 237)",
+      "frame_inactive": "rgb(239, 239, 237)",
+      "tab_background_text": "rgb(58, 42, 28)",
+      "tab_text": "rgb(58, 42, 28)",
+      "tab_selected": "rgb(255, 252, 245)",
+      "tab_line": "rgb(120, 72, 32)",
+      "tab_loading": "rgb(120, 72, 32)",
+      "toolbar": "rgb(255, 252, 245)",
+      "toolbar_text": "rgb(58, 42, 28)",
+      "icons": "rgb(58, 42, 28)",
+      "bookmark_text": "rgb(120, 72, 32)",
+      "toolbar_field": "rgb(255, 255, 255)",
+      "toolbar_field_text": "rgb(58, 42, 28)",
+      "toolbar_field_border": "rgb(239, 239, 237)",
+      "toolbar_field_focus": "rgb(255, 255, 255)",
+      "toolbar_field_text_focus": "rgb(58, 42, 28)",
+      "popup": "rgb(255, 252, 245)",
+      "popup_text": "rgb(58, 42, 28)",
+      "ntp_background": "rgb(210, 190, 150)",
+      "ntp_text": "rgb(48, 36, 24)"
+    }
+  }
+}

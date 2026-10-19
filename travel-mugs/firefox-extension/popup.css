@@ -101,3 +101,13 @@ li span { flex: 1; word-break: break-word; }
   font-weight: 600;
 }
 .toast.show { display: block; }
+
+.foot {
+  margin: 0;
+  padding: 8px 14px 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+.foot a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.foot a:hover { text-decoration: underline; }

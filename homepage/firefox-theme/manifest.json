@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Harbor Dusk",
+  "version": "2.0.0",
+  "description": "A photographic dusk harbor theme with moonlit water, warm pier lights, and a calm evening sky.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "harbor-dusk@gopromotional.co.uk",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/header.png"
+    },
+    "colors": {
+      "frame": "rgb(179, 184, 195)",
+      "frame_inactive": "rgb(179, 184, 195)",
+      "tab_background_text": "rgb(28, 36, 56)",
+      "tab_text": "rgb(28, 36, 56)",
+      "tab_selected": "rgb(255, 255, 255)",
+      "tab_line": "rgb(36, 48, 78)",
+      "tab_loading": "rgb(36, 48, 78)",
+      "toolbar": "rgb(255, 255, 255)",
+      "toolbar_text": "rgb(28, 36, 56)",
+      "icons": "rgb(28, 36, 56)",
+      "bookmark_text": "rgb(36, 48, 78)",
+      "toolbar_field": "rgb(255, 255, 255)",
+      "toolbar_field_text": "rgb(28, 36, 56)",
+      "toolbar_field_border": "rgb(179, 184, 195)",
+      "toolbar_field_focus": "rgb(255, 255, 255)",
+      "toolbar_field_text_focus": "rgb(28, 36, 56)",
+      "popup": "rgb(255, 255, 255)",
+      "popup_text": "rgb(28, 36, 56)",
+      "ntp_background": "rgb(18, 28, 48)",
+      "ntp_text": "rgb(255, 255, 255)"
+    }
+  }
+}

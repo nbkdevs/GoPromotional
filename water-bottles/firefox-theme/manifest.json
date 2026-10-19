@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Alpine Mist",
+  "version": "2.0.0",
+  "description": "A photographic alpine lake theme with misty turquoise water and cool morning light.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "alpine-mist@gopromotional.co.uk",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/header.png"
+    },
+    "colors": {
+      "frame": "rgb(236, 244, 250)",
+      "frame_inactive": "rgb(236, 244, 250)",
+      "tab_background_text": "rgb(18, 58, 72)",
+      "tab_text": "rgb(18, 58, 72)",
+      "tab_selected": "rgb(255, 255, 255)",
+      "tab_line": "rgb(14, 100, 120)",
+      "tab_loading": "rgb(14, 100, 120)",
+      "toolbar": "rgb(255, 255, 255)",
+      "toolbar_text": "rgb(18, 58, 72)",
+      "icons": "rgb(18, 58, 72)",
+      "bookmark_text": "rgb(14, 100, 120)",
+      "toolbar_field": "rgb(255, 255, 255)",
+      "toolbar_field_text": "rgb(18, 58, 72)",
+      "toolbar_field_border": "rgb(236, 244, 250)",
+      "toolbar_field_focus": "rgb(255, 255, 255)",
+      "toolbar_field_text_focus": "rgb(18, 58, 72)",
+      "popup": "rgb(255, 255, 255)",
+      "popup_text": "rgb(18, 58, 72)",
+      "ntp_background": "rgb(120, 180, 190)",
+      "ntp_text": "rgb(12, 45, 58)"
+    }
+  }
+}

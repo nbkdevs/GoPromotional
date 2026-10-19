@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Ember Steam",
+  "version": "2.0.0",
+  "description": "A photographic rainy-window evening theme with amber light, soft bokeh, and warm interior glow.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ember-steam@gopromotional.co.uk",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "theme": {
+    "images": {
+      "theme_frame": "images/header.png"
+    },
+    "colors": {
+      "frame": "rgb(48, 32, 26)",
+      "frame_inactive": "rgb(38, 26, 22)",
+      "tab_background_text": "rgb(210, 180, 150)",
+      "tab_text": "rgb(255, 236, 210)",
+      "tab_selected": "rgb(36, 26, 22)",
+      "tab_line": "rgb(255, 200, 140)",
+      "tab_loading": "rgb(255, 200, 140)",
+      "toolbar": "rgb(36, 26, 22)",
+      "toolbar_text": "rgb(255, 236, 210)",
+      "icons": "rgb(255, 236, 210)",
+      "bookmark_text": "rgb(255, 200, 140)",
+      "toolbar_field": "rgb(52, 36, 30)",
+      "toolbar_field_text": "rgb(255, 236, 210)",
+      "toolbar_field_border": "rgb(48, 32, 26)",
+      "toolbar_field_focus": "rgb(52, 36, 30)",
+      "toolbar_field_text_focus": "rgb(255, 236, 210)",
+      "popup": "rgb(36, 26, 22)",
+      "popup_text": "rgb(255, 236, 210)",
+      "ntp_background": "rgb(18, 12, 10)",
+      "ntp_text": "rgb(255, 236, 210)"
+    }
+  }
+}
