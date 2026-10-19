@@ -7,7 +7,7 @@ PAGES={'homepage':GP+'/','water-bottles':GP+'/branded-products/branded-water-bot
 ANCHOR={'homepage':'branded merchandise','water-bottles':'branded water bottles for event marketing',
         'tote-bags':'branded tote bags for event marketing','travel-mugs':'branded travel mugs for event marketing'}
 SUPPORT='https://github.com/nbkdevs/GoPromotional/issues'
-PRIV='https://nbkdevs.github.io/GoPromotional/privacy/{}.html'
+EDGE_PRIV='https://www.gopromotional.co.uk/privacy'  # GoPromotional site policy (footer link; HTTP 200 on 19 Oct 2026)
 problems=[]
 def size(rel):
     p=f'{REPO}/{rel}'
@@ -202,7 +202,7 @@ def write(path,txt):
     os.makedirs(os.path.dirname(path),exist_ok=True); open(path,'w').write(txt)
 
 for g,t in THEMES.items():
-    slug=t['slug']; url=PAGES[g]; priv=PRIV.format(slug)
+    slug=t['slug']; url=PAGES[g]
     desc=t['body']+'\n\n'+t['mention']
     imgs=[img(f'{g}/store-images/chrome-theme/icon-128.png','128x128','CWS store icon'),
           img(f'{g}/store-images/chrome-theme/screenshot-1280x800.png','1280x800','CWS screenshot (photographic v2, matches theme)'),
@@ -230,7 +230,7 @@ Source: `{g}/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 | Language | English (UK) |
 | Homepage URL / website | {url} |
 | Support URL | {SUPPORT} |
-| Privacy policy URL | {priv} (intended GitHub Pages URL; **live only after docs/ is pushed to main and Pages is enabled**) |
+| Privacy policy URL | **leave blank** (decision: no privacy policy URL on Chrome Web Store) |
 | Mature content | No |
 
 {chk("Summary (CWS short description)",t["summary"],132)}
@@ -256,7 +256,7 @@ Built from the Chrome colours: `{g}/firefox-theme/` (MV2 static theme, gecko id 
 | Category | Scenery |
 | Homepage | {url} |
 | Support website | {SUPPORT} |
-| Privacy policy | not required for themes (no data); optional link: {priv} |
+| Privacy policy | **leave blank** (decision: no privacy policy on AMO) |
 | License | All Rights Reserved (or MIT if the repo gets a LICENSE) |
 
 {chk("Summary (AMO)",t["amo_summary"],250)}
@@ -266,7 +266,7 @@ Built from the Chrome colours: `{g}/firefox-theme/` (MV2 static theme, gecko id 
     write(f'{K}/{g}/{slug}.md',md)
 
 for g,e in EXTS.items():
-    slug=e['slug']; url=PAGES[g]; priv=PRIV.format(slug)
+    slug=e['slug']; url=PAGES[g]
     desc=e['body']+'\n\n'+e['mention']
     im=f'store-kit/{g}/images/{slug}'
     edge_logo=f'{g}/edge-extension/store-logo-300.png' if g!='tote-bags' else f'{im}-logo-300x300.png'
@@ -278,7 +278,7 @@ for g,e in EXTS.items():
           img(f'{im}-promo-440x280.png','440x280','GENERATED: Edge small promo tile (optional) / CWS small promo tile')]
     imgs=[x for x in imgs if x]
     notes='\n'.join(f'{i}. {s}' for i,s in enumerate(e['tests'],1))
-    notes+=f'\n\nPermissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.\nPrivacy policy: {priv}'
+    notes+=f'\n\nPermissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.\nPrivacy policy: {EDGE_PRIV}'
     amo_notes=f'''{e["name"]} is a self-contained toolbar popup (popup.html / popup.js / popup.css, no build step, no minification, no third-party libraries), so no source code upload is needed.
 It requests only the "storage" permission and stores data with storage.local under the key "{e["key"]}". It makes no network requests and declares data_collection_permissions: {{"required": ["none"]}}.
 The only external URL is a plain footer link (target=_blank) to {url}.
@@ -306,14 +306,14 @@ Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup
 - Personal or sensitive data collected/transmitted: **none**. Everything stays in `storage.local` on the user's device.
 - Remote code: **No**.
 - CWS data-usage checkboxes: tick none (no PII, health, financial, authentication, communications, location, web history, user activity, website content). Tick all three certifications (no selling/transfer, no unrelated use, no creditworthiness use).
-- Edge "Does your extension access, collect or transmit personal information?": **No** (privacy policy URL still provided).
+- Edge "Does your extension access, collect or transmit personal information?": **No**. Privacy policy URL: {EDGE_PRIV} (GoPromotional site policy).
 - AMO: manifest declares `data_collection_permissions.required: ["none"]`; answer that the add-on collects no data.
 
 | Field | Value |
 |---|---|
 | Website / homepage | {url} |
 | Support URL | {SUPPORT} |
-| Privacy policy URL | {priv} (intended GitHub Pages URL; **live only after docs/ is pushed to main and Pages is enabled**) |
+| Privacy policy URL | Chrome Web Store and AMO: **leave blank**. Edge: {EDGE_PRIV} |
 
 ### Images (sizes verified with PIL)
 | File | Actual | Required | Check | Use |
@@ -327,13 +327,13 @@ Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup
 | Field | Value |
 |---|---|
 | Upload zip | {zipinfo(f"{g}/firefox-extension/firefox-extension.zip")} |
-| Add-on id | `{slug}@gopromotional.co.uk` (changed from `{slug}@local`), strict_min_version 109.0 |
+| Add-on id | `{slug}@gopromotional.co.uk` (changed from `{slug}@local`), strict_min_version 140.0 (desktop), gecko_android strict_min_version 142.0 |
 | Name | {e["name"]} |
 | Suggested slug | `{slug}`{" — the old `@local` submission may already hold this slug; fall back to `"+slug+"-tracker` or delete the stale draft first" if g!="tote-bags" else ""} |
 | Categories | {e["amo_cat"]} |
 | Homepage | {url} |
 | Support website | {SUPPORT} |
-| Privacy policy | {priv} |
+| Privacy policy | **leave blank** (decision: no privacy policy on AMO) |
 | License | All Rights Reserved (or MIT if the repo gets a LICENSE) |
 | Source code submission | No (code is not minified or transpiled) |
 | Screenshots | `{im}-screenshot-01-1280x800.png`, `{im}-screenshot-02-1280x800.png` |
@@ -348,7 +348,7 @@ Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup
 | Category | {e["edge_cat"]} |
 | Website URL | {url} |
 | Support contact | {SUPPORT} |
-| Privacy policy required? | No personal data is collected; still enter {priv} |
+| Privacy policy URL | {EDGE_PRIV} (GoPromotional's own site privacy policy, linked from the site footer; returns HTTP 200) |
 | Store logo (300×300) | `{edge_logo}` |
 | Small promo tile (440×280, optional) | `{im}-promo-440x280.png` |
 | Screenshots | `{im}-screenshot-01-1280x800.png`, `{im}-screenshot-02-1280x800.png` |
@@ -360,7 +360,7 @@ Edge's description field needs at least 250 characters; the full description abo
 ## Chrome Web Store extension (optional)
 
 Built from the Edge folder (same MV3 code, no gecko block): {zipinfo(f"store-kit/{g}/dist/{slug}-chrome-extension.zip")}.
-Use the shared copy above with category **{e["cws_cat"]}**, the 128 icon, both screenshots and the 440×280 tile. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.
+Use the shared copy above with category **{e["cws_cat"]}**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.
 '''
     write(f'{K}/{g}/{slug}.md',md)
 print('\n'.join(problems) or 'no problems')

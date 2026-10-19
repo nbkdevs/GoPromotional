@@ -50,14 +50,14 @@ Kitting out a team or an event? GoPromotional supplies branded travel mugs for e
 - Personal or sensitive data collected/transmitted: **none**. Everything stays in `storage.local` on the user's device.
 - Remote code: **No**.
 - CWS data-usage checkboxes: tick none (no PII, health, financial, authentication, communications, location, web history, user activity, website content). Tick all three certifications (no selling/transfer, no unrelated use, no creditworthiness use).
-- Edge "Does your extension access, collect or transmit personal information?": **No** (privacy policy URL still provided).
+- Edge "Does your extension access, collect or transmit personal information?": **No**. Privacy policy URL: https://www.gopromotional.co.uk/privacy (GoPromotional site policy).
 - AMO: manifest declares `data_collection_permissions.required: ["none"]`; answer that the add-on collects no data.
 
 | Field | Value |
 |---|---|
 | Website / homepage | https://www.gopromotional.co.uk/branded-products/travel-mugs |
 | Support URL | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy URL | https://nbkdevs.github.io/GoPromotional/privacy/mug-tap.html (intended GitHub Pages URL; **live only after docs/ is pushed to main and Pages is enabled**) |
+| Privacy policy URL | Chrome Web Store and AMO: **leave blank**. Edge: https://www.gopromotional.co.uk/privacy |
 
 ### Images (sizes verified with PIL)
 | File | Actual | Required | Check | Use |
@@ -76,13 +76,13 @@ Kitting out a team or an event? GoPromotional supplies branded travel mugs for e
 | Field | Value |
 |---|---|
 | Upload zip | `travel-mugs/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
-| Add-on id | `mug-tap@gopromotional.co.uk` (changed from `mug-tap@local`), strict_min_version 109.0 |
+| Add-on id | `mug-tap@gopromotional.co.uk` (changed from `mug-tap@local`), strict_min_version 140.0 (desktop), gecko_android strict_min_version 142.0 |
 | Name | Mug Tap |
 | Suggested slug | `mug-tap` — the old `@local` submission may already hold this slug; fall back to `mug-tap-tracker` or delete the stale draft first |
 | Categories | Other |
 | Homepage | https://www.gopromotional.co.uk/branded-products/travel-mugs |
 | Support website | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy | https://nbkdevs.github.io/GoPromotional/privacy/mug-tap.html |
+| Privacy policy | **leave blank** (decision: no privacy policy on AMO) |
 | License | All Rights Reserved (or MIT if the repo gets a LICENSE) |
 | Source code submission | No (code is not minified or transpiled) |
 | Screenshots | `store-kit/travel-mugs/images/mug-tap-screenshot-01-1280x800.png`, `store-kit/travel-mugs/images/mug-tap-screenshot-02-1280x800.png` |
@@ -112,7 +112,7 @@ To test: click the toolbar icon and follow these steps:
 | Category | Productivity |
 | Website URL | https://www.gopromotional.co.uk/branded-products/travel-mugs |
 | Support contact | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy required? | No personal data is collected; still enter https://nbkdevs.github.io/GoPromotional/privacy/mug-tap.html |
+| Privacy policy URL | https://www.gopromotional.co.uk/privacy (GoPromotional's own site privacy policy, linked from the site footer; returns HTTP 200) |
 | Store logo (300×300) | `travel-mugs/edge-extension/store-logo-300.png` |
 | Small promo tile (440×280, optional) | `store-kit/travel-mugs/images/mug-tap-promo-440x280.png` |
 | Screenshots | `store-kit/travel-mugs/images/mug-tap-screenshot-01-1280x800.png`, `store-kit/travel-mugs/images/mug-tap-screenshot-02-1280x800.png` |
@@ -133,10 +133,10 @@ Edge's description field needs at least 250 characters; the full description abo
 8. The footer link "More: gopromotional.co.uk" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
-Privacy policy: https://nbkdevs.github.io/GoPromotional/privacy/mug-tap.html
+Privacy policy: https://www.gopromotional.co.uk/privacy
 ```
 
 ## Chrome Web Store extension (optional)
 
 Built from the Edge folder (same MV3 code, no gecko block): `store-kit/travel-mugs/dist/mug-tap-chrome-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0).
-Use the shared copy above with category **Lifestyle → Well-being**, the 128 icon, both screenshots and the 440×280 tile. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.
+Use the shared copy above with category **Lifestyle → Well-being**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.

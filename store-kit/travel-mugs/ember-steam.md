@@ -13,7 +13,7 @@ Source: `travel-mugs/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submit
 | Language | English (UK) |
 | Homepage URL / website | https://www.gopromotional.co.uk/branded-products/travel-mugs |
 | Support URL | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy URL | https://nbkdevs.github.io/GoPromotional/privacy/ember-steam.html (intended GitHub Pages URL; **live only after docs/ is pushed to main and Pages is enabled**) |
+| Privacy policy URL | **leave blank** (decision: no privacy policy URL on Chrome Web Store) |
 | Mature content | No |
 
 **Summary (CWS short description)** (122/132 chars)
@@ -68,7 +68,7 @@ Built from the Chrome colours: `travel-mugs/firefox-theme/` (MV2 static theme, g
 | Category | Scenery |
 | Homepage | https://www.gopromotional.co.uk/branded-products/travel-mugs |
 | Support website | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy | not required for themes (no data); optional link: https://nbkdevs.github.io/GoPromotional/privacy/ember-steam.html |
+| Privacy policy | **leave blank** (decision: no privacy policy on AMO) |
 | License | All Rights Reserved (or MIT if the repo gets a LICENSE) |
 
 **Summary (AMO)** (139/250 chars)

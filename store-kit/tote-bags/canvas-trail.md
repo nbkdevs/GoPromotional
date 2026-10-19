@@ -13,7 +13,7 @@ Source: `tote-bags/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitte
 | Language | English (UK) |
 | Homepage URL / website | https://www.gopromotional.co.uk/branded-products/tote-bags |
 | Support URL | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy URL | https://nbkdevs.github.io/GoPromotional/privacy/canvas-trail.html (intended GitHub Pages URL; **live only after docs/ is pushed to main and Pages is enabled**) |
+| Privacy policy URL | **leave blank** (decision: no privacy policy URL on Chrome Web Store) |
 | Mature content | No |
 
 **Summary (CWS short description)** (113/132 chars)
@@ -68,7 +68,7 @@ Built from the Chrome colours: `tote-bags/firefox-theme/` (MV2 static theme, gec
 | Category | Scenery |
 | Homepage | https://www.gopromotional.co.uk/branded-products/tote-bags |
 | Support website | https://github.com/nbkdevs/GoPromotional/issues |
-| Privacy policy | not required for themes (no data); optional link: https://nbkdevs.github.io/GoPromotional/privacy/canvas-trail.html |
+| Privacy policy | **leave blank** (decision: no privacy policy on AMO) |
 | License | All Rights Reserved (or MIT if the repo gets a LICENSE) |
 
 **Summary (AMO)** (141/250 chars)

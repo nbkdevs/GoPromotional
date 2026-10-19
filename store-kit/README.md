@@ -14,16 +14,15 @@ Prepared 19 Oct 2026 (PKT). Branch `store-kit`, not pushed. Each file is ready t
 
 Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues are enabled on the repo).
 
-## Privacy policy URLs (intended, not live yet)
-Source: `docs/index.html` and `docs/privacy/<slug>.html`. These go live only after `docs/` is merged to `main`, pushed,
-and GitHub Pages is enabled (Settings → Pages → Deploy from branch `main`, folder `/docs`; the repo currently has Pages off).
-- https://nbkdevs.github.io/GoPromotional/ (index)
-- https://nbkdevs.github.io/GoPromotional/privacy/sip-quick.html · pack-quick.html · mug-tap.html
-- https://nbkdevs.github.io/GoPromotional/privacy/harbor-dusk.html · alpine-mist.html · canvas-trail.html · ember-steam.html
+## Privacy policy URLs (decision 19 Oct 2026)
+- **Chrome Web Store and Firefox AMO:** leave the privacy policy field **blank**. None of the items collects data.
+- **Microsoft Edge:** use GoPromotional's own policy, https://www.gopromotional.co.uk/privacy. It is the "Privacy Policy" link in the site footer and returned HTTP 200 on 19 Oct 2026 (`/privacy-policy` is a 404).
+- No push and no GitHub Pages. `docs/` (draft per-item policies) stays in the branch for reference only and is not used by the kit.
 
 ## What changed in the code
 - Firefox ids: `sip-quick@local` → `sip-quick@gopromotional.co.uk`, `pack-quick@local` → `pack-quick@gopromotional.co.uk`,
-  `mug-tap@local` → `mug-tap@gopromotional.co.uk`; `strict_min_version` 109.0 on all three; `data_collection_permissions` kept (`required: ["none"]`).
+  `mug-tap@local` → `mug-tap@gopromotional.co.uk`; `data_collection_permissions` kept (`required: ["none"]`).
+- All 4 Firefox extension manifests (incl. Event Snapshot): `gecko.strict_min_version` 140.0 + `gecko_android.strict_min_version` 142.0. Zips rebuilt; addons-linter: 0 errors, 0 warnings.
 - Event Snapshot (homepage, live on AMO): id set back to the live `eventsnapshot@softrank.local` so v1.1.0 can ship as an update. No other change to it.
 - Popup footer `More: gopromotional.co.uk` (target=_blank, rel=noopener noreferrer) in the Sip Quick, Pack Quick and Mug Tap popups, Firefox and Edge. Permissions unchanged (`storage` only).
 - Rebuilt upload zips from inside each folder (`zip -r -X <name>.zip manifest.json popup.html popup.js popup.css icons`): 4 Firefox, 3 Edge.
@@ -37,11 +36,11 @@ and GitHub Pages is enabled (Settings → Pages → Deploy from branch `main`, f
 - `<slug>-logo-300x300.png` / `-logo-128x128.png`: resized from `branding/extension/icon-512.png` with transparent corners. Needed for Pack Quick
   (no Edge `store-logo-300.png`; `store-images/extension/logo-300.png` has black corners). Optional for the other two.
 - Theme images were all present at the right sizes; nothing generated for themes except the Firefox header.
-- Regenerate with `store-kit/_tools/*.py` (render_popups → make_kit_images; make_firefox_themes; make_privacy; make_kit).
+- Regenerate with `store-kit/_tools/*.py` (render_popups → make_kit_images; make_firefox_themes; make_kit). `make_privacy.py` only rebuilds the unused `docs/` drafts.
 
 ## Open issues to decide before submitting
-1. **AMO warnings (not errors):** addons-linter gives 0 errors and 2 warnings per Firefox zip: `data_collection_permissions` needs Firefox 140+ (Android 142+), but `strict_min_version` is 109.0. Sip Quick and Mug Tap had 142.0 before, probably for this reason. To clear the warnings, set `strict_min_version` to `140.0` and add `"gecko_android": {"strict_min_version": "142.0"}`.
-2. **Sip Quick and Mug Tap already exist on AMO (not public; they return 401).** The new ids create *new* add-ons. Their old drafts may already hold the `sip-quick` / `mug-tap` slugs. Delete or disable the old drafts, or use a different slug.
-3. Privacy URLs return 404 until Pages is set up (see above). Edge and CWS reviewers open them.
-4. CWS theme packages have no `icons` key in the manifest. The store icon is uploaded in the listing form instead.
-5. The loose `homepage/chrome 1280.png` / `chrome-440.png` files show the old illustrated theme. Don't use them.
+1. **Sip Quick and Mug Tap already exist on AMO (not public; they return 401).** The new ids create *new* add-ons. Their old drafts may already hold the `sip-quick` / `mug-tap` slugs. Delete or disable the old drafts, or use a different slug.
+2. The Edge privacy URL is GoPromotional's general site policy. It doesn't mention the extensions, which is acceptable because they collect no data. If Edge asks, the kit's NOTES_FOR_CERTIFICATION states that no data is collected.
+3. CWS theme packages have no `icons` key in the manifest. The store icon is uploaded in the listing form instead.
+4. The loose `homepage/chrome 1280.png` / `chrome-440.png` files show the old illustrated theme. Don't use them.
+5. The optional Firefox *themes* still use strict_min_version 109.0, so addons-linter reports 2 warnings (data_collection_permissions) on each. Apply the same 140.0/142.0 change if they are submitted.
