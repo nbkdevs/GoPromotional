@@ -53,6 +53,6 @@ Pure Ruby, no runtime dependencies, Ruby 3.0+. `require "gopromotional-packlist"
 
 ## Links
 
-- Website: [branded tote bags](https://www.gopromotional.co.uk/branded-products/tote-bags)
+- Website: [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/tote-bags/rubygems`)
 - Licence: MIT

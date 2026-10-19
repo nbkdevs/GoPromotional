@@ -72,6 +72,6 @@ The library is a single dependency-free UMD file: it also works in the browser a
 
 ## Links
 
-- Website: [https://www.gopromotional.co.uk/branded-products/travel-mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs)
+- Website: [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/travel-mugs/npm`)
 - Licence: MIT

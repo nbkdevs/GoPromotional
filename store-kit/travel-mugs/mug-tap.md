@@ -1,6 +1,6 @@
 # Mug Tap — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
 
-Page group: `travel-mugs/` → https://www.gopromotional.co.uk/branded-products/travel-mugs  ·  preferred anchor: **branded travel mugs for event marketing**
+Page group: `travel-mugs/` → `https://www.gopromotional.co.uk/branded-products/travel-mugs`  ·  preferred anchor: **branded travel mugs for event marketing**
 Sources: `travel-mugs/firefox-extension/` and `travel-mugs/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
 
 ## Shared listing copy
@@ -100,7 +100,7 @@ To test: click the toolbar icon and follow these steps:
 4. Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.
 5. Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.
 6. Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.
-7. The footer link "More: gopromotional.co.uk" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
+7. The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
@@ -130,7 +130,7 @@ Edge's description field needs at least 250 characters; the full description abo
 5. Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.
 6. Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.
 7. Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.
-8. The footer link "More: gopromotional.co.uk" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
+8. The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy

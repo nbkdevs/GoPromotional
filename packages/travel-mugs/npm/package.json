@@ -1,6 +1,6 @@
 {
   "name": "gopromotional-mugday",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Caffeine tracker with half-life estimate, sleep-ready time and reusable-cup stats.",
   "keywords": [
     "caffeine",

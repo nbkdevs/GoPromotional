@@ -1,4 +1,4 @@
-/*! gopromotional-mugday v1.0.0 | MIT | https://www.gopromotional.co.uk/branded-products/travel-mugs */
+/*! gopromotional-mugday v1.0.1 | MIT | https://www.gopromotional.co.uk/branded-products/travel-mugs */
 // Caffeine and coffee intake tracker: typical caffeine per drink, daily totals
 // against a limit, an estimate of caffeine still in your system (half-life
 // model), when it should drop below a "sleep-ready" level, and reusable-cup stats.

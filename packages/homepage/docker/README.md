@@ -39,7 +39,7 @@ $ gopromotional-event-planner timeline 2026-12-03 --today 2026-10-19
 
 ```sh
 cd packages/homepage
-docker build -f docker/Dockerfile -t iamnazzal/gopromotional-event-planner:1.0.0 -t iamnazzal/gopromotional-event-planner:latest .
+docker build -f docker/Dockerfile -t iamnazzal/gopromotional-event-planner:1.0.1 -t iamnazzal/gopromotional-event-planner:latest .
 ```
 
 Image labels follow the OCI spec: `org.opencontainers.image.url` points to the project page and `org.opencontainers.image.source` to the repository.

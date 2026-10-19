@@ -1,4 +1,4 @@
-# Build from packages/travel-mugs:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-mugday:1.0.0 .
+# Build from packages/travel-mugs:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-mugday:1.0.1 .
 FROM node:20-alpine
 
 LABEL org.opencontainers.image.title="gopromotional-mugday" \
@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.title="gopromotional-mugday" \
       org.opencontainers.image.url="https://www.gopromotional.co.uk/branded-products/travel-mugs" \
       org.opencontainers.image.source="https://github.com/nbkdevs/GoPromotional" \
       org.opencontainers.image.documentation="https://github.com/nbkdevs/GoPromotional/tree/main/packages/travel-mugs/docker" \
-      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.version="1.0.1" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.vendor="GoPromotional" \
       org.opencontainers.image.authors="GoPromotional"

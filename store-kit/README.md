@@ -4,12 +4,12 @@ Prepared 19 Oct 2026 (PKT). Branch `store-kit`, not pushed. Each file is ready t
 
 | Page | Target URL (website/homepage field) | Item | Stores | Kit file |
 |---|---|---|---|---|
-| homepage | https://www.gopromotional.co.uk/ | Harbor Dusk (theme) | Chrome Web Store · *optional* Firefox AMO theme | [homepage/harbor-dusk.md](homepage/harbor-dusk.md) |
-| water-bottles | https://www.gopromotional.co.uk/branded-products/branded-water-bottles | Alpine Mist (theme) | CWS · *optional* AMO theme | [water-bottles/alpine-mist.md](water-bottles/alpine-mist.md) |
+| homepage | `https://www.gopromotional.co.uk/` | Harbor Dusk (theme) | Chrome Web Store · *optional* Firefox AMO theme | [homepage/harbor-dusk.md](homepage/harbor-dusk.md) |
+| water-bottles | `https://www.gopromotional.co.uk/branded-products/branded-water-bottles` | Alpine Mist (theme) | CWS · *optional* AMO theme | [water-bottles/alpine-mist.md](water-bottles/alpine-mist.md) |
 | water-bottles | 〃 | Sip Quick (extension) | AMO · Edge · *optional* CWS | [water-bottles/sip-quick.md](water-bottles/sip-quick.md) |
-| tote-bags | https://www.gopromotional.co.uk/branded-products/tote-bags | Canvas Trail (theme) | CWS · *optional* AMO theme | [tote-bags/canvas-trail.md](tote-bags/canvas-trail.md) |
+| tote-bags | `https://www.gopromotional.co.uk/branded-products/tote-bags` | Canvas Trail (theme) | CWS · *optional* AMO theme | [tote-bags/canvas-trail.md](tote-bags/canvas-trail.md) |
 | tote-bags | 〃 | Pack Quick (extension) | AMO · Edge · *optional* CWS | [tote-bags/pack-quick.md](tote-bags/pack-quick.md) |
-| travel-mugs | https://www.gopromotional.co.uk/branded-products/travel-mugs | Ember Steam (theme) | CWS · *optional* AMO theme | [travel-mugs/ember-steam.md](travel-mugs/ember-steam.md) |
+| travel-mugs | `https://www.gopromotional.co.uk/branded-products/travel-mugs` | Ember Steam (theme) | CWS · *optional* AMO theme | [travel-mugs/ember-steam.md](travel-mugs/ember-steam.md) |
 | travel-mugs | 〃 | Mug Tap (extension) | AMO · Edge · *optional* CWS | [travel-mugs/mug-tap.md](travel-mugs/mug-tap.md) |
 
 Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues are enabled on the repo).
@@ -24,7 +24,7 @@ Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues 
   `mug-tap@local` → `mug-tap@gopromotional.co.uk`; `data_collection_permissions` kept (`required: ["none"]`).
 - All 4 Firefox extension manifests (incl. Event Snapshot): `gecko.strict_min_version` 140.0 + `gecko_android.strict_min_version` 142.0. Zips rebuilt; addons-linter: 0 errors, 0 warnings.
 - Event Snapshot (homepage, live on AMO): id set back to the live `eventsnapshot@softrank.local` so v1.1.0 can ship as an update. No other change to it.
-- Popup footer `More: gopromotional.co.uk` (target=_blank, rel=noopener noreferrer) in the Sip Quick, Pack Quick and Mug Tap popups, Firefox and Edge. Permissions unchanged (`storage` only).
+- Popup footer `More: <exact page anchor>` (e.g. "More: branded water bottles for event marketing"; target=_blank, rel=noopener noreferrer) in the Sip Quick, Pack Quick and Mug Tap popups, Firefox and Edge. Permissions unchanged (`storage` only).
 - Rebuilt upload zips from inside each folder (`zip -r -X <name>.zip manifest.json popup.html popup.js popup.css icons`): 4 Firefox, 3 Edge.
 - New optional Firefox static themes: `<page>/firefox-theme/` (manifest + 1920×200 header, zip).
 - New optional Chrome extension zips (copied from the Edge folders): `store-kit/<page>/dist/<slug>-chrome-extension.zip`.

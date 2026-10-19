@@ -1,6 +1,6 @@
 # Pack Quick — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
 
-Page group: `tote-bags/` → https://www.gopromotional.co.uk/branded-products/tote-bags  ·  preferred anchor: **branded tote bags for event marketing**
+Page group: `tote-bags/` → `https://www.gopromotional.co.uk/branded-products/tote-bags`  ·  preferred anchor: **branded tote bags for event marketing**
 Sources: `tote-bags/firefox-extension/` and `tote-bags/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
 
 ## Shared listing copy
@@ -102,7 +102,7 @@ To test: click the toolbar icon and follow these steps:
 7. Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").
 8. Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.
 9. With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.
-10. The footer link "More: gopromotional.co.uk" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
+10. The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
@@ -135,7 +135,7 @@ Edge's description field needs at least 250 characters; the full description abo
 8. Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").
 9. Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.
 10. With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.
-11. The footer link "More: gopromotional.co.uk" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
+11. The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy

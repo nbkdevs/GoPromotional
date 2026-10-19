@@ -1,6 +1,6 @@
 # Harbor Dusk — Chrome Web Store theme (+ optional Firefox theme)
 
-Page group: `homepage/` → https://www.gopromotional.co.uk/  ·  preferred anchor: **branded merchandise**
+Page group: `homepage/` → `https://www.gopromotional.co.uk/`  ·  preferred anchor: **branded merchandise**
 Source: `homepage/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 
 ## Chrome Web Store (theme)

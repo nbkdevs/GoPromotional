@@ -7,7 +7,7 @@ sdk: static
 app_file: index.html
 pinned: false
 license: mit
-short_description: Packing checklists with templates and Markdown export
+short_description: "Packing checklists with templates and Markdown export"
 tags:
   - packing-list
   - checklist
@@ -26,10 +26,10 @@ Everything runs in your browser; nothing is uploaded. Your data stays in this br
 - **Tick off** items by a unique part of their name; see **progress** and what is **still to pack**.
 - **Markdown storage**: `- [x] 3 × T-shirts` round-trips, so the list works in any editor, GitHub or Obsidian.
 
-The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-packlist`, and as the Docker image `iamnazzal/gopromotional-packlist`. Built by GoPromotional; see [GoPromotional](https://www.gopromotional.co.uk/branded-products/tote-bags).
+The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-packlist`, and as the Docker image `iamnazzal/gopromotional-packlist`. Built by GoPromotional; see [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags).
 
 ## Links
 
-- Website: [GoPromotional](https://www.gopromotional.co.uk/branded-products/tote-bags)
+- Website: [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/tote-bags/huggingface-space`)
 - Licence: MIT

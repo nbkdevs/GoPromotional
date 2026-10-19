@@ -1,4 +1,4 @@
-/*! gopromotional-event-planner v1.0.0 | MIT | https://www.gopromotional.co.uk/ */
+/*! gopromotional-event-planner v1.0.1 | MIT | https://www.gopromotional.co.uk/ */
 // Event planning helpers: countdown, planning timeline, giveaway quantities and
 // the latest order date for printed merchandise. Works in Node.js and browsers.
 (function (root, factory) {

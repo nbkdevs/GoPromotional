@@ -1,6 +1,6 @@
 {
   "name": "gopromotional-packlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Packing checklists with templates, per-night quantities and a Markdown format.",
   "keywords": [
     "packing-list",

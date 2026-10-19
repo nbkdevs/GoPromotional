@@ -7,7 +7,7 @@ sdk: static
 app_file: index.html
 pinned: false
 license: mit
-short_description: Daily water goal and hydration log with streaks
+short_description: "Daily water goal and hydration log with streaks"
 tags:
   - hydration
   - water

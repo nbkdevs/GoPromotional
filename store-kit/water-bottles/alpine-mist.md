@@ -1,6 +1,6 @@
 # Alpine Mist — Chrome Web Store theme (+ optional Firefox theme)
 
-Page group: `water-bottles/` → https://www.gopromotional.co.uk/branded-products/branded-water-bottles  ·  preferred anchor: **branded water bottles for event marketing**
+Page group: `water-bottles/` → `https://www.gopromotional.co.uk/branded-products/branded-water-bottles`  ·  preferred anchor: **branded water bottles for event marketing**
 Source: `water-bottles/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 
 ## Chrome Web Store (theme)

@@ -1,6 +1,6 @@
 # Sip Quick — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
 
-Page group: `water-bottles/` → https://www.gopromotional.co.uk/branded-products/branded-water-bottles  ·  preferred anchor: **branded water bottles for event marketing**
+Page group: `water-bottles/` → `https://www.gopromotional.co.uk/branded-products/branded-water-bottles`  ·  preferred anchor: **branded water bottles for event marketing**
 Sources: `water-bottles/firefox-extension/` and `water-bottles/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
 
 ## Shared listing copy
@@ -101,7 +101,7 @@ To test: click the toolbar icon and follow these steps:
 5. Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.
 6. Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.
 7. Click "Clear today". Expected: today's total returns to 0 ml; the goal is kept.
-8. The footer link "More: gopromotional.co.uk" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
+8. The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
@@ -132,7 +132,7 @@ Edge's description field needs at least 250 characters; the full description abo
 6. Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.
 7. Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.
 8. Click "Clear today". Expected: today's total returns to 0 ml; the goal is kept.
-9. The footer link "More: gopromotional.co.uk" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
+9. The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy

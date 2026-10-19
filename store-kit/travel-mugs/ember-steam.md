@@ -1,6 +1,6 @@
 # Ember Steam — Chrome Web Store theme (+ optional Firefox theme)
 
-Page group: `travel-mugs/` → https://www.gopromotional.co.uk/branded-products/travel-mugs  ·  preferred anchor: **branded travel mugs for event marketing**
+Page group: `travel-mugs/` → `https://www.gopromotional.co.uk/branded-products/travel-mugs`  ·  preferred anchor: **branded travel mugs for event marketing**
 Source: `travel-mugs/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 
 ## Chrome Web Store (theme)

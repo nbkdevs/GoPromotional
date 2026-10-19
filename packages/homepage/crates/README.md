@@ -56,6 +56,6 @@ Dates are handled without a date crate; the CLI's default "today"/"now" is UTC (
 
 ## Links
 
-- Website: [promotional products](https://www.gopromotional.co.uk/)
+- Website: [branded merchandise](https://www.gopromotional.co.uk/)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/homepage/crates`)
 - Licence: MIT

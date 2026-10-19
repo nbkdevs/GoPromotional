@@ -58,6 +58,6 @@ Dates are handled without a date crate; the CLI's default "today"/"now" is UTC (
 
 ## Links
 
-- Website: [https://www.gopromotional.co.uk/branded-products/branded-water-bottles](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
+- Website: [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/water-bottles/crates`)
 - Licence: MIT

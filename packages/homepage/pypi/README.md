@@ -53,6 +53,6 @@ Pure Python, no dependencies, Python 3.9+.
 
 ## Links
 
-- Website: [GoPromotional](https://www.gopromotional.co.uk/)
+- Website: [branded merchandise](https://www.gopromotional.co.uk/)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/homepage/pypi`)
 - Licence: MIT

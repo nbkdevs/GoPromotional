@@ -55,13 +55,13 @@ Last 7 days: 2 reusable, 1 disposable (67% reusable).
 
 ```sh
 cd packages/travel-mugs
-docker build -f docker/Dockerfile -t iamnazzal/gopromotional-mugday:1.0.0 -t iamnazzal/gopromotional-mugday:latest .
+docker build -f docker/Dockerfile -t iamnazzal/gopromotional-mugday:1.0.1 -t iamnazzal/gopromotional-mugday:latest .
 ```
 
 Image labels follow the OCI spec: `org.opencontainers.image.url` points to the project page and `org.opencontainers.image.source` to the repository.
 
 ## Links
 
-- Website: [GoPromotional](https://www.gopromotional.co.uk/branded-products/travel-mugs)
+- Website: [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/travel-mugs/docker`)
 - Licence: MIT

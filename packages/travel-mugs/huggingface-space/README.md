@@ -28,10 +28,10 @@ Everything runs in your browser; nothing is uploaded. Your data stays in this br
 - **Reusable-cup stats** for the last 7 days.
 - Plain **JSON log** shared by the npm, PyPI, crates.io and RubyGems versions.
 
-The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-mugday`, and as the Docker image `iamnazzal/gopromotional-mugday`. Built by GoPromotional; see [branded travel mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs).
+The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-mugday`, and as the Docker image `iamnazzal/gopromotional-mugday`. Built by GoPromotional; see [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs).
 
 ## Links
 
-- Website: [branded travel mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs)
+- Website: [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/travel-mugs/huggingface-space`)
 - Licence: MIT

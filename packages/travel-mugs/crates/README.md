@@ -70,6 +70,6 @@ Dates are handled without a date crate; the CLI's default "today"/"now" is UTC (
 
 ## Links
 
-- Website: [branded travel mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs)
+- Website: [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/travel-mugs/crates`)
 - Licence: MIT

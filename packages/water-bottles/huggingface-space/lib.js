@@ -1,4 +1,4 @@
-/*! gopromotional-siplog v1.0.0 | MIT | https://www.gopromotional.co.uk/branded-products/branded-water-bottles */
+/*! gopromotional-siplog v1.0.1 | MIT | https://www.gopromotional.co.uk/branded-products/branded-water-bottles */
 // Hydration helpers: a daily water goal estimate, amount parsing and a small
 // day-by-day water log with progress, 7-day history and streaks.
 (function (root, factory) {

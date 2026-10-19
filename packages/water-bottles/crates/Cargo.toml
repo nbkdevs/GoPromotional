@@ -1,6 +1,6 @@
 [package]
 name = "gopromotional-siplog"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.70"
 description = "Daily water goal calculator and hydration log: parse 500ml/0.5l/16oz amounts, track daily totals, 7-day history and streaks. Library + CLI."

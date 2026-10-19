@@ -57,6 +57,6 @@ Pure Python, no dependencies, Python 3.9+.
 
 ## Links
 
-- Website: [branded water bottles](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
+- Website: [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/water-bottles/pypi`)
 - Licence: MIT

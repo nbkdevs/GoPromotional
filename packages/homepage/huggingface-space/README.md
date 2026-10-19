@@ -7,7 +7,7 @@ sdk: static
 app_file: index.html
 pinned: false
 license: mit
-short_description: Event countdown, timeline, giveaways and order-by dates
+short_description: "Event countdown, timeline, giveaways and order-by dates"
 tags:
   - event-planning
   - countdown
@@ -26,10 +26,10 @@ Everything runs in your browser; nothing is uploaded. Your data stays in this br
 - **Giveaway quantity**: attendees × days × uptake × items per person, plus a buffer, rounded up.
 - **Order-by date**: production + delivery + safety margin counted back in working days (Mon–Fri).
 
-The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-event-planner`, and as the Docker image `iamnazzal/gopromotional-event-planner`. Built by GoPromotional; see [promotional products](https://www.gopromotional.co.uk/).
+The same logic ships as a library and CLI on npm, PyPI, crates.io and RubyGems as `gopromotional-event-planner`, and as the Docker image `iamnazzal/gopromotional-event-planner`. Built by GoPromotional; see [branded merchandise](https://www.gopromotional.co.uk/).
 
 ## Links
 
-- Website: [promotional products](https://www.gopromotional.co.uk/)
+- Website: [branded merchandise](https://www.gopromotional.co.uk/)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/homepage/huggingface-space`)
 - Licence: MIT

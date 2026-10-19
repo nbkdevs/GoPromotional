@@ -53,6 +53,6 @@ The library is a single dependency-free UMD file: it also works in the browser a
 
 ## Links
 
-- Website: [branded tote bags](https://www.gopromotional.co.uk/branded-products/tote-bags)
+- Website: [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/tote-bags/npm`)
 - Licence: MIT

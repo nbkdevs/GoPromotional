@@ -1,6 +1,6 @@
 # Travel mugs asset group
 
-**Target:** [https://www.gopromotional.co.uk/branded-products/travel-mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs)
+**Target:** [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs)
 
 **Preferred GitHub / docs anchor:** branded travel mugs for event marketing
 

@@ -4,10 +4,10 @@ Useful digital assets organised by the website page they relate to. Each group h
 
 | Folder | Target page | Preferred link anchor (when linking) |
 |--------|-------------|--------------------------------------|
-| [`homepage/`](homepage/) | [https://www.gopromotional.co.uk](https://www.gopromotional.co.uk) | branded merchandise |
-| [`water-bottles/`](water-bottles/) | [https://www.gopromotional.co.uk/branded-products/branded-water-bottles](https://www.gopromotional.co.uk/branded-products/branded-water-bottles) | branded water bottles for event marketing |
-| [`tote-bags/`](tote-bags/) | [https://www.gopromotional.co.uk/branded-products/tote-bags](https://www.gopromotional.co.uk/branded-products/tote-bags) | branded tote bags for event marketing |
-| [`travel-mugs/`](travel-mugs/) | [https://www.gopromotional.co.uk/branded-products/travel-mugs](https://www.gopromotional.co.uk/branded-products/travel-mugs) | branded travel mugs for event marketing |
+| [`homepage/`](homepage/) | [branded merchandise](https://www.gopromotional.co.uk) | branded merchandise |
+| [`water-bottles/`](water-bottles/) | [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles) | branded water bottles for event marketing |
+| [`tote-bags/`](tote-bags/) | [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags) | branded tote bags for event marketing |
+| [`travel-mugs/`](travel-mugs/) | [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs) | branded travel mugs for event marketing |
 
 ## Current status
 

@@ -41,13 +41,13 @@ Streak: 0 day(s)
 
 ```sh
 cd packages/water-bottles
-docker build -f docker/Dockerfile -t iamnazzal/gopromotional-siplog:1.0.0 -t iamnazzal/gopromotional-siplog:latest .
+docker build -f docker/Dockerfile -t iamnazzal/gopromotional-siplog:1.0.1 -t iamnazzal/gopromotional-siplog:latest .
 ```
 
 Image labels follow the OCI spec: `org.opencontainers.image.url` points to the project page and `org.opencontainers.image.source` to the repository.
 
 ## Links
 
-- Website: [branded water bottles](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
+- Website: [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/water-bottles/docker`)
 - Licence: MIT

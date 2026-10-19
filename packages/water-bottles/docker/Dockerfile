@@ -1,4 +1,4 @@
-# Build from packages/water-bottles:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-siplog:1.0.0 .
+# Build from packages/water-bottles:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-siplog:1.0.1 .
 FROM node:20-alpine
 
 LABEL org.opencontainers.image.title="gopromotional-siplog" \
@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.title="gopromotional-siplog" \
       org.opencontainers.image.url="https://www.gopromotional.co.uk/branded-products/branded-water-bottles" \
       org.opencontainers.image.source="https://github.com/nbkdevs/GoPromotional" \
       org.opencontainers.image.documentation="https://github.com/nbkdevs/GoPromotional/tree/main/packages/water-bottles/docker" \
-      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.version="1.0.1" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.vendor="GoPromotional" \
       org.opencontainers.image.authors="GoPromotional"

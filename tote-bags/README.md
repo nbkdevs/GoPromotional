@@ -1,6 +1,6 @@
 # Tote bags asset group
 
-**Target:** [https://www.gopromotional.co.uk/branded-products/tote-bags](https://www.gopromotional.co.uk/branded-products/tote-bags)
+**Target:** [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags)
 
 **Preferred GitHub / docs anchor:** branded tote bags for event marketing
 

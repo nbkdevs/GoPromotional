@@ -58,6 +58,6 @@ The library is a single dependency-free UMD file: it also works in the browser a
 
 ## Links
 
-- Website: [GoPromotional](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
+- Website: [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/water-bottles/npm`)
 - Licence: MIT

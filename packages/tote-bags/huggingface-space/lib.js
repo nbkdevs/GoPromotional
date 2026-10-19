@@ -1,4 +1,4 @@
-/*! gopromotional-packlist v1.0.0 | MIT | https://www.gopromotional.co.uk/branded-products/tote-bags */
+/*! gopromotional-packlist v1.0.1 | MIT | https://www.gopromotional.co.uk/branded-products/tote-bags */
 // Packing checklists: built-in templates (work day, travel, trade show, gym),
 // per-night quantities, merging without duplicates, progress, and a Markdown
 // format that round-trips so a checklist can live in a plain .md file.

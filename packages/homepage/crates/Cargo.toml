@@ -1,6 +1,6 @@
 [package]
 name = "gopromotional-event-planner"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.70"
 description = "Event planning helpers: countdown, planning timeline, giveaway quantity estimator and order-by dates for printed merchandise. Library + CLI."

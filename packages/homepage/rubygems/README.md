@@ -54,6 +54,6 @@ Pure Ruby, no runtime dependencies, Ruby 3.0+. `require "gopromotional-event-pla
 
 ## Links
 
-- Website: [https://www.gopromotional.co.uk/](https://www.gopromotional.co.uk/)
+- Website: [branded merchandise](https://www.gopromotional.co.uk/)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/homepage/rubygems`)
 - Licence: MIT

@@ -53,6 +53,6 @@ Pure Python, no dependencies, Python 3.9+.
 
 ## Links
 
-- Website: [https://www.gopromotional.co.uk/branded-products/tote-bags](https://www.gopromotional.co.uk/branded-products/tote-bags)
+- Website: [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags)
 - Source code: [https://github.com/nbkdevs/GoPromotional](https://github.com/nbkdevs/GoPromotional) (`packages/tote-bags/pypi`)
 - Licence: MIT

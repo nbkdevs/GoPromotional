@@ -1,6 +1,6 @@
 # Canvas Trail — Chrome Web Store theme (+ optional Firefox theme)
 
-Page group: `tote-bags/` → https://www.gopromotional.co.uk/branded-products/tote-bags  ·  preferred anchor: **branded tote bags for event marketing**
+Page group: `tote-bags/` → `https://www.gopromotional.co.uk/branded-products/tote-bags`  ·  preferred anchor: **branded tote bags for event marketing**
 Source: `tote-bags/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 
 ## Chrome Web Store (theme)

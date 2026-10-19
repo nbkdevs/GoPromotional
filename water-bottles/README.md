@@ -1,6 +1,6 @@
 # Water bottles asset group
 
-**Target:** [https://www.gopromotional.co.uk/branded-products/branded-water-bottles](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
+**Target:** [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles)
 
 **Preferred GitHub / docs anchor:** branded water bottles for event marketing
 

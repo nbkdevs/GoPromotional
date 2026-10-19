@@ -40,7 +40,7 @@ Still to pack: Pop-up banner / stand, Table cloth, Branded giveaways, Business c
 
 ```sh
 cd packages/tote-bags
-docker build -f docker/Dockerfile -t iamnazzal/gopromotional-packlist:1.0.0 -t iamnazzal/gopromotional-packlist:latest .
+docker build -f docker/Dockerfile -t iamnazzal/gopromotional-packlist:1.0.1 -t iamnazzal/gopromotional-packlist:latest .
 ```
 
 Image labels follow the OCI spec: `org.opencontainers.image.url` points to the project page and `org.opencontainers.image.source` to the repository.

@@ -24,6 +24,9 @@ THEME={
  'canvas-trail':dict(name='Canvas Trail',page=GP+'/branded-products/tote-bags',desc='a photographic golden-hour trail theme'),
  'ember-steam':dict(name='Ember Steam',page=GP+'/branded-products/travel-mugs',desc='a photographic rainy-window evening theme'),
 }
+ANCHOR={GP+'/':'branded merchandise',GP+'/branded-products/branded-water-bottles':'branded water bottles for event marketing',
+        GP+'/branded-products/tote-bags':'branded tote bags for event marketing',GP+'/branded-products/travel-mugs':'branded travel mugs for event marketing'}
+for _e in [*EXT.values(),*THEME.values()]: _e['anchor']=ANCHOR[_e['page']]  # exact anchor text for every in-text link
 CSS='''body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1c2430;background:#f6f7f9}
 main{max-width:760px;margin:0 auto;padding:40px 22px 64px;background:#fff;min-height:100vh;box-sizing:border-box}
 h1{font-size:1.8rem;line-height:1.25;margin:0 0 4px}h2{font-size:1.15rem;margin:2em 0 .4em}
@@ -75,7 +78,7 @@ for slug,e in EXT.items():
 <p>{e["name"]} requests no host permissions, no access to tabs or browsing history, and no clipboard permission. The <em>Copy</em> buttons write a short text summary to your clipboard only when you click them.</p>
 
 <h2>External link</h2>
-<p>The popup shows a small \u201cMore: gopromotional.co.uk\u201d link to <a href="{e["page"]}">{e["page"]}</a>. Nothing happens unless you click it. If you do, the page opens in a new tab and is governed by that website\u2019s own privacy and cookie policies, not this one. The extension does not pass any of your data to that site.</p>
+<p>The popup shows a small footer link, \u201cMore: <a href="{e["page"]}">{e["anchor"]}</a>\u201d. Nothing happens unless you click it. If you do, the page opens in a new tab and is governed by that website\u2019s own privacy and cookie policies, not this one. The extension does not pass any of your data to that site.</p>
 
 <h2>Deleting your data</h2>
 <p>{e["clear"]}. Uninstalling the extension removes all of its stored data from your browser.</p>
@@ -108,7 +111,7 @@ for slug,t in THEME.items():
 <p>None. Browser themes cannot request extension permissions.</p>
 
 <h2>External link</h2>
-<p>The store listing for this theme links to <a href="{t["page"]}">{t["page"]}</a>. The theme itself shows no links. If you visit that website, it is governed by its own privacy and cookie policies, not this one.</p>
+<p>The store listing for this theme links to <a href="{t["page"]}">{t["anchor"]}</a>. The theme itself shows no links. If you visit that website, it is governed by its own privacy and cookie policies, not this one.</p>
 
 <h2>Removing the theme</h2>
 <p>Switch back to the default theme in your browser settings (Chrome: Settings \u2192 Appearance \u2192 Reset to default; Firefox: Add-ons and themes \u2192 Themes) or uninstall it. No data is left behind.</p>

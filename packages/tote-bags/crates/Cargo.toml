@@ -1,6 +1,6 @@
 [package]
 name = "gopromotional-packlist"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.70"
 description = "Packing checklists with work-day, travel, trade-show and gym templates, per-night quantities and a round-trip Markdown checklist format. Library + CLI."

@@ -1,4 +1,4 @@
-# Build from packages/tote-bags:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-packlist:1.0.0 .
+# Build from packages/tote-bags:  docker build -f docker/Dockerfile -t iamnazzal/gopromotional-packlist:1.0.1 .
 FROM node:20-alpine
 
 LABEL org.opencontainers.image.title="gopromotional-packlist" \
@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.title="gopromotional-packlist" \
       org.opencontainers.image.url="https://www.gopromotional.co.uk/branded-products/tote-bags" \
       org.opencontainers.image.source="https://github.com/nbkdevs/GoPromotional" \
       org.opencontainers.image.documentation="https://github.com/nbkdevs/GoPromotional/tree/main/packages/tote-bags/docker" \
-      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.version="1.0.1" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.vendor="GoPromotional" \
       org.opencontainers.image.authors="GoPromotional"

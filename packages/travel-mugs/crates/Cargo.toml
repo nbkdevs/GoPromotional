@@ -1,6 +1,6 @@
 [package]
 name = "gopromotional-mugday"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 rust-version = "1.70"
 description = "Caffeine and coffee tracker: typical caffeine per drink, daily totals against a limit, half-life estimate of caffeine in your system, sleep-ready time and reusable-cup stats. Library + CLI."

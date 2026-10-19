@@ -1,6 +1,6 @@
 # Homepage asset group
 
-**Target:** [https://www.gopromotional.co.uk](https://www.gopromotional.co.uk)
+**Target:** [branded merchandise](https://www.gopromotional.co.uk)
 
 **Preferred GitHub / docs anchor:** branded merchandise
 

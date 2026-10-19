@@ -125,7 +125,7 @@ It is handy on desk days, at conferences and during long events, when it is easy
     'Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.',
     'Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.',
     'Click "Clear today". Expected: today\'s total returns to 0 ml; the goal is kept.',
-    'The footer link "More: gopromotional.co.uk" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.',
+    'The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.',
    ]),
  'tote-bags':dict(slug='pack-quick',name='Pack Quick',key='pack_quick_v2',
    cws_summary='Packing lists in your toolbar: multiple lists, work and travel templates, tick-off, filter and copy. Stored locally.',
@@ -159,7 +159,7 @@ It works well for exhibitors and event teams packing a stand, as well as for eve
     'Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").',
     'Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.',
     'With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.',
-    'The footer link "More: gopromotional.co.uk" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.',
+    'The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.',
    ]),
  'travel-mugs':dict(slug='mug-tap',name='Mug Tap',key='mug_tap_v2',
    cws_summary='Log reusable vs disposable cups in one tap and see your weekly reusable rate and streak. Stored locally, no tracking.',
@@ -190,7 +190,7 @@ A simple nudge for anyone trying to cut down on single-use cups.''',
     'Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.',
     'Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.',
     'Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.',
-    'The footer link "More: gopromotional.co.uk" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.',
+    'The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.',
    ]),
 }
 CWS_PRIV_THEME='''- Permission justification: none requested (themes cannot request permissions)
@@ -217,7 +217,7 @@ for g,t in THEMES.items():
     fx_desc=t['fx_intro']+'\n\n'+feats+'\n\n'+t['fx_body_extra']+'\n\nTo switch back, open Add-ons and themes → Themes and enable the default theme.\n\n'+t['mention']
     md=f'''# {t["name"]} — Chrome Web Store theme (+ optional Firefox theme)
 
-Page group: `{g}/` → {url}  ·  preferred anchor: **{ANCHOR[g]}**
+Page group: `{g}/` → `{url}`  ·  preferred anchor: **{ANCHOR[g]}**
 Source: `{g}/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 
 ## Chrome Web Store (theme)
@@ -286,7 +286,7 @@ To test: click the toolbar icon and follow these steps:
 ''' + '\n'.join(f'{i}. {s}' for i,s in enumerate(e['tests'][1:],1))
     md=f'''# {e["name"]} — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
 
-Page group: `{g}/` → {url}  ·  preferred anchor: **{ANCHOR[g]}**
+Page group: `{g}/` → `{url}`  ·  preferred anchor: **{ANCHOR[g]}**
 Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
 
 ## Shared listing copy
