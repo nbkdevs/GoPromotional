@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoPromotional MugDay: caffeine tracker and reusable-cup log</title>
+<meta name="description" content="Log coffee and tea, compare your caffeine with a daily limit, see how much is still in your system, when it drops below a sleep-friendly level, and how often you used a reusable cup.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --muted:#5b6475; --line:#e3e6ee; --accent:#7a4b2a; --accent-soft:#f1e6dc; --bad:#c0392b; --ok:#1e8e4e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--accent); color:#fff; padding:22px 16px; }
+  header h1 { margin:0 auto; max-width:960px; font-size:24px; } header p { margin:4px auto 0; max-width:960px; opacity:.9; }
+  main { max-width:960px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .wide { grid-column:1/-1; }
+  h2 { margin:0 0 10px; font-size:17px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:8px 0 2px; }
+  input,select,button,textarea { font:inherit; }
+  input[type=number],input[type=date],input[type=text],input[type=datetime-local],select,textarea { width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:end; } .row > * { flex:1; min-width:90px; }
+  button { padding:7px 12px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button.ghost { background:#fff; color:var(--accent); }
+  button:disabled { opacity:.5; cursor:default; }
+  .big { font-size:30px; font-weight:700; margin:4px 0; } .muted { color:var(--muted); font-size:13px; }
+  .bar { height:12px; background:var(--accent-soft); border-radius:6px; overflow:hidden; } .bar > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  table { width:100%; border-collapse:collapse; font-size:14px; } td,th { padding:6px 4px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .overdue { color:var(--bad); } .ok { color:var(--ok); } .err { color:var(--bad); font-size:13px; min-height:1em; }
+  .chk { display:flex; gap:8px; align-items:center; padding:4px 0; } .chk.done span { text-decoration:line-through; color:var(--muted); }
+  footer { max-width:960px; margin:0 auto; padding:8px 16px 28px; color:var(--muted); font-size:13px; } footer a { color:var(--accent); }
+  svg { width:100%; height:150px; display:block; } .del { border:none; background:none; color:var(--bad); padding:0 4px; }
+</style>
+</head>
+<body>
+<header><h1>☕ MugDay</h1><p>Caffeine and coffee tracker with a half-life estimate, sleep-ready time and reusable-cup stats. Runs in your browser.</p></header>
+<main>
+  <section class="card">
+    <h2>Log a drink</h2>
+    <label for="drink">Drink</label><select id="drink"></select>
+    <div class="row">
+      <div><label for="time">Time</label><input id="time" type="datetime-local"></div>
+      <div><label for="mg">Caffeine mg (optional)</label><input id="mg" type="number" min="0" max="1000" placeholder="typical"></div>
+    </div>
+    <label class="chk"><input id="reu" type="checkbox" checked> <span>Reusable cup</span></label>
+    <div class="row"><button id="add">Add drink</button><button class="ghost" id="undo">Undo last</button></div>
+    <div class="err" id="err"></div>
+  </section>
+  <section class="card">
+    <h2>Today</h2>
+    <div class="big" id="tot">0 mg</div>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="muted" id="sub" style="margin-top:6px"></div>
+    <label for="lim">Daily limit</label>
+    <select id="lim"><option value="400">400 mg (healthy adults)</option><option value="200">200 mg (pregnant or breastfeeding)</option></select>
+    <p class="muted">Typical values; real drinks vary. Not medical advice.</p>
+  </section>
+  <section class="card">
+    <h2>In your system</h2>
+    <div class="big" id="now">0 mg</div><div class="muted">estimated now, 5-hour half-life</div>
+    <svg id="chart" viewBox="0 0 300 150" preserveAspectRatio="none" aria-label="Caffeine over the day"></svg>
+    <div class="row"><div><label for="thr">Sleep-ready below (mg)</label><input id="thr" type="number" min="1" value="50"></div></div>
+    <p id="sleep" style="margin:8px 0 0"></p>
+  </section>
+  <section class="card">
+    <h2>Reusable cups, last 7 days</h2>
+    <div class="big" id="rate">–</div><div class="muted" id="cups"></div>
+    <h2 style="margin-top:14px">Today's drinks</h2>
+    <table><tbody id="list"></tbody></table>
+    <div class="row" style="margin-top:10px"><button class="ghost" id="exp">Download JSON</button><button class="ghost" id="impb">Import JSON</button><input id="imp" type="file" accept=".json,application/json" hidden></div>
+  </section>
+</main>
+<footer>Built by GoPromotional: see <a href="https://www.gopromotional.co.uk/branded-products/travel-mugs" rel="noopener">branded travel mugs</a>. Also available as <code>gopromotional-mugday</code> on npm, PyPI, crates.io and RubyGems, and as the Docker image <code>iamnazzal/gopromotional-mugday</code>. <a href="https://github.com/nbkdevs/GoPromotional" rel="noopener">Source</a> · MIT licence.</footer>
+<script src="lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var M = window.MugDay, KEY = 'gopromotional-mugday';
+  var $ = function (id) { return document.getElementById(id); };
+  var log;
+  try { log = new M.CaffeineLog(JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { log = new M.CaffeineLog(); }
+  Object.keys(M.DRINKS).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = k.replace(/-/g, ' ') + ' (' + M.DRINKS[k].mg + ' mg)'; $('drink').appendChild(o); });
+  $('drink').value = 'flat-white';
+  $('lim').value = String(log.limit === 200 ? 200 : 400);
+  function save() { localStorage.setItem(KEY, JSON.stringify(log)); }
+  function render() {
+    save();
+    var now = M.nowLocal(), today = now.slice(0, 10), d = log.day(today);
+    if (!$('time').value) $('time').value = now;
+    $('tot').textContent = d.total + ' mg';
+    $('bar').style.width = Math.min(100, d.total * 100 / d.limit) + '%';
+    $('sub').innerHTML = d.drinks + ' drink(s). ' + (d.over ? '<span class="overdue">' + d.over + ' mg over the ' + d.limit + ' mg limit.</span>' : d.remaining + ' mg left of ' + d.limit + ' mg.');
+    $('now').textContent = log.inSystem(now) + ' mg';
+    var thr = Number($('thr').value) || 50, s = log.sleepReady(thr);
+    $('sleep').textContent = s ? (M.toMinutes(s) <= M.toMinutes(now) ? 'Already below ' + thr + ' mg.' : 'Below ' + thr + ' mg from about ' + s.replace('T', ' ') + '.') : 'No drinks logged yet.';
+    var c = log.cups(today);
+    $('rate').textContent = c.reusable + c.disposable ? c.rate + '%' : '–';
+    $('cups').textContent = c.reusable + ' reusable, ' + c.disposable + ' disposable';
+    $('list').innerHTML = log.forDay(today).map(function (e) {
+      return '<tr><td>' + e.time.slice(11) + '</td><td>' + e.drink.replace(/-/g, ' ') + (e.reusable ? ' ♻️' : '') + '</td><td>' + e.mg + ' mg</td></tr>';
+    }).join('') || '<tr><td class="muted">Nothing yet today.</td></tr>';
+    chart(today, now, thr);
+    $('undo').disabled = !log.entries.length;
+  }
+  function chart(today, now, thr) {
+    var start = M.toMinutes(today + 'T06:00'), pts = [], max = Math.max(thr * 2, 100), lv = [];
+    for (var i = 0; i <= 72; i++) { var t = start + i * 15; var v = log.inSystem(M.fromMinutes(t)); lv.push(v); if (v > max) max = v; }
+    lv.forEach(function (v, i) { pts.push((i * 300 / 72).toFixed(1) + ',' + (145 - v * 135 / max).toFixed(1)); });
+    var y = (145 - thr * 135 / max).toFixed(1), nx = ((M.toMinutes(now) - start) * 300 / (72 * 15)).toFixed(1);
+    $('chart').innerHTML = '<line x1="0" x2="300" y1="' + y + '" y2="' + y + '" stroke="#999" stroke-dasharray="4 3"/>' +
+      (nx >= 0 && nx <= 300 ? '<line x1="' + nx + '" x2="' + nx + '" y1="0" y2="150" stroke="#ccc"/>' : '') +
+      '<polyline fill="none" stroke="currentColor" stroke-width="2" points="' + pts.join(' ') + '"/>' +
+      '<text x="2" y="12" font-size="10" fill="#777">06:00 → 24:00 · max ' + Math.round(max) + ' mg</text>';
+    $('chart').style.color = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+  }
+  $('add').addEventListener('click', function () {
+    try {
+      var mg = $('mg').value === '' ? undefined : Number($('mg').value);
+      log.add($('drink').value, { time: $('time').value || M.nowLocal(), mg: mg, reusable: $('reu').checked });
+      $('err').textContent = ''; $('mg').value = ''; $('time').value = ''; render();
+    } catch (e) { $('err').textContent = e.message; }
+  });
+  $('undo').addEventListener('click', function () { log.undo(); render(); });
+  $('lim').addEventListener('change', function () { log.limit = Number($('lim').value); render(); });
+  $('thr').addEventListener('input', render);
+  $('exp').addEventListener('click', function () {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(log, null, 2) + '\n'], { type: 'application/json' }));
+    a.download = 'gopromotional-mugday.json'; a.click();
+  });
+  $('impb').addEventListener('click', function () { $('imp').click(); });
+  $('imp').addEventListener('change', function () {
+    var f = $('imp').files[0]; if (!f) return;
+    f.text().then(function (t) { log = new M.CaffeineLog(JSON.parse(t)); $('lim').value = String(log.limit === 200 ? 200 : 400); render(); }).catch(function (e) { $('err').textContent = 'Import failed: ' + e.message; });
+  });
+  render();
+  setInterval(render, 60000);
+})();
+</script>
+</body>
+</html>

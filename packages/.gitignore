@@ -1,0 +1,13 @@
+# Build output and caches for the registry packages (never commit these)
+target/
+dist/
+build/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+node_modules/
+*.tgz
+*.gem
+.bundle/
+Gemfile.lock

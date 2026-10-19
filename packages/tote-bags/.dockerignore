@@ -1,0 +1,7 @@
+# Docker build context is packages/<page>; only the npm sources are needed.
+*
+!npm/package.json
+!npm/README.md
+!npm/LICENSE
+!npm/lib/**
+!npm/bin/**

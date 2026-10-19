@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gopromotional-siplog"
+version = "1.0.0"
+description = "Daily water goal estimate and a simple hydration log with streaks."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "GoPromotional" }]
+requires-python = ">=3.9"
+keywords = ["hydration", "water", "tracker", "health", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://www.gopromotional.co.uk/branded-products/branded-water-bottles"
+Repository = "https://github.com/nbkdevs/GoPromotional"
+Issues = "https://github.com/nbkdevs/GoPromotional/issues"
+
+[project.scripts]
+gopromotional-siplog = "gopromotional_siplog.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

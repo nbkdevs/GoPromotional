@@ -1,0 +1,23 @@
+[package]
+name = "gopromotional-siplog"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Daily water goal calculator and hydration log: parse 500ml/0.5l/16oz amounts, track daily totals, 7-day history and streaks. Library + CLI."
+license = "MIT"
+authors = ["GoPromotional"]
+readme = "README.md"
+homepage = "https://www.gopromotional.co.uk/branded-products/branded-water-bottles"
+documentation = "https://docs.rs/gopromotional-siplog"
+repository = "https://github.com/nbkdevs/GoPromotional"
+keywords = ["hydration", "water", "health", "tracker", "cli"]
+categories = ["command-line-utilities"]
+include = ["src/**/*", "tests/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[[bin]]
+name = "gopromotional-siplog"
+path = "src/bin/gopromotional-siplog.rs"

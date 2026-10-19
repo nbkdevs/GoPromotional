@@ -1,0 +1,23 @@
+[package]
+name = "gopromotional-event-planner"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Event planning helpers: countdown, planning timeline, giveaway quantity estimator and order-by dates for printed merchandise. Library + CLI."
+license = "MIT"
+authors = ["GoPromotional"]
+readme = "README.md"
+homepage = "https://www.gopromotional.co.uk/"
+documentation = "https://docs.rs/gopromotional-event-planner"
+repository = "https://github.com/nbkdevs/GoPromotional"
+keywords = ["event-planning", "countdown", "checklist", "giveaways", "cli"]
+categories = ["command-line-utilities", "date-and-time"]
+include = ["src/**/*", "tests/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[[bin]]
+name = "gopromotional-event-planner"
+path = "src/bin/gopromotional-event-planner.rs"

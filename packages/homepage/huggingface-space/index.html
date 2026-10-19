@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoPromotional Event Planner: countdown, timeline, giveaways and order-by dates</title>
+<meta name="description" content="Plan an event or trade show in your browser: countdown, 12-step planning timeline, giveaway quantity estimate and the latest order date for printed merchandise.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --muted:#5b6475; --line:#e3e6ee; --accent:#3949ab; --accent-soft:#e3e7fb; --bad:#c0392b; --ok:#1e8e4e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--accent); color:#fff; padding:22px 16px; }
+  header h1 { margin:0 auto; max-width:960px; font-size:24px; } header p { margin:4px auto 0; max-width:960px; opacity:.9; }
+  main { max-width:960px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .wide { grid-column:1/-1; }
+  h2 { margin:0 0 10px; font-size:17px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:8px 0 2px; }
+  input,select,button,textarea { font:inherit; }
+  input[type=number],input[type=date],input[type=text],input[type=datetime-local],select,textarea { width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:end; } .row > * { flex:1; min-width:90px; }
+  button { padding:7px 12px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button.ghost { background:#fff; color:var(--accent); }
+  button:disabled { opacity:.5; cursor:default; }
+  .big { font-size:30px; font-weight:700; margin:4px 0; } .muted { color:var(--muted); font-size:13px; }
+  .bar { height:12px; background:var(--accent-soft); border-radius:6px; overflow:hidden; } .bar > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  table { width:100%; border-collapse:collapse; font-size:14px; } td,th { padding:6px 4px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .overdue { color:var(--bad); } .ok { color:var(--ok); } .err { color:var(--bad); font-size:13px; min-height:1em; }
+  .chk { display:flex; gap:8px; align-items:center; padding:4px 0; } .chk.done span { text-decoration:line-through; color:var(--muted); }
+  footer { max-width:960px; margin:0 auto; padding:8px 16px 28px; color:var(--muted); font-size:13px; } footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header><h1>📅 Event Planner</h1><p>Countdown, planning timeline, giveaway quantities and print order-by dates. Runs in your browser; nothing is uploaded.</p></header>
+<main>
+  <section class="card">
+    <h2>Your event</h2>
+    <label for="name">Event name</label><input id="name" type="text" placeholder="e.g. Spring Trade Show">
+    <label for="date">Event date</label><input id="date" type="date">
+    <div class="big" id="cd">–</div><div class="muted" id="cdsub"></div>
+  </section>
+  <section class="card">
+    <h2>Giveaway quantity</h2>
+    <div class="row">
+      <div><label for="att">Attendees</label><input id="att" type="number" min="0" value="250"></div>
+      <div><label for="days">Days</label><input id="days" type="number" min="0" step="1" value="1"></div>
+    </div>
+    <div class="row">
+      <div><label for="upt">Uptake %</label><input id="upt" type="number" min="0" max="100" value="60"></div>
+      <div><label for="pp">Per person</label><input id="pp" type="number" min="0" step="1" value="1"></div>
+      <div><label for="buf">Buffer %</label><input id="buf" type="number" min="0" value="10"></div>
+    </div>
+    <div class="big" id="gq">–</div><div class="muted" id="gqsub"></div>
+  </section>
+  <section class="card">
+    <h2>Order-by date for printed items</h2>
+    <div class="row">
+      <div><label for="prod">Production days</label><input id="prod" type="number" min="0" step="1" value="10"></div>
+      <div><label for="del">Delivery days</label><input id="del" type="number" min="0" step="1" value="3"></div>
+      <div><label for="saf">Safety days</label><input id="saf" type="number" min="0" step="1" value="2"></div>
+    </div>
+    <div class="big" id="ob">–</div><div class="muted" id="obsub">Working days (Mon–Fri) counted back from the event.</div>
+  </section>
+  <section class="card wide">
+    <h2>Planning timeline</h2>
+    <div class="muted" id="tlsum"></div>
+    <table><thead><tr><th></th><th>Due</th><th>Task</th><th>Status</th></tr></thead><tbody id="tl"></tbody></table>
+    <div class="row" style="margin-top:10px"><button class="ghost" id="copy">Copy as Markdown checklist</button><button class="ghost" id="reset">Clear ticks</button></div>
+    <div class="err" id="err"></div>
+  </section>
+</main>
+<footer>Built by GoPromotional: see <a href="https://www.gopromotional.co.uk/" rel="noopener">promotional products</a>. Also available as <code>gopromotional-event-planner</code> on npm, PyPI, crates.io and RubyGems, and as the Docker image <code>iamnazzal/gopromotional-event-planner</code>. <a href="https://github.com/nbkdevs/GoPromotional" rel="noopener">Source</a> · MIT licence.</footer>
+<script src="lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var EP = window.EventPlanner, KEY = 'gopromotional-event-planner';
+  var $ = function (id) { return document.getElementById(id); };
+  var ids = ['name', 'date', 'att', 'days', 'upt', 'pp', 'buf', 'prod', 'del', 'saf'];
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { state = {}; }
+  state.done = state.done || {};
+  ids.forEach(function (id) { if (state[id] !== undefined) $(id).value = state[id]; });
+  if (!$('date').value) { var d = new Date(Date.now() + 45 * 864e5); $('date').value = d.toISOString().slice(0, 10); }
+  function save() { ids.forEach(function (id) { state[id] = $(id).value; }); localStorage.setItem(KEY, JSON.stringify(state)); }
+  function num(id) { var v = Number($(id).value); return isFinite(v) ? v : 0; }
+  var rows = [];
+  function render() {
+    save(); $('err').textContent = '';
+    var today = EP.todayISO(), date = $('date').value;
+    try {
+      var c = EP.countdown(date, today);
+      $('cd').textContent = c.status === 'today' ? 'Today!' : c.status === 'upcoming' ? c.days + ' days to go' : Math.abs(c.days) + ' days ago';
+      $('cdsub').textContent = c.status === 'upcoming' ? c.weeks + ' weeks ' + c.remainderDays + ' days until ' + ($('name').value || 'the event') + ' (' + date + ')' : '';
+      var o = EP.orderByDate(date, { productionDays: Math.round(num('prod')), deliveryDays: Math.round(num('del')), safetyDays: Math.round(num('saf')), today: today });
+      $('ob').textContent = o.orderBy;
+      $('ob').className = 'big' + (o.late ? ' overdue' : '');
+      $('obsub').textContent = o.workingDays + ' working days before the event. ' + (o.late ? 'That was ' + (-o.daysFromToday) + ' days ago: ask about express production.' : o.daysFromToday + ' days from today.');
+      rows = EP.timeline(date, { today: today });
+      var left = 0;
+      $('tl').innerHTML = '';
+      rows.forEach(function (r) {
+        var id = r.offsetDays + ':' + r.task, done = !!state.done[id];
+        if (!done) left++;
+        var tr = document.createElement('tr');
+        var status = done ? '<span class="ok">done</span>' : r.overdue ? '<span class="overdue">overdue by ' + (-r.daysLeft) + ' d</span>' : r.daysLeft === 0 ? 'due today' : 'in ' + r.daysLeft + ' d';
+        tr.innerHTML = '<td><input type="checkbox"' + (done ? ' checked' : '') + ' aria-label="done"></td><td>' + r.due + '</td><td>' + r.task + ' <span class="muted">(' + r.category + ')</span></td><td>' + status + '</td>';
+        tr.querySelector('input').addEventListener('change', function (e) { if (e.target.checked) state.done[id] = true; else delete state.done[id]; render(); });
+        $('tl').appendChild(tr);
+      });
+      $('tlsum').textContent = (rows.length - left) + ' of ' + rows.length + ' tasks done.';
+    } catch (e) { $('err').textContent = e.message; }
+    try {
+      var g = EP.giveawayQuantity({ attendees: num('att'), days: num('days'), uptake: num('upt') / 100, perPerson: num('pp'), buffer: num('buf') / 100 });
+      $('gq').textContent = g.total + ' items';
+      $('gqsub').textContent = g.base + ' expected + ' + g.buffer + ' buffer';
+    } catch (e) { $('gq').textContent = '–'; $('gqsub').textContent = e.message; }
+  }
+  ids.forEach(function (id) { $(id).addEventListener('input', render); });
+  $('reset').addEventListener('click', function () { state.done = {}; render(); });
+  $('copy').addEventListener('click', function () {
+    var md = '# ' + ($('name').value || 'Event') + ' (' + $('date').value + ')\n\n' + rows.map(function (r) {
+      return '- [' + (state.done[r.offsetDays + ':' + r.task] ? 'x' : ' ') + '] ' + r.due + ' ' + r.task; }).join('\n') + '\n';
+    (navigator.clipboard ? navigator.clipboard.writeText(md) : Promise.reject()).then(function () { $('copy').textContent = 'Copied!'; }, function () { prompt('Copy this:', md); });
+    setTimeout(function () { $('copy').textContent = 'Copy as Markdown checklist'; }, 1500);
+  });
+  render();
+})();
+</script>
+</body>
+</html>

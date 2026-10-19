@@ -1,0 +1,40 @@
+{
+  "name": "gopromotional-packlist",
+  "version": "1.0.0",
+  "description": "Packing checklists with templates, per-night quantities and a Markdown format.",
+  "keywords": [
+    "packing-list",
+    "checklist",
+    "travel",
+    "markdown",
+    "cli"
+  ],
+  "homepage": "https://www.gopromotional.co.uk/branded-products/tote-bags",
+  "bugs": {
+    "url": "https://github.com/nbkdevs/GoPromotional/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkdevs/GoPromotional.git",
+    "directory": "packages/tote-bags/npm"
+  },
+  "license": "MIT",
+  "author": "GoPromotional",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "bin": {
+    "gopromotional-packlist": "bin/cli.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "gopromotional-siplog",
+  "version": "1.0.0",
+  "description": "Daily water goal estimate and a simple hydration log with streaks.",
+  "keywords": [
+    "hydration",
+    "water",
+    "tracker",
+    "health",
+    "cli"
+  ],
+  "homepage": "https://www.gopromotional.co.uk/branded-products/branded-water-bottles",
+  "bugs": {
+    "url": "https://github.com/nbkdevs/GoPromotional/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkdevs/GoPromotional.git",
+    "directory": "packages/water-bottles/npm"
+  },
+  "license": "MIT",
+  "author": "GoPromotional",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "bin": {
+    "gopromotional-siplog": "bin/cli.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

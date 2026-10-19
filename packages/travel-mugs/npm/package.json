@@ -1,0 +1,40 @@
+{
+  "name": "gopromotional-mugday",
+  "version": "1.0.0",
+  "description": "Caffeine tracker with half-life estimate, sleep-ready time and reusable-cup stats.",
+  "keywords": [
+    "caffeine",
+    "coffee",
+    "tracker",
+    "health",
+    "cli"
+  ],
+  "homepage": "https://www.gopromotional.co.uk/branded-products/travel-mugs",
+  "bugs": {
+    "url": "https://github.com/nbkdevs/GoPromotional/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkdevs/GoPromotional.git",
+    "directory": "packages/travel-mugs/npm"
+  },
+  "license": "MIT",
+  "author": "GoPromotional",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "bin": {
+    "gopromotional-mugday": "bin/cli.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

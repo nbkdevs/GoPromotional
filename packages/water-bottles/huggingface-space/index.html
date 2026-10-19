@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoPromotional SipLog: daily water goal and hydration log</title>
+<meta name="description" content="Estimate a daily water goal and log what you drink in ml, cl, litres or fl oz. Progress, 7-day history, average and streak, stored in your browser.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --muted:#5b6475; --line:#e3e6ee; --accent:#1677c9; --accent-soft:#dcecfa; --bad:#c0392b; --ok:#1e8e4e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--accent); color:#fff; padding:22px 16px; }
+  header h1 { margin:0 auto; max-width:960px; font-size:24px; } header p { margin:4px auto 0; max-width:960px; opacity:.9; }
+  main { max-width:960px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .wide { grid-column:1/-1; }
+  h2 { margin:0 0 10px; font-size:17px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:8px 0 2px; }
+  input,select,button,textarea { font:inherit; }
+  input[type=number],input[type=date],input[type=text],input[type=datetime-local],select,textarea { width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:end; } .row > * { flex:1; min-width:90px; }
+  button { padding:7px 12px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button.ghost { background:#fff; color:var(--accent); }
+  button:disabled { opacity:.5; cursor:default; }
+  .big { font-size:30px; font-weight:700; margin:4px 0; } .muted { color:var(--muted); font-size:13px; }
+  .bar { height:12px; background:var(--accent-soft); border-radius:6px; overflow:hidden; } .bar > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  table { width:100%; border-collapse:collapse; font-size:14px; } td,th { padding:6px 4px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .overdue { color:var(--bad); } .ok { color:var(--ok); } .err { color:var(--bad); font-size:13px; min-height:1em; }
+  .chk { display:flex; gap:8px; align-items:center; padding:4px 0; } .chk.done span { text-decoration:line-through; color:var(--muted); }
+  footer { max-width:960px; margin:0 auto; padding:8px 16px 28px; color:var(--muted); font-size:13px; } footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header><h1>💧 SipLog</h1><p>Daily water goal and a simple hydration log. Runs in your browser; your log stays in this browser.</p></header>
+<main>
+  <section class="card">
+    <h2>Today</h2>
+    <div class="big" id="tot">0 ml</div>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="muted" id="sub" style="margin-top:6px"></div>
+    <div class="row" style="margin-top:12px">
+      <button data-ml="250">+250 ml</button><button data-ml="330">+330 ml</button><button data-ml="500">+500 ml</button><button data-ml="750">+750 ml</button>
+    </div>
+    <div class="row">
+      <div><label for="amt">Other amount (250, 50cl, 0.5l, 16oz)</label><input id="amt" type="text" placeholder="e.g. 16oz"></div>
+      <div style="flex:0"><button id="add">Add</button></div>
+    </div>
+    <div class="row" style="margin-top:8px"><button class="ghost" id="undo">Undo last</button></div>
+    <div class="err" id="err"></div>
+  </section>
+  <section class="card">
+    <h2>Daily goal</h2>
+    <div class="row">
+      <div><label for="w">Weight (kg)</label><input id="w" type="number" min="1" max="400" value="70"></div>
+      <div><label for="act">Exercise (min)</label><input id="act" type="number" min="0" value="0"></div>
+    </div>
+    <label class="chk"><input id="hot" type="checkbox"> <span>Hot weather</span></label>
+    <div class="big" id="sugg">–</div>
+    <div class="muted">weight × 33 ml + 12 ml per active minute (+500 ml if hot), to the nearest 50 ml. A general guide, not medical advice.</div>
+    <div class="row" style="margin-top:10px"><button id="use">Use as my goal</button></div>
+    <div class="muted" id="cur" style="margin-top:6px"></div>
+  </section>
+  <section class="card">
+    <h2>Last 7 days</h2>
+    <table><tbody id="week"></tbody></table>
+    <p class="muted" id="stats"></p>
+  </section>
+  <section class="card">
+    <h2>Your data</h2>
+    <p class="muted">The log uses the same JSON format as the gopromotional-siplog CLI (npm, PyPI, crates.io, RubyGems), so you can move it between them.</p>
+    <div class="row"><button class="ghost" id="exp">Download JSON</button><button class="ghost" id="impb">Import JSON</button><input id="imp" type="file" accept="application/json,.json" hidden></div>
+  </section>
+</main>
+<footer>Built by GoPromotional: see <a href="https://www.gopromotional.co.uk/branded-products/branded-water-bottles" rel="noopener">branded water bottles for event marketing</a>. Also available as <code>gopromotional-siplog</code> on npm, PyPI, crates.io and RubyGems, and as the Docker image <code>iamnazzal/gopromotional-siplog</code>. <a href="https://github.com/nbkdevs/GoPromotional" rel="noopener">Source</a> · MIT licence.</footer>
+<script src="lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var S = window.SipLog, KEY = 'gopromotional-siplog';
+  var $ = function (id) { return document.getElementById(id); };
+  var log;
+  try { log = new S.HydrationLog(JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { log = new S.HydrationLog(); }
+  function save() { localStorage.setItem(KEY, JSON.stringify(log)); }
+  function err(m) { $('err').textContent = m || ''; }
+  function render() {
+    var today = S.todayISO(), p = log.progress(today);
+    $('tot').textContent = p.total + ' ml';
+    $('bar').style.width = Math.min(100, p.percent) + '%';
+    $('sub').innerHTML = p.percent + '% of ' + p.goal + ' ml. ' + (p.reached ? '<span class="ok">Goal reached!</span>' : p.remaining + ' ml to go.');
+    $('cur').textContent = 'Current goal: ' + log.goal + ' ml.';
+    $('week').innerHTML = log.week(today).map(function (d) {
+      var pct = Math.min(100, Math.round(d.total * 100 / log.goal));
+      return '<tr><td>' + d.date + '</td><td style="width:45%"><div class="bar"><div style="width:' + pct + '%"></div></div></td><td>' + d.total + ' ml' + (d.total >= log.goal ? ' <span class="ok">✓</span>' : '') + '</td></tr>';
+    }).join('');
+    $('stats').textContent = 'Average ' + log.average(today) + ' ml/day · Streak ' + log.streak(today) + ' day(s)';
+    $('undo').disabled = !log.entries.some(function (e) { return e.date === today; });
+    suggest();
+  }
+  function suggest() {
+    try { $('sugg').textContent = S.dailyGoal({ weightKg: Number($('w').value), activityMinutes: Number($('act').value) || 0, hot: $('hot').checked }) + ' ml'; $('use').disabled = false; }
+    catch (e) { $('sugg').textContent = '–'; $('use').disabled = true; }
+  }
+  function add(v) { try { log.add(v); save(); err(); render(); } catch (e) { err(e.message); } }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ml]'), function (b) { b.addEventListener('click', function () { add(Number(b.dataset.ml)); }); });
+  $('add').addEventListener('click', function () { if ($('amt').value.trim()) { add($('amt').value); $('amt').value = ''; } });
+  $('amt').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('add').click(); });
+  $('undo').addEventListener('click', function () { log.undo(); save(); render(); });
+  ['w', 'act', 'hot'].forEach(function (id) { $(id).addEventListener('input', suggest); });
+  $('use').addEventListener('click', function () { log.goal = S.dailyGoal({ weightKg: Number($('w').value), activityMinutes: Number($('act').value) || 0, hot: $('hot').checked }); save(); render(); });
+  $('exp').addEventListener('click', function () {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(log, null, 2) + '\n'], { type: 'application/json' }));
+    a.download = 'gopromotional-siplog.json'; a.click();
+  });
+  $('impb').addEventListener('click', function () { $('imp').click(); });
+  $('imp').addEventListener('change', function () {
+    var f = $('imp').files[0]; if (!f) return;
+    f.text().then(function (t) { log = new S.HydrationLog(JSON.parse(t)); save(); err(); render(); }).catch(function (e) { err('Import failed: ' + e.message); });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

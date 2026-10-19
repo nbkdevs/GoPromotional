@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gopromotional-event-planner"
+version = "1.0.0"
+description = "Event countdown, planning timeline, giveaway quantities and print order-by dates."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "GoPromotional" }]
+requires-python = ">=3.9"
+keywords = ["event-planning", "countdown", "trade-show", "giveaways", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://www.gopromotional.co.uk/"
+Repository = "https://github.com/nbkdevs/GoPromotional"
+Issues = "https://github.com/nbkdevs/GoPromotional/issues"
+
+[project.scripts]
+gopromotional-event-planner = "gopromotional_event_planner.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

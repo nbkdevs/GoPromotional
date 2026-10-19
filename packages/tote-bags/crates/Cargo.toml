@@ -1,0 +1,23 @@
+[package]
+name = "gopromotional-packlist"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Packing checklists with work-day, travel, trade-show and gym templates, per-night quantities and a round-trip Markdown checklist format. Library + CLI."
+license = "MIT"
+authors = ["GoPromotional"]
+readme = "README.md"
+homepage = "https://www.gopromotional.co.uk/branded-products/tote-bags"
+documentation = "https://docs.rs/gopromotional-packlist"
+repository = "https://github.com/nbkdevs/GoPromotional"
+keywords = ["packing-list", "checklist", "travel", "markdown", "cli"]
+categories = ["command-line-utilities"]
+include = ["src/**/*", "tests/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[[bin]]
+name = "gopromotional-packlist"
+path = "src/bin/gopromotional-packlist.rs"

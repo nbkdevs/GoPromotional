@@ -1,0 +1,40 @@
+{
+  "name": "gopromotional-event-planner",
+  "version": "1.0.0",
+  "description": "Event countdown, planning timeline, giveaway quantities and print order-by dates.",
+  "keywords": [
+    "event-planning",
+    "countdown",
+    "trade-show",
+    "giveaways",
+    "cli"
+  ],
+  "homepage": "https://www.gopromotional.co.uk/",
+  "bugs": {
+    "url": "https://github.com/nbkdevs/GoPromotional/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbkdevs/GoPromotional.git",
+    "directory": "packages/homepage/npm"
+  },
+  "license": "MIT",
+  "author": "GoPromotional",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "bin": {
+    "gopromotional-event-planner": "bin/cli.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

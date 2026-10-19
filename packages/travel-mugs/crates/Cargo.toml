@@ -1,0 +1,23 @@
+[package]
+name = "gopromotional-mugday"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Caffeine and coffee tracker: typical caffeine per drink, daily totals against a limit, half-life estimate of caffeine in your system, sleep-ready time and reusable-cup stats. Library + CLI."
+license = "MIT"
+authors = ["GoPromotional"]
+readme = "README.md"
+homepage = "https://www.gopromotional.co.uk/branded-products/travel-mugs"
+documentation = "https://docs.rs/gopromotional-mugday"
+repository = "https://github.com/nbkdevs/GoPromotional"
+keywords = ["caffeine", "coffee", "tracker", "health", "cli"]
+categories = ["command-line-utilities"]
+include = ["src/**/*", "tests/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[[bin]]
+name = "gopromotional-mugday"
+path = "src/bin/gopromotional-mugday.rs"

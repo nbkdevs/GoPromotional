@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoPromotional PackList: packing checklists with templates</title>
+<meta name="description" content="Build a packing checklist from work-day, travel, trade-show and gym templates, scale clothes to the number of nights, tick items off and export Markdown.">
+<style>
+  :root { --bg:#f6f7fb; --card:#fff; --ink:#1d2433; --muted:#5b6475; --line:#e3e6ee; --accent:#b5532a; --accent-soft:#f8e6dc; --bad:#c0392b; --ok:#1e8e4e; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--accent); color:#fff; padding:22px 16px; }
+  header h1 { margin:0 auto; max-width:960px; font-size:24px; } header p { margin:4px auto 0; max-width:960px; opacity:.9; }
+  main { max-width:960px; margin:0 auto; padding:16px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .wide { grid-column:1/-1; }
+  h2 { margin:0 0 10px; font-size:17px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:8px 0 2px; }
+  input,select,button,textarea { font:inherit; }
+  input[type=number],input[type=date],input[type=text],input[type=datetime-local],select,textarea { width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:end; } .row > * { flex:1; min-width:90px; }
+  button { padding:7px 12px; border-radius:8px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+  button.ghost { background:#fff; color:var(--accent); }
+  button:disabled { opacity:.5; cursor:default; }
+  .big { font-size:30px; font-weight:700; margin:4px 0; } .muted { color:var(--muted); font-size:13px; }
+  .bar { height:12px; background:var(--accent-soft); border-radius:6px; overflow:hidden; } .bar > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  table { width:100%; border-collapse:collapse; font-size:14px; } td,th { padding:6px 4px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .overdue { color:var(--bad); } .ok { color:var(--ok); } .err { color:var(--bad); font-size:13px; min-height:1em; }
+  .chk { display:flex; gap:8px; align-items:center; padding:4px 0; } .chk.done span { text-decoration:line-through; color:var(--muted); }
+  footer { max-width:960px; margin:0 auto; padding:8px 16px 28px; color:var(--muted); font-size:13px; } footer a { color:var(--accent); }
+  .cat { margin-top:12px; font-weight:600; } .qty { color:var(--muted); }
+</style>
+</head>
+<body>
+<header><h1>👜 PackList</h1><p>Packing checklists from templates, with per-night quantities and Markdown export. Runs in your browser.</p></header>
+<main>
+  <section class="card">
+    <h2>New list</h2>
+    <label for="title">Title</label><input id="title" type="text" value="Packing list">
+    <label>Templates</label>
+    <div id="tpls"></div>
+    <label for="nights">Nights away</label><input id="nights" type="number" min="0" max="365" step="1" value="0">
+    <label for="extras">Extra items (one per line)</label><textarea id="extras" rows="3" placeholder="Umbrella"></textarea>
+    <div class="row" style="margin-top:10px"><button id="build">Build list</button></div>
+    <p class="muted">Building replaces the current list.</p>
+    <div class="err" id="err"></div>
+  </section>
+  <section class="card">
+    <h2 id="lt">Checklist</h2>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="muted" id="prog" style="margin:6px 0"></div>
+    <div class="row">
+      <div><label for="q">Filter</label><input id="q" type="text" placeholder="e.g. charger"></div>
+      <div style="flex:0"><label class="chk"><input id="hide" type="checkbox"> <span>Hide packed</span></label></div>
+    </div>
+    <div id="list"></div>
+    <div class="row" style="margin-top:10px">
+      <div><label for="newi">Add an item</label><input id="newi" type="text" placeholder="e.g. Sunglasses"></div>
+      <div style="flex:0"><button id="addi">Add</button></div>
+    </div>
+  </section>
+  <section class="card wide">
+    <h2>Markdown</h2>
+    <p class="muted">The same format as the gopromotional-packlist CLI. Paste a checklist here and import it, or copy/download the current one.</p>
+    <textarea id="md" rows="8" spellcheck="false"></textarea>
+    <div class="row" style="margin-top:8px"><button class="ghost" id="copy">Copy</button><button class="ghost" id="dl">Download .md</button><button class="ghost" id="imp">Import from text</button></div>
+  </section>
+</main>
+<footer>Built by GoPromotional: see <a href="https://www.gopromotional.co.uk/branded-products/tote-bags" rel="noopener">GoPromotional</a>. Also available as <code>gopromotional-packlist</code> on npm, PyPI, crates.io and RubyGems, and as the Docker image <code>iamnazzal/gopromotional-packlist</code>. <a href="https://github.com/nbkdevs/GoPromotional" rel="noopener">Source</a> · MIT licence.</footer>
+<script src="lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var P = window.PackList, KEY = 'gopromotional-packlist';
+  var $ = function (id) { return document.getElementById(id); };
+  var st;
+  try { st = JSON.parse(localStorage.getItem(KEY)); } catch (e) { st = null; }
+  if (!st || !Array.isArray(st.items)) st = { title: 'Weekend away', items: P.buildList({ templates: ['travel'], nights: 2 }) };
+  Object.keys(P.TEMPLATES).forEach(function (t) {
+    var l = document.createElement('label'); l.className = 'chk';
+    l.innerHTML = '<input type="checkbox" value="' + t + '"' + (t === 'travel' ? ' checked' : '') + '> <span>' + t + ' (' + P.TEMPLATES[t].length + ' items)</span>';
+    $('tpls').appendChild(l);
+  });
+  function save() { localStorage.setItem(KEY, JSON.stringify(st)); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function render() {
+    save();
+    $('lt').textContent = st.title;
+    var p = P.progress(st.items);
+    $('bar').style.width = p.percent + '%';
+    $('prog').textContent = p.packed + '/' + p.total + ' packed (' + p.percent + '%)' + (p.total && p.packed === p.total ? ' – all packed!' : '');
+    var shown = $('q').value.trim() ? P.filterItems(st.items, $('q').value) : st.items;
+    if ($('hide').checked) shown = shown.filter(function (i) { return !i.packed; });
+    var html = '';
+    P.categories(shown).forEach(function (c) {
+      html += '<div class="cat">' + esc(c) + '</div>';
+      shown.forEach(function (i) {
+        if (i.category !== c) return;
+        var idx = st.items.indexOf(i);
+        html += '<label class="chk' + (i.packed ? ' done' : '') + '"><input type="checkbox" data-i="' + idx + '"' + (i.packed ? ' checked' : '') + '> <span>' +
+          (i.qty > 1 ? '<span class="qty">' + i.qty + ' × </span>' : '') + esc(i.name) + '</span></label>';
+      });
+    });
+    $('list').innerHTML = html || '<p class="muted">Nothing to show.</p>';
+    $('md').value = P.toMarkdown(st.items, st.title);
+  }
+  $('list').addEventListener('change', function (e) { var i = e.target.dataset.i; if (i !== undefined) { st.items[i].packed = e.target.checked; render(); } });
+  $('build').addEventListener('click', function () {
+    var t = Array.prototype.map.call(document.querySelectorAll('#tpls input:checked'), function (x) { return x.value; });
+    try {
+      if (!t.length) throw new Error('Pick at least one template.');
+      st = { title: $('title').value.trim() || 'Packing list', items: P.buildList({ templates: t, nights: Number($('nights').value), extras: $('extras').value.split('\n').filter(function (s) { return s.trim(); }) }) };
+      $('err').textContent = ''; render();
+    } catch (e) { $('err').textContent = e.message; }
+  });
+  $('addi').addEventListener('click', function () {
+    var n = $('newi').value.trim(); if (!n) return;
+    if (st.items.some(function (i) { return i.name.toLowerCase() === n.toLowerCase(); })) { $('err').textContent = '"' + n + '" is already on the list'; return; }
+    st.items.push({ name: n, category: 'Extras', qty: 1, packed: false }); $('newi').value = ''; $('err').textContent = ''; render();
+  });
+  $('newi').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('addi').click(); });
+  ['q', 'hide'].forEach(function (id) { $(id).addEventListener('input', render); });
+  $('copy').addEventListener('click', function () { (navigator.clipboard ? navigator.clipboard.writeText($('md').value) : Promise.reject()).then(function () { $('copy').textContent = 'Copied!'; setTimeout(function () { $('copy').textContent = 'Copy'; }, 1500); }, function () { $('md').select(); }); });
+  $('dl').addEventListener('click', function () {
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([$('md').value], { type: 'text/markdown' }));
+    a.download = (st.title.replace(/[^\w-]+/g, '-').toLowerCase() || 'packing-list') + '.md'; a.click();
+  });
+  $('imp').addEventListener('click', function () {
+    var r = P.parseMarkdown($('md').value);
+    if (!r.items.length) { $('err').textContent = 'No "- [ ] item" lines found.'; return; }
+    st = { title: r.title, items: r.items }; $('err').textContent = ''; render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
