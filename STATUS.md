@@ -108,3 +108,14 @@ Submitted manually by the user from the `directory-kits/<page>/` copy. Link type
 | water-bottles | Product Hunt | https://www.producthunt.com/products/gopromotional-water-bottles | Pending Review: scheduled launch 2026-10-21 12:01 PM PKT |
 | tote-bags | Product Hunt | https://www.producthunt.com/products/gopromotional-tote-bags | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
 | travel-mugs | Product Hunt | https://www.producthunt.com/products/gopromotional-travel-mugs | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
+
+### Directory listings (Indie Hackers)
+
+Created manually by the user under the Indie Hackers account `nbkshing`, from the `directory-kits/<page>/` copy. Link type Nofollow (IH DA 61 / DR 81). Verified 2026-10-20 19:0x PKT: each page returns HTTP 200 and its Website link points to the target page with rel="nofollow noopener".
+
+| Page | Directory | Item URL | Status |
+|---|---|---|---|
+| homepage | Indie Hackers | https://www.indiehackers.com/product/gopromotional | Live |
+| water-bottles | Indie Hackers | https://www.indiehackers.com/product/gopromotional-water-bottles | Live |
+| tote-bags | Indie Hackers | https://www.indiehackers.com/product/gopromotional-tote-bags | Live |
+| travel-mugs | Indie Hackers | https://www.indiehackers.com/product/gopromotional-travel-mugs | Live |
