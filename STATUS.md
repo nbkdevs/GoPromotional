@@ -97,3 +97,14 @@ Built and tested, waiting on an account or token:
 | travel-mugs | pub.dev | `gopromotional_mugday` | `packages/travel-mugs/dart/` | Live: https://pub.dev/packages/gopromotional_mugday (1.0.1, uploader nbkdevs@gmail.com; README exact anchor rendered with rel="ugc" (nofollow-class); page currently has meta robots noindex, as pub.dev does for new packages; verified 2026-10-20) |
 | travel-mugs | Smithery | `nbkdevs/gopromotional-mugday` | `skills/gopromotional-mugday/` | Live: https://smithery.ai/skills/nbkdevs/gopromotional-mugday (HTTP 200; exact anchor rendered as a plain <a> with no rel, i.e. dofollow; verified 2026-10-20) |
 | travel-mugs | ClawHub | `nbkdevs/gopromotional-mugday` | `skills/gopromotional-mugday/` | Live: https://clawhub.ai/nbkdevs/skills/gopromotional-mugday (1.0.1, owner nbkdevs; cleared moderation, scanner.vt.clean; exact anchor rendered as a plain <a> with no rel, i.e. dofollow; ClawHub relicenses skills as MIT-0; verified 2026-10-20 15:2x PKT) |
+
+### Directory listings (Product Hunt)
+
+Submitted manually by the user from the `directory-kits/<page>/` copy. Link type Nofollow (PH DA 95 / DR 91). Sheet status "Pending Review" until each launch goes live.
+
+| Page | Directory | Item URL | Status |
+|---|---|---|---|
+| homepage | Product Hunt | https://www.producthunt.com/products/gopromotional-2 | Pending Review: scheduled launch 2026-10-21 12:01 PM PKT |
+| water-bottles | Product Hunt | https://www.producthunt.com/products/gopromotional-water-bottles | Pending Review: scheduled launch 2026-10-21 12:01 PM PKT |
+| tote-bags | Product Hunt | https://www.producthunt.com/products/gopromotional-tote-bags | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
+| travel-mugs | Product Hunt | https://www.producthunt.com/products/gopromotional-travel-mugs | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
