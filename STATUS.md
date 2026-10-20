@@ -69,19 +69,19 @@ Built and tested, waiting on an account or token:
 
 | Page | Platform | Name | Source | Status |
 |---|---|---|---|---|
-| homepage | Packagist | `gopromotional/event-planner` | `packages/homepage/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| homepage | Packagist | `gopromotional/event-planner` | split repo https://github.com/nbkdevs/gopromotional-event-planner-php (from `packages/homepage/php/`) | Live: https://packagist.org/packages/gopromotional/event-planner (v1.0.1, homepage = page URL, README exact anchor verified 2026-10-20) |
 | homepage | NuGet | `GoPromotional.EventPlanner` | `packages/homepage/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
 | homepage | pub.dev | `gopromotional_event_planner` | `packages/homepage/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
 | homepage | Smithery / ClawHub | `gopromotional-event-planner` | `skills/gopromotional-event-planner/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
-| water-bottles | Packagist | `gopromotional/siplog` | `packages/water-bottles/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| water-bottles | Packagist | `gopromotional/siplog` | split repo https://github.com/nbkdevs/gopromotional-siplog-php (from `packages/water-bottles/php/`) | Live: https://packagist.org/packages/gopromotional/siplog (v1.0.1, homepage = page URL, README exact anchor verified 2026-10-20) |
 | water-bottles | NuGet | `GoPromotional.SipLog` | `packages/water-bottles/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
 | water-bottles | pub.dev | `gopromotional_siplog` | `packages/water-bottles/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
 | water-bottles | Smithery / ClawHub | `gopromotional-siplog` | `skills/gopromotional-siplog/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
-| tote-bags | Packagist | `gopromotional/packlist` | `packages/tote-bags/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| tote-bags | Packagist | `gopromotional/packlist` | split repo https://github.com/nbkdevs/gopromotional-packlist-php (from `packages/tote-bags/php/`) | Live: https://packagist.org/packages/gopromotional/packlist (v1.0.1, homepage = page URL, README exact anchor verified 2026-10-20) |
 | tote-bags | NuGet | `GoPromotional.PackList` | `packages/tote-bags/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
 | tote-bags | pub.dev | `gopromotional_packlist` | `packages/tote-bags/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
 | tote-bags | Smithery / ClawHub | `gopromotional-packlist` | `skills/gopromotional-packlist/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
-| travel-mugs | Packagist | `gopromotional/mugday` | `packages/travel-mugs/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| travel-mugs | Packagist | `gopromotional/mugday` | split repo https://github.com/nbkdevs/gopromotional-mugday-php (from `packages/travel-mugs/php/`) | Live: https://packagist.org/packages/gopromotional/mugday (v1.0.1, homepage = page URL, README exact anchor verified 2026-10-20) |
 | travel-mugs | NuGet | `GoPromotional.MugDay` | `packages/travel-mugs/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
 | travel-mugs | pub.dev | `gopromotional_mugday` | `packages/travel-mugs/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
 | travel-mugs | Smithery / ClawHub | `gopromotional-mugday` | `skills/gopromotional-mugday/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
