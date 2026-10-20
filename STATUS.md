@@ -42,3 +42,46 @@ Verified on 2026-10-19 after republishing:
 | 22 | travel-mugs | RubyGems | `gopromotional-mugday` | `packages/travel-mugs/rubygems/` | Live: https://rubygems.org/gems/gopromotional-mugday (1.0.1, exact anchor verified 2026-10-19) |
 | 23 | travel-mugs | Docker Hub | `iamnazzal/gopromotional-mugday` | `packages/travel-mugs/docker/` | Live: https://hub.docker.com/r/iamnazzal/gopromotional-mugday (tags 1.0.1 + latest, overview updated, exact anchor verified 2026-10-19) |
 | 24 | travel-mugs | Hugging Face Space | `iamnazzal/gopromotional-mugday` | `packages/travel-mugs/huggingface-space/` | Live: https://huggingface.co/spaces/iamnazzal/gopromotional-mugday (static, RUNNING, 1.0.1 files, exact anchor verified 2026-10-19) |
+
+
+## Phase 2 (2026-10-20): GitHub, Socket.dev, agent skills; PHP, .NET and Dart ports
+
+Repo pushed to https://github.com/nbkdevs/GoPromotional (main and registry-packages in sync), description, homepage
+(https://www.gopromotional.co.uk) and topics set; the `tree/main/packages/...` source links from all 24
+published packages now resolve (HTTP 200).
+
+| Page | Platform | Name | Source | Status |
+|---|---|---|---|---|
+| homepage | GitHub | `nbkdevs/GoPromotional` | repo root / `homepage/` | Live: https://github.com/nbkdevs/GoPromotional (public; README Links use the exact anchor; verified 2026-10-20) |
+| homepage | Socket.dev | `gopromotional-event-planner` (npm) | auto-indexed from npm | Live: https://socket.dev/npm/package/gopromotional-event-planner (README shown with the exact anchor; verified 2026-10-20) |
+| homepage | GitHub (agent skill) | `skills/gopromotional-event-planner/SKILL.md` | `skills/gopromotional-event-planner/` | Live in repo: https://github.com/nbkdevs/GoPromotional/tree/main/skills/gopromotional-event-planner (installable with `npx skills add https://github.com/nbkdevs/GoPromotional --skill gopromotional-event-planner`) |
+| water-bottles | GitHub | `nbkdevs/GoPromotional` | repo root / `water-bottles/` | Live: https://github.com/nbkdevs/GoPromotional/tree/main/water-bottles (public; README Links use the exact anchor; verified 2026-10-20) |
+| water-bottles | Socket.dev | `gopromotional-siplog` (npm) | auto-indexed from npm | Live: https://socket.dev/npm/package/gopromotional-siplog (README shown with the exact anchor; verified 2026-10-20) |
+| water-bottles | GitHub (agent skill) | `skills/gopromotional-siplog/SKILL.md` | `skills/gopromotional-siplog/` | Live in repo: https://github.com/nbkdevs/GoPromotional/tree/main/skills/gopromotional-siplog (installable with `npx skills add https://github.com/nbkdevs/GoPromotional --skill gopromotional-siplog`) |
+| tote-bags | GitHub | `nbkdevs/GoPromotional` | repo root / `tote-bags/` | Live: https://github.com/nbkdevs/GoPromotional/tree/main/tote-bags (public; README Links use the exact anchor; verified 2026-10-20) |
+| tote-bags | Socket.dev | `gopromotional-packlist` (npm) | auto-indexed from npm | Live: https://socket.dev/npm/package/gopromotional-packlist (README shown with the exact anchor; verified 2026-10-20) |
+| tote-bags | GitHub (agent skill) | `skills/gopromotional-packlist/SKILL.md` | `skills/gopromotional-packlist/` | Live in repo: https://github.com/nbkdevs/GoPromotional/tree/main/skills/gopromotional-packlist (installable with `npx skills add https://github.com/nbkdevs/GoPromotional --skill gopromotional-packlist`) |
+| travel-mugs | GitHub | `nbkdevs/GoPromotional` | repo root / `travel-mugs/` | Live: https://github.com/nbkdevs/GoPromotional/tree/main/travel-mugs (public; README Links use the exact anchor; verified 2026-10-20) |
+| travel-mugs | Socket.dev | `gopromotional-mugday` (npm) | auto-indexed from npm | Live: https://socket.dev/npm/package/gopromotional-mugday (README shown with the exact anchor; verified 2026-10-20) |
+| travel-mugs | GitHub (agent skill) | `skills/gopromotional-mugday/SKILL.md` | `skills/gopromotional-mugday/` | Live in repo: https://github.com/nbkdevs/GoPromotional/tree/main/skills/gopromotional-mugday (installable with `npx skills add https://github.com/nbkdevs/GoPromotional --skill gopromotional-mugday`) |
+
+Built and tested, waiting on an account or token:
+
+| Page | Platform | Name | Source | Status |
+|---|---|---|---|---|
+| homepage | Packagist | `gopromotional/event-planner` | `packages/homepage/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| homepage | NuGet | `GoPromotional.EventPlanner` | `packages/homepage/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
+| homepage | pub.dev | `gopromotional_event_planner` | `packages/homepage/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
+| homepage | Smithery / ClawHub | `gopromotional-event-planner` | `skills/gopromotional-event-planner/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
+| water-bottles | Packagist | `gopromotional/siplog` | `packages/water-bottles/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| water-bottles | NuGet | `GoPromotional.SipLog` | `packages/water-bottles/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
+| water-bottles | pub.dev | `gopromotional_siplog` | `packages/water-bottles/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
+| water-bottles | Smithery / ClawHub | `gopromotional-siplog` | `skills/gopromotional-siplog/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
+| tote-bags | Packagist | `gopromotional/packlist` | `packages/tote-bags/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| tote-bags | NuGet | `GoPromotional.PackList` | `packages/tote-bags/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
+| tote-bags | pub.dev | `gopromotional_packlist` | `packages/tote-bags/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
+| tote-bags | Smithery / ClawHub | `gopromotional-packlist` | `skills/gopromotional-packlist/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |
+| travel-mugs | Packagist | `gopromotional/mugday` | `packages/travel-mugs/php/` | Built, 1.0.1, PHPUnit green, `composer validate --strict` OK. Needs Packagist account + a split repo with composer.json at root |
+| travel-mugs | NuGet | `GoPromotional.MugDay` | `packages/travel-mugs/nuget/` | Built, 1.0.1, xunit green, nupkg packed (netstandard2.0 + net8.0, README + MIT). Needs NUGET_API_KEY |
+| travel-mugs | pub.dev | `gopromotional_mugday` | `packages/travel-mugs/dart/` | Built, 1.0.1, `dart analyze` clean, tests green, `dart pub publish --dry-run` 0 warnings. Needs Google sign-in on pub.dev |
+| travel-mugs | Smithery / ClawHub | `gopromotional-mugday` | `skills/gopromotional-mugday/` | SKILL.md in repo. Needs Smithery API key / ClawHub clh_ token (both GitHub OAuth) |

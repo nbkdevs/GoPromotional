@@ -1,0 +1,19 @@
+name: gopromotional_siplog
+description: Daily water goal estimate and a simple hydration log with streaks.
+version: 1.0.1
+homepage: https://www.gopromotional.co.uk/branded-products/branded-water-bottles
+repository: https://github.com/nbkdevs/GoPromotional/tree/main/packages/water-bottles/dart
+issue_tracker: https://github.com/nbkdevs/GoPromotional/issues
+topics:
+  - health
+  - hydration
+  - tracker
+  - utility
+  - json
+
+environment:
+  sdk: ^3.3.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

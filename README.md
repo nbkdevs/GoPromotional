@@ -18,6 +18,12 @@ Each folder includes an Android app, Firefox extension, Edge extension, and Chro
 3. **Tote bags** — BagPack · Pack Quick · Canvas Trail
 4. **Travel mugs** — MugDay · Mug Tap · Ember Steam
 
+## Developer packages and agent skills
+
+- [`packages/`](packages/) holds four small open-source tools (event planner, SipLog, PackList, MugDay) published to npm, PyPI, crates.io, RubyGems, Docker Hub and Hugging Face Spaces, with PHP, .NET and Dart library ports.
+- [`skills/`](skills/) holds an Agent Skills `SKILL.md` for each tool so AI agents can run them.
+- Release status: [`STATUS.md`](STATUS.md).
+
 ## Link guidance
 
 - Use the preferred anchors above on GitHub READMEs and similar docs when a contextual link is appropriate.

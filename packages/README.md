@@ -72,6 +72,31 @@ python3 packages/tools/hf_smoke.py                           # headless Chrome t
 packages/tools/parity.sh                                     # same CLI output from all 4 languages
 ```
 
+## Phase 2: PHP, .NET, Dart and agent skills
+
+Library ports with the same behaviour and the same JSON file formats as the CLI packages (tested
+against the same fixtures), plus an Agent Skills `SKILL.md` per tool at the repo root in `skills/`.
+Every README uses the page's exact anchor in its **Links** section; `homepage`, `PackageProjectUrl`
+and pubspec `homepage` keep the plain page URL.
+
+| Page | Packagist (`php/`) | NuGet (`nuget/`) | pub.dev (`dart/`) | Agent skill | Page link |
+|---|---|---|---|---|---|
+| homepage | `gopromotional/event-planner` | `GoPromotional.EventPlanner` | `gopromotional_event_planner` | [`skills/gopromotional-event-planner`](../skills/gopromotional-event-planner/SKILL.md) | [branded merchandise](https://www.gopromotional.co.uk/) |
+| water-bottles | `gopromotional/siplog` | `GoPromotional.SipLog` | `gopromotional_siplog` | [`skills/gopromotional-siplog`](../skills/gopromotional-siplog/SKILL.md) | [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles) |
+| tote-bags | `gopromotional/packlist` | `GoPromotional.PackList` | `gopromotional_packlist` | [`skills/gopromotional-packlist`](../skills/gopromotional-packlist/SKILL.md) | [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags) |
+| travel-mugs | `gopromotional/mugday` | `GoPromotional.MugDay` | `gopromotional_mugday` | [`skills/gopromotional-mugday`](../skills/gopromotional-mugday/SKILL.md) | [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs) |
+
+```sh
+(cd packages/<page>/php && composer install && vendor/bin/phpunit && composer validate --strict)
+(cd packages/<page>/nuget && dotnet test tests && dotnet pack src -c Release -o out)   # netstandard2.0 + net8.0
+(cd packages/<page>/dart && dart pub get && dart analyze && dart test && dart pub publish --dry-run)
+```
+
+Publishing (not done yet, needs accounts): Packagist reads `composer.json` from a repository root,
+so each `php/` folder is published from its own split repo (`git subtree split --prefix packages/<page>/php`).
+NuGet: `dotnet nuget push out/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json`.
+pub.dev: `dart pub publish` (Google sign-in). Skills: `clawhub skill publish skills/<slug>` and the Smithery skills API.
+
 ## Publish commands
 
 All 24 are published (see `STATUS.md`). Credentials needed for a release:

@@ -1,0 +1,19 @@
+name: gopromotional_mugday
+description: Caffeine tracker with half-life estimate, sleep-ready time and reusable-cup stats.
+version: 1.0.1
+homepage: https://www.gopromotional.co.uk/branded-products/travel-mugs
+repository: https://github.com/nbkdevs/GoPromotional/tree/main/packages/travel-mugs/dart
+issue_tracker: https://github.com/nbkdevs/GoPromotional/issues
+topics:
+  - health
+  - caffeine
+  - tracker
+  - coffee
+  - utility
+
+environment:
+  sdk: ^3.3.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

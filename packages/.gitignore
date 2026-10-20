@@ -11,3 +11,14 @@ node_modules/
 *.gem
 .bundle/
 Gemfile.lock
+# PHP / .NET / Dart
+vendor/
+composer.lock
+.phpunit.cache/
+.phpunit.result.cache
+bin/
+obj/
+*.nupkg
+*.snupkg
+.dart_tool/
+pubspec.lock

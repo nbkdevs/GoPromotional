@@ -1,0 +1,19 @@
+name: gopromotional_packlist
+description: Packing checklists with templates, per-night quantities and a Markdown format.
+version: 1.0.1
+homepage: https://www.gopromotional.co.uk/branded-products/tote-bags
+repository: https://github.com/nbkdevs/GoPromotional/tree/main/packages/tote-bags/dart
+issue_tracker: https://github.com/nbkdevs/GoPromotional/issues
+topics:
+  - checklist
+  - packing
+  - markdown
+  - travel
+  - utility
+
+environment:
+  sdk: ^3.3.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0

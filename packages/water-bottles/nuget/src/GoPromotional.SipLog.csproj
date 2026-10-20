@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>GoPromotional</RootNamespace>
+    <PackageId>GoPromotional.SipLog</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>GoPromotional</Authors>
+    <Company>GoPromotional</Company>
+    <Description>Daily water goal estimate and a simple hydration log with streaks.</Description>
+    <PackageTags>hydration water tracker health gopromotional</PackageTags>
+    <PackageProjectUrl>https://www.gopromotional.co.uk/branded-products/branded-water-bottles</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nbkdevs/GoPromotional</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
