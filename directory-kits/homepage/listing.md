@@ -55,8 +55,11 @@ Other features include free samples on most items, a price match promise on like
 | Field | Value |
 |---|---|
 | Product name | GoPromotional (13 characters) |
-| Tagline | UK promotional products, printed with your logo and managed by a real account manager (85 characters) |
+| Tagline (use this; limit 60) | 50,000+ UK promotional products, printed with your logo (55 / 60) |
+| Old tagline (too long, do not use) | UK promotional products, printed with your logo and managed by a real account manager (85 characters) |
 | URL | https://www.gopromotional.co.uk/ |
+| Account username (suggestion) | nbkdevs (7 / 20); one account for all 4 products |
+| Logo | `thumb-240.png` (square, at least 200x200) |
 
 ### Description (129 words; target 100-200)
 
@@ -64,5 +67,41 @@ GoPromotional is a UK business supplying promotional products to schools, charit
 
 The model is deliberately not DIY: each customer gets a dedicated account manager, and an in-house artwork team checks every logo and emails a PDF proof before production. Free samples on most items, a price match promise and express 48 or 72-hour delivery on selected lines from the London warehouse help buyers order with confidence. If you need branded merchandise for an event, a staff welcome pack or client gifts, the site makes it easy to compare options and request a quote.
 
+## Automatool (https://automatool.app/submit)
+
+| Field | Value | Limit |
+|---|---|---|
+| Tool Name | GoPromotional | 13 / 128 |
+| Category | Advertising & Paid Media (alt: Marketing Automation) | one of the 83 options |
+| Short Description | see below | 179 / 280 |
+| Website URL | https://www.gopromotional.co.uk/ | (URL field) |
+| Logo | `thumb-240.png` (square PNG, under 2 MB) | optional |
+
+### Short Description (179 / 280 characters)
+
+UK supplier of 50,000+ promotional products printed with your logo, with a dedicated account manager, free PDF artwork proofs and express 48 or 72-hour delivery on selected items.
+
+### Full Description (Markdown, 223 words; target 150-250)
+
+GoPromotional is a UK promotional products supplier, founded in 2010 by Gareth Parkin and based near Sheffield, with offices in London and Dublin. Its catalogue covers more than 50,000 items that can be printed, engraved, embossed or embroidered with a company logo: pens, notebooks, bags, mugs, water bottles, clothing, tech and event giveaways.
+
+## How ordering works
+
+GoPromotional is not a DIY ordering tool. Every enquiry goes to a dedicated account manager who compares products, quantities, branding methods, prices and deadlines with you:
+
+1. **Choose**: explain what the campaign needs to achieve and get recommendations.
+2. **Artwork**: the in-house studio checks your logo and emails a PDF proof.
+3. **Approve**: nothing is printed until you sign off the final layout.
+4. **Deliver**: most items are branded within 5-7 working days, with 48 or 72-hour express options from the London warehouse.
+
+## Why teams use it
+
+- More than 3,500 eco-friendly lines and a range of UK-made products
+- A price match if you find the same product cheaper elsewhere
+- Rated 4.8 from 5,000+ verified reviews on Reviews.co.uk
+- Buyers include schools, universities, charities, sports clubs, NHS teams, local authorities and agencies
+
+The homepage also summarises the research behind promotional items, including the ASI Global Ad Impressions Study and the mere-exposure effect, so marketers can see why useful [branded merchandise](https://www.gopromotional.co.uk/) keeps a logo in view long after an event.
+
 ---
-Anchor check: the exact phrase "branded merchandise" appears once each in the Product Hunt first comment, the Design Nominees description and the Indie Hackers description, and once in the Product Hunt description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/; otherwise leave it as plain text and put the URL in the URL field.
+Anchor check: the exact phrase "branded merchandise" appears once each in the Product Hunt first comment, the Design Nominees description, the Indie Hackers description and (as the only Markdown link) the Automatool full description, and once in the Product Hunt description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/; otherwise leave it as plain text and put the URL in the URL field.

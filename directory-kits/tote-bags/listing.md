@@ -55,8 +55,11 @@ An FAQ covers minimum orders, turnaround, proofs, samples and set-up charges. It
 | Field | Value |
 |---|---|
 | Product name | GoPromotional Tote Bags (23 characters) |
-| Tagline | Logo-printed cotton, canvas, jute and non-woven tote bags, with an honest buying guide (86 characters) |
+| Tagline (use this; limit 60) | Logo-printed cotton, canvas, jute and non-woven tote bags (57 / 60) |
+| Old tagline (too long, do not use) | Logo-printed cotton, canvas, jute and non-woven tote bags, with an honest buying guide (86 characters) |
 | URL | https://www.gopromotional.co.uk/branded-products/tote-bags |
+| Account username (suggestion) | nbkdevs (7 / 20); one account for all 4 products |
+| Logo | `thumb-240.png` (square, at least 200x200) |
 
 ### Description (122 words; target 100-200)
 
@@ -64,5 +67,44 @@ This GoPromotional page brings together a large range of reusable tote bags that
 
 What sets it apart is the guide. It explains what 5oz, 7oz and 10oz fabric weights mean, which printing method suits your artwork, and why dye-sublimation doesn't bond to cotton, and it is candid that a cotton tote only pays off environmentally when it is reused. Most bags start at 50 units, with a free proof and samples on most items. Ideal if you're ordering branded tote bags for event marketing, conferences or retail.
 
+## Automatool (https://automatool.app/submit)
+
+| Field | Value | Limit |
+|---|---|---|
+| Tool Name | GoPromotional Tote Bags | 23 / 128 |
+| Category | Events & Webinars (alt: E-commerce) | one of the 83 options |
+| Short Description | see below | 190 / 280 |
+| Website URL | https://www.gopromotional.co.uk/branded-products/tote-bags | (URL field) |
+| Logo | `thumb-240.png` (square PNG, under 2 MB) | optional |
+
+### Short Description (190 / 280 characters)
+
+Logo-printed cotton, non-woven, canvas, jute and foldable tote bags from 50 units, with a clear guide to fabric weights, print methods and when a cotton tote is genuinely the greener choice.
+
+### Full Description (Markdown, 227 words; target 150-250)
+
+GoPromotional's tote bag page covers thousands of UK printed bags and explains how to choose between them, not just what they cost.
+
+## Materials at a glance
+
+- **Cotton**: the default; soft, prints cleanly, widest colour choice
+- **Non-woven**: the lowest cost per bag and the largest order volumes
+- **Canvas**: a heavier, close-woven fabric for retail and premium gifts
+- **Jute**: natural texture, picked when the bag is part of the gift
+
+## Fabric weight explained
+
+The ounce figure is the fabric weight per square yard. The range runs from 3oz to 27oz, with 5oz the most common, and at 10oz and above a bag stands up on its own.
+
+## Printing
+
+Screen printing handles most runs. UltraHD transfer and digital printing cover photographic designs, and the page notes that dye-sublimation does not bond to cotton. Both sides can usually be printed.
+
+## Order patterns and eco claims
+
+Average runs are around 400 bags, rising to 700 for non-woven, and more than 400,000 of the 5oz long-handled natural cotton shopper have been printed. The page cites the Danish EPA finding that an organic cotton bag needs about 149 uses to match a single-use plastic bag on climate impact, and says plainly that non-woven polypropylene is not an eco choice.
+
+Minimums start at 50 on most bags, with a five-day standard turnaround and free proofs. Useful for anyone planning [branded tote bags for event marketing](https://www.gopromotional.co.uk/branded-products/tote-bags).
+
 ---
-Anchor check: the exact phrase "branded tote bags for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description and the Indie Hackers description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/tote-bags; otherwise leave it as plain text and put the URL in the URL field.
+Anchor check: the exact phrase "branded tote bags for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description, the Indie Hackers description and (as the only Markdown link) the Automatool full description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/tote-bags; otherwise leave it as plain text and put the URL in the URL field.

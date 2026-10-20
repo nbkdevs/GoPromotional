@@ -1,6 +1,6 @@
 # Directory listing kits
 
-One folder per GoPromotional target page, for manual submission to Product Hunt, Design Nominees and Indie Hackers.
+One folder per GoPromotional target page, for manual submission to Product Hunt, Design Nominees, Indie Hackers and Automatool. `automatool-ih.json` holds the Automatool and Indie Hackers fields for all 4 pages in one paste-ready file (regenerate with `python3 _tools/automatool_ih.py`).
 Nothing here has been submitted.
 
 Each folder holds:

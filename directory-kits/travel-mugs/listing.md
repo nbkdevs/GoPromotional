@@ -55,8 +55,11 @@ An FAQ answers questions on minimums, dispatch, samples, Pantone matching and ar
 | Field | Value |
 |---|---|
 | Product name | GoPromotional Travel Mugs (25 characters) |
-| Tagline | Custom printed and engraved travel mugs, tumblers and reusable coffee cups (74 characters) |
+| Tagline (use this; limit 60) | Logo-printed travel mugs, tumblers and coffee cups (50 / 60) |
+| Old tagline (too long, do not use) | Custom printed and engraved travel mugs, tumblers and reusable coffee cups (74 characters) |
 | URL | https://www.gopromotional.co.uk/branded-products/travel-mugs |
+| Account username (suggestion) | nbkdevs (7 / 20); one account for all 4 products |
+| Logo | `thumb-240.png` (square, at least 200x200) |
 
 ### Description (116 words; target 100-200)
 
@@ -64,5 +67,43 @@ GoPromotional's travel mug page lists hundreds of mugs, tumblers and reusable co
 
 The guide is genuinely useful. It explains how to pick a lid, why spill-resistant isn't leak-proof, how double-walled and vacuum-insulated mugs differ, and when laser engraving is a better choice than print. Filters for capacity, material and imprint method keep the range manageable, and free artwork proofs and plain samples are available. A practical starting point for anyone sourcing branded travel mugs for event marketing or employee gifts.
 
+## Automatool (https://automatool.app/submit)
+
+| Field | Value | Limit |
+|---|---|---|
+| Tool Name | GoPromotional Travel Mugs | 25 / 128 |
+| Category | HR & People Ops (alt: Events & Webinars) | one of the 83 options |
+| Short Description | see below | 194 / 280 |
+| Website URL | https://www.gopromotional.co.uk/branded-products/travel-mugs | (URL field) |
+| Logo | `thumb-240.png` (square PNG, under 2 MB) | optional |
+
+### Short Description (194 / 280 characters)
+
+Branded travel mugs, tumblers and reusable coffee cups, screen printed, pad printed, UltraHD printed or laser engraved with your logo, plus a clear guide to lids, insulation and dishwasher care.
+
+### Full Description (Markdown, 226 words; target 150-250)
+
+GoPromotional's travel mug page brings together hundreds of plastic and metal travel mugs, tumblers and reusable coffee cups that can carry a company logo, and helps buyers pick by use rather than looks.
+
+## Start with the lid and the insulation
+
+- Push-on lids and thumb sliders suit a desk or a short walk; screw tops are safer for commuting
+- Spill-resistant is not the same as leak-proof
+- Double-walled and vacuum-insulated are different constructions, and copper linings cut radiant heat transfer
+
+## Branding options
+
+Screen printing and UltraHD full colour are available on selected plastic mugs, pad printing suits solid-colour designs, and laser engraving on metal exposes the steel beneath a powder coating rather than printing a colour.
+
+## Care and eco claims
+
+The page separates care for the mug from care for the logo: a dishwasher-safe body can still wear a printed mark, while engraving can't peel away. It also explains why recycled material and end-of-life recyclability are separate claims.
+
+## What 1,100 customers ordered
+
+Across 325,000 mugs, 250ml take-out mugs average around 450 units per order and 470ml Ontario steel tumblers about 100. The Americano family alone has sold more than 120,000 units to over 350 buyers.
+
+Minimums start at 10, most items dispatch in five or seven working days, and plain samples are mostly free. A sensible first stop for [branded travel mugs for event marketing](https://www.gopromotional.co.uk/branded-products/travel-mugs) or staff gifts.
+
 ---
-Anchor check: the exact phrase "branded travel mugs for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description and the Indie Hackers description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/travel-mugs; otherwise leave it as plain text and put the URL in the URL field.
+Anchor check: the exact phrase "branded travel mugs for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description, the Indie Hackers description and (as the only Markdown link) the Automatool full description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/travel-mugs; otherwise leave it as plain text and put the URL in the URL field.

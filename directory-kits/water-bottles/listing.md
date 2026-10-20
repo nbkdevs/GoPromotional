@@ -55,8 +55,11 @@ An FAQ covers minimum orders, artwork formats, samples and free proofs. It's a u
 | Field | Value |
 |---|---|
 | Product name | GoPromotional Water Bottles (27 characters) |
-| Tagline | Custom logo water bottles for events, schools, gyms and corporate gifts (71 characters) |
+| Tagline (use this; limit 60) | Logo-printed water bottles for events, schools and gyms (55 / 60) |
+| Old tagline (too long, do not use) | Custom logo water bottles for events, schools, gyms and corporate gifts (71 characters) |
 | URL | https://www.gopromotional.co.uk/branded-products/branded-water-bottles |
+| Account username (suggestion) | nbkdevs (7 / 20); one account for all 4 products |
+| Logo | `thumb-240.png` (square, at least 200x200) |
 
 ### Description (118 words; target 100-200)
 
@@ -64,5 +67,41 @@ GoPromotional's water bottle page gathers hundreds of reusable bottles that can 
 
 The buying guide is written for real decisions: which bottle suits your audience and order size, how screen printing, UltraHD and laser engraving compare, and why recycled and recyclable are different claims. It also shares data from the company's UK order records. A good fit for anyone choosing branded water bottles for event marketing, staff wellbeing or fundraising.
 
+## Automatool (https://automatool.app/submit)
+
+| Field | Value | Limit |
+|---|---|---|
+| Tool Name | GoPromotional Water Bottles | 27 / 128 |
+| Category | Events & Webinars (alt: Healthcare & Wellness) | one of the 83 options |
+| Short Description | see below | 204 / 280 |
+| Website URL | https://www.gopromotional.co.uk/branded-products/branded-water-bottles | (URL field) |
+| Logo | `thumb-240.png` (square PNG, under 2 MB) | optional |
+
+### Short Description (204 / 280 characters)
+
+Hundreds of reusable water bottles printed or laser engraved with your logo, from budget plastic sports bottles to Tritan, glass and vacuum-insulated steel, with a free artwork proof and minimums from 10.
+
+### Full Description (Markdown, 207 words; target 150-250)
+
+GoPromotional's water bottle page is a buying resource as much as a catalogue. It lists hundreds of bottles that can carry a company logo, grouped into budget drinks bottles, metal, Tritan, glass, recycled, protein shakers and fruit infusers, in 500ml, 650ml, 750ml and one-litre sizes.
+
+## Choosing a branding method
+
+- **Screen printing** for simple spot-colour logos
+- **UltraHD** for full-colour or finely detailed artwork
+- **Laser engraving** on metal and stainless steel, which reveals the material instead of adding colour
+
+Not every bottle offers every method, so the studio checks each logo and emails a free proof, usually on the same day.
+
+## What the order data shows
+
+The page publishes figures from 673,883 bottles across 2,797 UK orders (2011 to July 2026). Plastic lines average about 305 units and metal about 158, and 100 is the most common quantity. Schools, universities and colleges (263 buyers) and sports and leisure (260) buy the most.
+
+## Straight answers on specs
+
+It separates reusable, recycled, recyclable and biodegradable claims, and points out that a dishwasher-safe bottle doesn't mean the print should be machine washed. Minimum orders start at 10, with most lines at 25 or 50.
+
+A practical reference for anyone comparing [branded water bottles for event marketing](https://www.gopromotional.co.uk/branded-products/branded-water-bottles), school programmes or sports club kit.
+
 ---
-Anchor check: the exact phrase "branded water bottles for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description and the Indie Hackers description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/branded-water-bottles; otherwise leave it as plain text and put the URL in the URL field.
+Anchor check: the exact phrase "branded water bottles for event marketing" appears once each in the Product Hunt first comment, the Design Nominees description, the Indie Hackers description and (as the only Markdown link) the Automatool full description. If a form renders Markdown or HTML, link that phrase to https://www.gopromotional.co.uk/branded-products/branded-water-bottles; otherwise leave it as plain text and put the URL in the URL field.
