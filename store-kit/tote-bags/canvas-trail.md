@@ -58,7 +58,7 @@ Canvas Trail is part of a small set of free themes published alongside GoPromoti
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `tote-bags/firefox-theme/` (MV2 static theme, gecko id `canvas-trail@gopromotional.co.uk`, strict_min_version 109.0, data_collection_permissions none).
+Built from the Chrome colours: `tote-bags/firefox-theme/` (MV2 static theme, gecko id `canvas-trail-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
 
 | Field | Value |
 |---|---|

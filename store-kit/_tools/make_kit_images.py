@@ -14,6 +14,10 @@ def font(sz,w=700):
 def hexrgb(h): h=h.lstrip('#'); return tuple(int(h[i:i+2],16) for i in (0,2,4))
 def mix(a,b,t): return tuple(round(a[i]*(1-t)+b[i]*t) for i in range(3))
 X={
+ 'homepage':dict(slug='event-snapshot',name='Event Snapshot',accent='#1B5E4B',
+   tag='Event planner for your toolbar',
+   shots=[('Plan the next event from the toolbar',['Countdown to the event date','Prioritised checklist with high/normal','Notes and a copyable summary']),
+          ('Track tasks until the day',['Starter checklist for common prep','Tick off done items','Clear done or reset everything'])]),
  'water-bottles':dict(slug='sip-quick',name='Sip Quick',accent='#0E7490',
    tag='Water intake tracker for your toolbar',
    shots=[('Log a glass in one click',['Quick +150 / +250 / +330 / +500 ml buttons','Custom amounts and one-step undo','Progress bar towards your daily goal']),
@@ -48,7 +52,28 @@ for g,c in X.items():
             d.text((120,y),b,font=font(22,500),fill=(40,48,60)); y+=48
         d.text((90,700),'Runs locally · no account · no tracking',font=font(18,500),fill=(95,107,122))
         # popup render, scaled to fit
-        pop=Image.open(f'{R}/{g}-{k}-crop.png').convert('RGB')
+        raw=f'{R}/{g}-{k}.png'; crop=f'{R}/{g}-{k}-crop.png'
+        if not os.path.exists(crop):
+            src=Image.open(raw).convert('RGB'); px=src.load(); W0,H0=src.size
+            # trim near-white margins from the headless screenshot
+            def nonempty(x,y):
+                r,g2,b=px[x,y]; return not (r>248 and g2>248 and b>248)
+            top=0
+            for y in range(H0):
+                if any(nonempty(x,y) for x in range(W0)): top=y; break
+            bot=H0-1
+            for y in range(H0-1,-1,-1):
+                if any(nonempty(x,y) for x in range(W0)): bot=y; break
+            left=0
+            for x in range(W0):
+                if any(nonempty(x,y) for y in range(top,bot+1)): left=x; break
+            right=W0-1
+            for x in range(W0-1,-1,-1):
+                if any(nonempty(x,y) for y in range(top,bot+1)): right=x; break
+            pad=8
+            box=(max(0,left-pad),max(0,top-pad),min(W0,right+1+pad),min(H0,bot+1+pad))
+            src.crop(box).save(crop)
+        pop=Image.open(crop).convert('RGB')
         maxh=720; s=min(maxh/pop.height, 400/pop.width); pw,ph=round(pop.width*s),round(pop.height*s)
         pop=pop.resize((pw,ph),Image.LANCZOS)
         px,py=W-90-pw,(H-ph)//2

@@ -18,7 +18,8 @@ Plan an upcoming event from your toolbar: countdown, prioritized checklist, note
 Uses `storage` only for local data on your device. No accounts. No tracking. No remote calls.
 
 ## Add-on id (important)
-The live AMO listing (https://addons.mozilla.org/firefox/addon/event-snapshot/, v1.0.0) was signed with the id
-`eventsnapshot@softrank.local`. The repo previously said `event-snapshot@local`, which AMO would treat as a different
-add-on. The manifest now uses `eventsnapshot@softrank.local` again so v1.1.0 can be uploaded as an **update**.
-Do not change this id.
+The previous AMO listing was signed with `eventsnapshot@softrank.local`, which belongs to another AMO account.
+The signed-in account currently has 0 add-ons, so this package uses `eventsnapshot@gopromotional.co.uk` and will be submitted as a **new** add-on at v1.1.0.
+
+## Build zip
+`zip -r -X firefox-extension.zip manifest.json popup.html popup.js popup.css icons`

@@ -58,7 +58,7 @@ Ember Steam is part of a small set of free themes published alongside GoPromotio
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `travel-mugs/firefox-theme/` (MV2 static theme, gecko id `ember-steam@gopromotional.co.uk`, strict_min_version 109.0, data_collection_permissions none).
+Built from the Chrome colours: `travel-mugs/firefox-theme/` (MV2 static theme, gecko id `ember-steam-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
 
 | Field | Value |
 |---|---|

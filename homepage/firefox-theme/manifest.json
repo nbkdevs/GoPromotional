@@ -5,13 +5,16 @@
   "description": "A photographic dusk harbor theme with moonlit water, warm pier lights, and a calm evening sky.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "harbor-dusk@gopromotional.co.uk",
-      "strict_min_version": "109.0",
+      "id": "harbor-dusk-theme@gopromotional.co.uk",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
         "required": [
           "none"
         ]
       }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
     }
   },
   "theme": {

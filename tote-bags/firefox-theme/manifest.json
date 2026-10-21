@@ -5,13 +5,16 @@
   "description": "A photographic golden-hour trail theme with warm grass, soft hills, and open sky.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "canvas-trail@gopromotional.co.uk",
-      "strict_min_version": "109.0",
+      "id": "canvas-trail-theme@gopromotional.co.uk",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
         "required": [
           "none"
         ]
       }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
     }
   },
   "theme": {

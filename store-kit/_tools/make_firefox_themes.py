@@ -23,8 +23,9 @@ for g,(slug,cy) in T.items():
       "name":cm['name'],
       "version":cm['version'],
       "description":cm['description'],
-      "browser_specific_settings":{"gecko":{"id":f"{slug}@gopromotional.co.uk","strict_min_version":"109.0",
-          "data_collection_permissions":{"required":["none"]}}},
+      "browser_specific_settings":{"gecko":{"id":f"{slug}-theme@gopromotional.co.uk","strict_min_version":"140.0",
+          "data_collection_permissions":{"required":["none"]}},
+        "gecko_android":{"strict_min_version":"142.0"}},
       "theme":{
         "images":{"theme_frame":"images/header.png"},
         "colors":{
@@ -50,7 +51,7 @@ Static Firefox theme generated from `../chrome-theme/manifest.json` colours and 
 text keeps the same contrast as the Chrome theme. Firefox themes cannot set a new-tab background image, so only
 `ntp_background`/`ntp_text` colours carry over.
 
-- gecko id: `{slug}@gopromotional.co.uk`
+- gecko id: `{slug}-theme@gopromotional.co.uk`
 - Build: `cd {g}/firefox-theme && rm -f firefox-theme.zip && zip -r -X firefox-theme.zip manifest.json images`
 - Test: `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`
 - Regenerate: `python3 /workspace/softrank/tools/make_firefox_themes.py`

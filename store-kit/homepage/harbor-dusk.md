@@ -60,7 +60,7 @@ Harbor Dusk is one of a small set of free themes published alongside GoPromotion
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `homepage/firefox-theme/` (MV2 static theme, gecko id `harbor-dusk@gopromotional.co.uk`, strict_min_version 109.0, data_collection_permissions none).
+Built from the Chrome colours: `homepage/firefox-theme/` (MV2 static theme, gecko id `harbor-dusk-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
 
 | Field | Value |
 |---|---|

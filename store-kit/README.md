@@ -5,6 +5,7 @@ Prepared 19 Oct 2026 (PKT). Branch `store-kit`, not pushed. Each file is ready t
 | Page | Target URL (website/homepage field) | Item | Stores | Kit file |
 |---|---|---|---|---|
 | homepage | `https://www.gopromotional.co.uk/` | Harbor Dusk (theme) | Chrome Web Store · *optional* Firefox AMO theme | [homepage/harbor-dusk.md](homepage/harbor-dusk.md) |
+| homepage | 〃 | Event Snapshot (extension) | AMO · Edge · CWS | [homepage/event-snapshot.md](homepage/event-snapshot.md) |
 | water-bottles | `https://www.gopromotional.co.uk/branded-products/branded-water-bottles` | Alpine Mist (theme) | CWS · *optional* AMO theme | [water-bottles/alpine-mist.md](water-bottles/alpine-mist.md) |
 | water-bottles | 〃 | Sip Quick (extension) | AMO · Edge · *optional* CWS | [water-bottles/sip-quick.md](water-bottles/sip-quick.md) |
 | tote-bags | `https://www.gopromotional.co.uk/branded-products/tote-bags` | Canvas Trail (theme) | CWS · *optional* AMO theme | [tote-bags/canvas-trail.md](tote-bags/canvas-trail.md) |
@@ -23,7 +24,7 @@ Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues 
 - Firefox ids: `sip-quick@local` → `sip-quick@gopromotional.co.uk`, `pack-quick@local` → `pack-quick@gopromotional.co.uk`,
   `mug-tap@local` → `mug-tap@gopromotional.co.uk`; `data_collection_permissions` kept (`required: ["none"]`).
 - All 4 Firefox extension manifests (incl. Event Snapshot): `gecko.strict_min_version` 140.0 + `gecko_android.strict_min_version` 142.0. Zips rebuilt; addons-linter: 0 errors, 0 warnings.
-- Event Snapshot (homepage, live on AMO): id set back to the live `eventsnapshot@softrank.local` so v1.1.0 can ship as an update. No other change to it.
+- Event Snapshot (homepage): gecko id changed to `eventsnapshot@gopromotional.co.uk` (current AMO account has 0 add-ons; old `@softrank.local` belongs elsewhere). Footer "More: branded merchandise" added; CWS zip at `store-kit/homepage/dist/event-snapshot-chrome-extension.zip`.
 - Popup footer `More: <exact page anchor>` (e.g. "More: branded water bottles for event marketing"; target=_blank, rel=noopener noreferrer) in the Sip Quick, Pack Quick and Mug Tap popups, Firefox and Edge. Permissions unchanged (`storage` only).
 - Rebuilt upload zips from inside each folder (`zip -r -X <name>.zip manifest.json popup.html popup.js popup.css icons`): 4 Firefox, 3 Edge.
 - New optional Firefox static themes: `<page>/firefox-theme/` (manifest + 1920×200 header, zip).
@@ -43,4 +44,7 @@ Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues 
 2. The Edge privacy URL is GoPromotional's general site policy. It doesn't mention the extensions, which is acceptable because they collect no data. If Edge asks, the kit's NOTES_FOR_CERTIFICATION states that no data is collected.
 3. CWS theme packages have no `icons` key in the manifest. The store icon is uploaded in the listing form instead.
 4. The loose `homepage/chrome 1280.png` / `chrome-440.png` files show the old illustrated theme. Don't use them.
-5. The optional Firefox *themes* still use strict_min_version 109.0, so addons-linter reports 2 warnings (data_collection_permissions) on each. Apply the same 140.0/142.0 change if they are submitted.
+5. Firefox static themes now use `<slug>-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none.
+
+## Submission matrix
+See [SUBMIT.md](SUBMIT.md) for the full CWS (4 themes + 4 extensions) · AMO (4 extensions + 4 themes) · Edge (4 extensions) upload table with absolute paths.

@@ -5,7 +5,7 @@ Static Firefox theme generated from `../chrome-theme/manifest.json` colours and 
 text keeps the same contrast as the Chrome theme. Firefox themes cannot set a new-tab background image, so only
 `ntp_background`/`ntp_text` colours carry over.
 
-- gecko id: `harbor-dusk@gopromotional.co.uk`
+- gecko id: `harbor-dusk-theme@gopromotional.co.uk`
 - Build: `cd homepage/firefox-theme && rm -f firefox-theme.zip && zip -r -X firefox-theme.zip manifest.json images`
 - Test: `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`
 - Regenerate: `python3 /workspace/softrank/tools/make_firefox_themes.py`

@@ -246,7 +246,7 @@ Source: `{g}/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 {extra}
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `{g}/firefox-theme/` (MV2 static theme, gecko id `{slug}@gopromotional.co.uk`, strict_min_version 109.0, data_collection_permissions none).
+Built from the Chrome colours: `{g}/firefox-theme/` (MV2 static theme, gecko id `{slug}-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none).
 
 | Field | Value |
 |---|---|

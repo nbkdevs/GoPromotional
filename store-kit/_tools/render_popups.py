@@ -4,7 +4,26 @@ REPO='/workspace/softrank/GoPromotional'
 OUT='/tmp/render'
 today=dt.date.today()
 def d(i): return (today-dt.timedelta(days=i)).isoformat()
+def d_future(i): return (today+dt.timedelta(days=i)).isoformat()
 states={
+ 'homepage':[
+   {'event_snapshot_v1':{'eventName':'Product launch meetup','eventDate':d_future(14),'eventTime':'18:30','venue':'Harbour Studio, Bristol','notes':'Welcome drinks 18:00\nTalks 18:45–20:00\nNetworking afterwards','tasks':[
+     {'title':'Confirm venue','priority':'high','done':True},
+     {'title':'Send invitations','priority':'high','done':True},
+     {'title':'Lock headcount','priority':'normal','done':False},
+     {'title':'Prepare agenda','priority':'normal','done':False},
+     {'title':'Check AV / equipment','priority':'normal','done':False},
+     {'title':'Plan guest arrival flow','priority':'normal','done':False},
+   ]}},
+   {'event_snapshot_v1':{'eventName':'Team offsite','eventDate':d_future(3),'eventTime':'09:00','venue':'Lakeside Hub','notes':'Bring printed name badges','tasks':[
+     {'title':'Confirm venue','priority':'high','done':True},
+     {'title':'Send invitations','priority':'high','done':True},
+     {'title':'Lock headcount','priority':'normal','done':True},
+     {'title':'Prepare agenda','priority':'normal','done':True},
+     {'title':'Check AV / equipment','priority':'normal','done':False},
+     {'title':'Order catering','priority':'high','done':False},
+   ]}},
+ ],
  'water-bottles':[
    {'sip_quick_v1':{'goal':2000,'days':{d(0):1330,d(1):2150,d(2):1800,d(3):2400,d(4):1650,d(5):2000,d(6):900},'history':{d(0):[250,500,330,250]}}},
    {'sip_quick_v1':{'goal':2500,'days':{d(0):2580,d(1):2500,d(2):2100,d(3):2650,d(4):1900,d(5):2300,d(6):2500},'history':{d(0):[500,500,330,250,500,500]}}},
@@ -33,5 +52,5 @@ for g,sts in states.items():
     open(f'{dst}/popup.html','w').write(h)
     png=f'{OUT}/{g}-{k}.png'
     subprocess.run(['google-chrome','--headless=new','--no-sandbox','--disable-gpu','--hide-scrollbars','--force-device-scale-factor=2',
-      '--window-size=340,1000','--virtual-time-budget=2000',f'--screenshot={png}',f'file://{dst}/popup.html'],check=True,capture_output=True)
+      '--window-size=340,1200','--virtual-time-budget=2000',f'--screenshot={png}',f'file://{dst}/popup.html'],check=True,capture_output=True)
     print(png)
