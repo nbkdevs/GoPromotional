@@ -53,7 +53,7 @@ for g,c in X.items():
         d.text((90,700),'Runs locally · no account · no tracking',font=font(18,500),fill=(95,107,122))
         # popup render, scaled to fit
         raw=f'{R}/{g}-{k}.png'; crop=f'{R}/{g}-{k}-crop.png'
-        if not os.path.exists(crop):
+        if (not os.path.exists(crop)) or (os.path.getmtime(raw) > os.path.getmtime(crop)):
             src=Image.open(raw).convert('RGB'); px=src.load(); W0,H0=src.size
             # trim near-white margins from the headless screenshot
             def nonempty(x,y):
