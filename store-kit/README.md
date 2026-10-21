@@ -47,4 +47,5 @@ Support URL everywhere: https://github.com/nbkdevs/GoPromotional/issues (issues 
 5. Firefox static themes now use `<slug>-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none.
 
 ## Submission matrix
+**Final:** CWS 4 themes · AMO 3 extensions · Edge 3 extensions (10). No Event Snapshot, no Firefox themes, no CWS extensions.
 See [SUBMIT.md](SUBMIT.md) for the full CWS (4 themes + 4 extensions) · AMO (4 extensions + 4 themes) · Edge (4 extensions) upload table with absolute paths.

@@ -1,7 +1,7 @@
-# Pack Quick — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
+# Pack Quick — Firefox AMO + Microsoft Edge Add-ons
 
 Page group: `tote-bags/` → `https://www.gopromotional.co.uk/branded-products/tote-bags`  ·  preferred anchor: **branded tote bags for event marketing**
-Sources: `tote-bags/firefox-extension/` and `tote-bags/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
+Sources: `tote-bags/firefox-extension/` and `tote-bags/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.1. Nothing has been submitted.
 
 ## Shared listing copy
 
@@ -17,7 +17,7 @@ Packing lists in your toolbar: multiple lists, work and travel templates, tick-o
 Keep packing lists in your toolbar. Create several named lists, start from work-day or travel templates, tick items off, filter long lists and copy a checklist. Lists stay in local storage on your device: no account, no tracking.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Pack Quick keeps packing lists in your toolbar, so you can tick things off as they go into the bag. Keep separate lists for work days, trips, gym kit or event set-up, and pick up where you left off every time you open it.
@@ -34,8 +34,6 @@ Privacy
 Pack Quick keeps your lists in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 It works well for exhibitors and event teams packing a stand, as well as for everyday bags.
-
-Packing for a trade show? GoPromotional has a range of branded tote bags for event marketing: https://www.gopromotional.co.uk/branded-products/tote-bags
 ```
 
 **Single-purpose statement**
@@ -68,13 +66,13 @@ Packing for a trade show? GoPromotional has a range of branded tote bags for eve
 | `tote-bags/branding/extension/icon-128.png` | 128x128 RGBA | 128x128 | OK | CWS store icon / AMO icon is read from the zip |
 | `store-kit/tote-bags/images/pack-quick-promo-440x280.png` | 440x280 RGB | 440x280 | OK | GENERATED: Edge small promo tile (optional) / CWS small promo tile |
 
-> Not used: `tote-bags/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded BagPack), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data and the new footer link), padded onto a 1280×800 canvas.
+> Not used: `tote-bags/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded BagPack), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data), padded onto a 1280×800 canvas.
 
 ## Firefox AMO
 
 | Field | Value |
 |---|---|
-| Upload zip | `tote-bags/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `tote-bags/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Add-on id | `pack-quick@gopromotional.co.uk` (changed from `pack-quick@local`), strict_min_version 140.0 (desktop), gecko_android strict_min_version 142.0 |
 | Name | Pack Quick |
 | Suggested slug | `pack-quick` |
@@ -91,7 +89,7 @@ Packing for a trade show? GoPromotional has a range of branded tote bags for eve
 ```
 Pack Quick is a self-contained toolbar popup (popup.html / popup.js / popup.css, no build step, no minification, no third-party libraries), so no source code upload is needed.
 It requests only the "storage" permission and stores data with storage.local under the key "pack_quick_v2". It makes no network requests and declares data_collection_permissions: {"required": ["none"]}.
-The only external URL is a plain footer link (target=_blank) to https://www.gopromotional.co.uk/branded-products/tote-bags.
+There are no external URLs in the popup UI.
 To test: click the toolbar icon and follow these steps:
 1. Type "Umbrella" in "Add item" and click "Add". Expected: the item appears in the list and the counter shows "0/1 packed".
 2. Click "Travel". Expected: travel starter items (Passport / ID, Tickets, Phone charger, …) are added; clicking it again does not add duplicates.
@@ -102,14 +100,13 @@ To test: click the toolbar icon and follow these steps:
 7. Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").
 8. Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.
 9. With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.
-10. The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
 
 | Field | Value |
 |---|---|
-| Upload zip | `tote-bags/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `tote-bags/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Display name | Pack Quick (from manifest) |
 | Category | Productivity |
 | Website URL | https://www.gopromotional.co.uk/branded-products/tote-bags |
@@ -120,7 +117,7 @@ To test: click the toolbar icon and follow these steps:
 | Screenshots | `store-kit/tote-bags/images/pack-quick-screenshot-01-1280x800.png`, `store-kit/tote-bags/images/pack-quick-screenshot-02-1280x800.png` |
 | Mature content | No |
 
-Edge's description field needs at least 250 characters; the full description above is 1022 characters.
+Edge's description field needs at least 250 characters; the full description above is 868 characters.
 
 **NOTES_FOR_CERTIFICATION (paste into 'Notes for certification')**
 
@@ -135,13 +132,9 @@ Edge's description field needs at least 250 characters; the full description abo
 8. Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").
 9. Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.
 10. With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.
-11. The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy
 ```
 
-## Chrome Web Store extension (optional)
 
-Built from the Edge folder (same MV3 code, no gecko block): `store-kit/tote-bags/dist/pack-quick-chrome-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0).
-Use the shared copy above with category **Productivity → Workflow & Planning (or Lifestyle → Travel)**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.

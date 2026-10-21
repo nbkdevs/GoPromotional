@@ -1,4 +1,4 @@
-# Ember Steam — Chrome Web Store theme (+ optional Firefox theme)
+# Ember Steam — Chrome Web Store theme
 
 Page group: `travel-mugs/` → `https://www.gopromotional.co.uk/branded-products/travel-mugs`  ·  preferred anchor: **branded travel mugs for event marketing**
 Source: `travel-mugs/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
@@ -22,7 +22,7 @@ Source: `travel-mugs/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submit
 A cosy dark photographic theme for Chrome: rain on a window at dusk, amber lamplight, soft bokeh and a warm interior glow.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Ember Steam is a dark, warm theme built around a photograph of rain running down a window on an autumn evening, with amber lamplight inside and blurred street lights beyond. The tab strip and toolbar are deep espresso brown with cream and soft-amber text, which is easy on the eyes in the evening.
@@ -34,8 +34,6 @@ What you get
 • Theme only: no permissions, no scripts and no data collection
 
 To switch back at any time, open Settings → Appearance → Reset to default.
-
-Ember Steam is part of a small set of free themes published alongside GoPromotional, who supply branded travel mugs for event marketing: https://www.gopromotional.co.uk/branded-products/travel-mugs
 ```
 
 **Privacy practices**
@@ -58,7 +56,7 @@ Ember Steam is part of a small set of free themes published alongside GoPromotio
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `travel-mugs/firefox-theme/` (MV2 static theme, gecko id `ember-steam-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
+Built from the Chrome colours: `travel-mugs/firefox-theme/` (MV2 static theme, gecko id `ember-steam-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none).
 
 | Field | Value |
 |---|---|
@@ -90,8 +88,6 @@ What you get
 Firefox themes cannot set a new-tab background image, so the Firefox version carries the Ember Steam colours and a rainy-window header behind the tab strip.
 
 To switch back, open Add-ons and themes → Themes and enable the default theme.
-
-Ember Steam is part of a small set of free themes published alongside GoPromotional, who supply branded travel mugs for event marketing: https://www.gopromotional.co.uk/branded-products/travel-mugs
 ```
 
 **Notes to reviewer (AMO)**

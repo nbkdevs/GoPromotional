@@ -1,4 +1,4 @@
-# Harbor Dusk — Chrome Web Store theme (+ optional Firefox theme)
+# Harbor Dusk — Chrome Web Store theme
 
 Page group: `homepage/` → `https://www.gopromotional.co.uk/`  ·  preferred anchor: **branded merchandise**
 Source: `homepage/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
@@ -22,7 +22,7 @@ Source: `homepage/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted
 A calm photographic harbour at dusk for Chrome: moonlit water, warm pier lights and a soft evening sky on every new tab.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Harbor Dusk brings a quiet harbour at dusk to your browser. Each new tab opens on a photographic scene of still water, a wooden pier lit by warm lamps and a fading pink-and-violet sky, while the tab strip and toolbar stay in soft slate grey and white with dark, easy-to-read text.
@@ -34,8 +34,6 @@ What you get
 • Theme only: no permissions, no scripts and no data collection
 
 To switch back at any time, open Settings → Appearance → Reset to default.
-
-Harbor Dusk is one of a small set of free themes published alongside GoPromotional, a UK supplier of branded merchandise: https://www.gopromotional.co.uk/
 ```
 
 **Privacy practices**
@@ -60,7 +58,7 @@ Harbor Dusk is one of a small set of free themes published alongside GoPromotion
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `homepage/firefox-theme/` (MV2 static theme, gecko id `harbor-dusk-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
+Built from the Chrome colours: `homepage/firefox-theme/` (MV2 static theme, gecko id `harbor-dusk-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none).
 
 | Field | Value |
 |---|---|
@@ -92,8 +90,6 @@ What you get
 Firefox themes cannot set a new-tab background image, so the Firefox version carries the Harbor Dusk colours and a dusk-sky header behind the tab strip.
 
 To switch back, open Add-ons and themes → Themes and enable the default theme.
-
-Harbor Dusk is one of a small set of free themes published alongside GoPromotional, a UK supplier of branded merchandise: https://www.gopromotional.co.uk/
 ```
 
 **Notes to reviewer (AMO)**

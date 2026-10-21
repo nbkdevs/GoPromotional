@@ -1,7 +1,7 @@
-# Sip Quick — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
+# Sip Quick — Firefox AMO + Microsoft Edge Add-ons
 
 Page group: `water-bottles/` → `https://www.gopromotional.co.uk/branded-products/branded-water-bottles`  ·  preferred anchor: **branded water bottles for event marketing**
-Sources: `water-bottles/firefox-extension/` and `water-bottles/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
+Sources: `water-bottles/firefox-extension/` and `water-bottles/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.1. Nothing has been submitted.
 
 ## Shared listing copy
 
@@ -17,7 +17,7 @@ Log water in one click, track a daily goal, review the last 7 days and copy your
 Log water intake from your toolbar in one click. Set a daily goal, undo mistakes, review the last 7 days and copy a stats summary. Everything stays in local storage on your device: no account, no tracking.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Sip Quick is a small hydration tracker that lives in your toolbar. Click the icon, tap the amount you just drank and watch today's total move towards your goal. There is no account, no sign-up and nothing to sync.
@@ -34,8 +34,6 @@ Privacy
 Sip Quick keeps your goal and daily totals in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 It is handy on desk days, at conferences and during long events, when it is easy to forget to drink.
-
-If you're planning event giveaways, the popup footer also links to GoPromotional's branded water bottles for event marketing: https://www.gopromotional.co.uk/branded-products/branded-water-bottles
 ```
 
 **Single-purpose statement**
@@ -69,13 +67,13 @@ If you're planning event giveaways, the popup footer also links to GoPromotional
 | `water-bottles/branding/extension/icon-128.png` | 128x128 RGBA | 128x128 | OK | CWS store icon / AMO icon is read from the zip |
 | `store-kit/water-bottles/images/sip-quick-promo-440x280.png` | 440x280 RGB | 440x280 | OK | GENERATED: Edge small promo tile (optional) / CWS small promo tile |
 
-> Not used: `water-bottles/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded SipLog), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data and the new footer link), padded onto a 1280×800 canvas.
+> Not used: `water-bottles/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded SipLog), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data), padded onto a 1280×800 canvas.
 
 ## Firefox AMO
 
 | Field | Value |
 |---|---|
-| Upload zip | `water-bottles/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `water-bottles/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Add-on id | `sip-quick@gopromotional.co.uk` (changed from `sip-quick@local`), strict_min_version 140.0 (desktop), gecko_android strict_min_version 142.0 |
 | Name | Sip Quick |
 | Suggested slug | `sip-quick` — the old `@local` submission may already hold this slug; fall back to `sip-quick-tracker` or delete the stale draft first |
@@ -92,7 +90,7 @@ If you're planning event giveaways, the popup footer also links to GoPromotional
 ```
 Sip Quick is a self-contained toolbar popup (popup.html / popup.js / popup.css, no build step, no minification, no third-party libraries), so no source code upload is needed.
 It requests only the "storage" permission and stores data with storage.local under the key "sip_quick_v1". It makes no network requests and declares data_collection_permissions: {"required": ["none"]}.
-The only external URL is a plain footer link (target=_blank) to https://www.gopromotional.co.uk/branded-products/branded-water-bottles.
+There are no external URLs in the popup UI.
 To test: click the toolbar icon and follow these steps:
 1. Click "+250". Expected: the total shows 250, the chip shows 13%, the progress bar fills slightly and the label reads "Goal 2000 ml · 1750 ml to go". The "Today" row under "Last 7 days" shows 250 ml.
 2. Click "+500", then type 120 in "Custom ml" and click "Add". Expected: total 870 ml (44%).
@@ -101,14 +99,13 @@ To test: click the toolbar icon and follow these steps:
 5. Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.
 6. Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.
 7. Click "Clear today". Expected: today's total returns to 0 ml; the goal is kept.
-8. The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
 
 | Field | Value |
 |---|---|
-| Upload zip | `water-bottles/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `water-bottles/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Display name | Sip Quick (from manifest) |
 | Category | Productivity |
 | Website URL | https://www.gopromotional.co.uk/branded-products/branded-water-bottles |
@@ -119,7 +116,7 @@ To test: click the toolbar icon and follow these steps:
 | Screenshots | `store-kit/water-bottles/images/sip-quick-screenshot-01-1280x800.png`, `store-kit/water-bottles/images/sip-quick-screenshot-02-1280x800.png` |
 | Mature content | No |
 
-Edge's description field needs at least 250 characters; the full description above is 1076 characters.
+Edge's description field needs at least 250 characters; the full description above is 878 characters.
 
 **NOTES_FOR_CERTIFICATION (paste into 'Notes for certification')**
 
@@ -132,13 +129,9 @@ Edge's description field needs at least 250 characters; the full description abo
 6. Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.
 7. Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.
 8. Click "Clear today". Expected: today's total returns to 0 ml; the goal is kept.
-9. The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy
 ```
 
-## Chrome Web Store extension (optional)
 
-Built from the Edge folder (same MV3 code, no gecko block): `store-kit/water-bottles/dist/sip-quick-chrome-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0).
-Use the shared copy above with category **Lifestyle → Well-being**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.

@@ -1,7 +1,7 @@
-# Mug Tap — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
+# Mug Tap — Firefox AMO + Microsoft Edge Add-ons
 
 Page group: `travel-mugs/` → `https://www.gopromotional.co.uk/branded-products/travel-mugs`  ·  preferred anchor: **branded travel mugs for event marketing**
-Sources: `travel-mugs/firefox-extension/` and `travel-mugs/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
+Sources: `travel-mugs/firefox-extension/` and `travel-mugs/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.1. Nothing has been submitted.
 
 ## Shared listing copy
 
@@ -17,7 +17,7 @@ Log reusable vs disposable cups in one tap and see your weekly reusable rate and
 A tiny habit tracker for reusable cups. Tap once per drink to log a reusable or disposable cup, then see today's count, your weekly reusable rate and streak, and copy a week summary. Stored locally: no account, no tracking.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Mug Tap is a tiny habit tracker for reusable cups. Each time you get a drink, tap whether you used your own cup or a disposable one. Mug Tap shows today's count, your reusable rate for the week and how many days in a row you've remembered your cup.
@@ -34,8 +34,6 @@ Privacy
 Mug Tap keeps your log in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 A simple nudge for anyone trying to cut down on single-use cups.
-
-Kitting out a team or an event? GoPromotional supplies branded travel mugs for event marketing: https://www.gopromotional.co.uk/branded-products/travel-mugs
 ```
 
 **Single-purpose statement**
@@ -69,13 +67,13 @@ Kitting out a team or an event? GoPromotional supplies branded travel mugs for e
 | `travel-mugs/branding/extension/icon-128.png` | 128x128 RGBA | 128x128 | OK | CWS store icon / AMO icon is read from the zip |
 | `store-kit/travel-mugs/images/mug-tap-promo-440x280.png` | 440x280 RGB | 440x280 | OK | GENERATED: Edge small promo tile (optional) / CWS small promo tile |
 
-> Not used: `travel-mugs/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded MugDay), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data and the new footer link), padded onto a 1280×800 canvas.
+> Not used: `travel-mugs/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded MugDay), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data), padded onto a 1280×800 canvas.
 
 ## Firefox AMO
 
 | Field | Value |
 |---|---|
-| Upload zip | `travel-mugs/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `travel-mugs/firefox-extension/firefox-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Add-on id | `mug-tap@gopromotional.co.uk` (changed from `mug-tap@local`), strict_min_version 140.0 (desktop), gecko_android strict_min_version 142.0 |
 | Name | Mug Tap |
 | Suggested slug | `mug-tap` — the old `@local` submission may already hold this slug; fall back to `mug-tap-tracker` or delete the stale draft first |
@@ -92,7 +90,7 @@ Kitting out a team or an event? GoPromotional supplies branded travel mugs for e
 ```
 Mug Tap is a self-contained toolbar popup (popup.html / popup.js / popup.css, no build step, no minification, no third-party libraries), so no source code upload is needed.
 It requests only the "storage" permission and stores data with storage.local under the key "mug_tap_v2". It makes no network requests and declares data_collection_permissions: {"required": ["none"]}.
-The only external URL is a plain footer link (target=_blank) to https://www.gopromotional.co.uk/branded-products/travel-mugs.
+There are no external URLs in the popup UI.
 To test: click the toolbar icon and follow these steps:
 1. Type "coffee" in the drink note field and click "Used reusable cup". Expected: today shows 1, the chip shows "streak 1", the "Recent" list shows "Reusable · coffee" with today's date, and the note field clears.
 2. Click "Disposable cup". Expected: the week line reads "Last 7 days: 1 reusable · 1 disposable" and the reusable rate shows 50%.
@@ -100,14 +98,13 @@ To test: click the toolbar icon and follow these steps:
 4. Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.
 5. Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.
 6. Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.
-7. The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
 ```
 
 ## Microsoft Edge Add-ons
 
 | Field | Value |
 |---|---|
-| Upload zip | `travel-mugs/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0) |
+| Upload zip | `travel-mugs/edge-extension/edge-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.1) |
 | Display name | Mug Tap (from manifest) |
 | Category | Productivity |
 | Website URL | https://www.gopromotional.co.uk/branded-products/travel-mugs |
@@ -118,7 +115,7 @@ To test: click the toolbar icon and follow these steps:
 | Screenshots | `store-kit/travel-mugs/images/mug-tap-screenshot-01-1280x800.png`, `store-kit/travel-mugs/images/mug-tap-screenshot-02-1280x800.png` |
 | Mature content | No |
 
-Edge's description field needs at least 250 characters; the full description above is 974 characters.
+Edge's description field needs at least 250 characters; the full description above is 816 characters.
 
 **NOTES_FOR_CERTIFICATION (paste into 'Notes for certification')**
 
@@ -130,13 +127,9 @@ Edge's description field needs at least 250 characters; the full description abo
 5. Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.
 6. Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.
 7. Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.
-8. The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.
 
 Permissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.
 Privacy policy: https://www.gopromotional.co.uk/privacy
 ```
 
-## Chrome Web Store extension (optional)
 
-Built from the Edge folder (same MV3 code, no gecko block): `store-kit/travel-mugs/dist/mug-tap-chrome-extension.zip` (12 entries, `manifest.json` at zip root, version 1.1.0).
-Use the shared copy above with category **Lifestyle → Well-being**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.

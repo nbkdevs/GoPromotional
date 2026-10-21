@@ -42,7 +42,7 @@ What you get
 
 To switch back at any time, open Settings → Appearance → Reset to default.''',
    fx_body_extra='Firefox themes cannot set a new-tab background image, so the Firefox version carries the Harbor Dusk colours and a dusk-sky header behind the tab strip.',
-   mention='Harbor Dusk is one of a small set of free themes published alongside GoPromotional, a UK supplier of branded merchandise: https://www.gopromotional.co.uk/',
+   mention='',
    single='Changes the colours and new tab background of Chrome to a dusk harbour photo theme. It is a theme only and contains no code.',
    cws_cat='Themes (theme uploads are listed under Themes; if a sub-category is offered, choose the landscape/nature option)'),
  'water-bottles':dict(slug='alpine-mist',fx_intro='Alpine Mist gives Firefox a cool, light look: misty mountains and a pine-fringed alpine lake fade in behind the right side of the tab strip, while tabs sit on a pale blue-white background with deep teal text and the toolbar stays white.',name='Alpine Mist',
@@ -58,7 +58,7 @@ What you get
 
 To switch back at any time, open Settings → Appearance → Reset to default.''',
    fx_body_extra='Firefox themes cannot set a new-tab background image, so the Firefox version carries the Alpine Mist colours and a misty-lake header behind the tab strip.',
-   mention='Alpine Mist is part of a small set of free themes published alongside GoPromotional, who supply branded water bottles for event marketing: https://www.gopromotional.co.uk/branded-products/branded-water-bottles',
+   mention='',
    single='Changes the colours and new tab background of Chrome to an alpine lake photo theme. It is a theme only and contains no code.',
    cws_cat='Themes (choose the landscape/nature sub-category if offered)'),
  'tote-bags':dict(slug='canvas-trail',fx_intro='Canvas Trail gives Firefox a warm, light look: golden-hour hills and a lone tree fade in behind the right side of the tab strip, while tabs sit on soft linen grey with dark brown text and the toolbar stays a warm off-white.',name='Canvas Trail',
@@ -74,7 +74,7 @@ What you get
 
 To switch back at any time, open Settings → Appearance → Reset to default.''',
    fx_body_extra='Firefox themes cannot set a new-tab background image, so the Firefox version carries the Canvas Trail colours and a golden-hour header behind the tab strip.',
-   mention='Canvas Trail is part of a small set of free themes published alongside GoPromotional, who supply branded tote bags for event marketing: https://www.gopromotional.co.uk/branded-products/tote-bags',
+   mention='',
    single='Changes the colours and new tab background of Chrome to a golden-hour countryside photo theme. It is a theme only and contains no code.',
    cws_cat='Themes (choose the landscape/nature sub-category if offered)'),
  'travel-mugs':dict(slug='ember-steam',fx_intro='Ember Steam gives Firefox a cosy dark look: rain on a window with amber lamplight and soft bokeh fades in behind the right side of the tab strip, while tabs and the toolbar stay deep espresso brown with cream and soft-amber text.',name='Ember Steam',
@@ -90,7 +90,7 @@ What you get
 
 To switch back at any time, open Settings → Appearance → Reset to default.''',
    fx_body_extra='Firefox themes cannot set a new-tab background image, so the Firefox version carries the Ember Steam colours and a rainy-window header behind the tab strip.',
-   mention='Ember Steam is part of a small set of free themes published alongside GoPromotional, who supply branded travel mugs for event marketing: https://www.gopromotional.co.uk/branded-products/travel-mugs',
+   mention='',
    single='Changes the colours and new tab background of Chrome to a dark rainy-window photo theme. It is a theme only and contains no code.',
    cws_cat='Themes (choose the dark sub-category if offered)'),
 }
@@ -112,7 +112,7 @@ Privacy
 Sip Quick keeps your goal and daily totals in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 It is handy on desk days, at conferences and during long events, when it is easy to forget to drink.''',
-   mention="If you're planning event giveaways, the popup footer also links to GoPromotional's branded water bottles for event marketing: https://www.gopromotional.co.uk/branded-products/branded-water-bottles",
+   mention="",
    single='Sip Quick lets the user log daily water intake, track it against a daily goal and review the last 7 days, all inside the toolbar popup.',
    storage='Sip Quick uses storage.local to save the user\'s daily goal, the water total for each calendar day and the list of amounts added each day (so Undo can remove the last entry). Without it, totals would be lost every time the popup closes. The data never leaves the device; the extension makes no network requests.',
    amo_cat='Other', edge_cat='Productivity', cws_cat='Lifestyle → Well-being',
@@ -125,7 +125,6 @@ It is handy on desk days, at conferences and during long events, when it is easy
     'Close the popup and open it again. Expected: the total (750 ml) and goal (1500 ml) are still there, saved via the storage permission.',
     'Click "Copy stats" and paste into any text field. Expected: "Hydration goal: 1500 ml" followed by one line per day for the last 7 days; a green "Stats copied" message appears.',
     'Click "Clear today". Expected: today\'s total returns to 0 ml; the goal is kept.',
-    'The footer link "More: branded water bottles for event marketing" opens the GoPromotional water bottles page in a new tab. It is a plain link; no data is sent.',
    ]),
  'tote-bags':dict(slug='pack-quick',name='Pack Quick',key='pack_quick_v2',
    cws_summary='Packing lists in your toolbar: multiple lists, work and travel templates, tick-off, filter and copy. Stored locally.',
@@ -144,7 +143,7 @@ Privacy
 Pack Quick keeps your lists in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 It works well for exhibitors and event teams packing a stand, as well as for everyday bags.''',
-   mention="Packing for a trade show? GoPromotional has a range of branded tote bags for event marketing: https://www.gopromotional.co.uk/branded-products/tote-bags",
+   mention="",
    single='Pack Quick lets the user create and manage packing checklists (add, tick off, filter, copy) inside the toolbar popup.',
    storage='Pack Quick uses storage.local to save the user\'s packing lists: list names, the items on each list, whether each item is ticked, and which list was last open. Without it, lists would disappear when the popup closes. The data never leaves the device; the extension makes no network requests.',
    amo_cat='Other', edge_cat='Productivity', cws_cat='Productivity → Workflow & Planning (or Lifestyle → Travel)',
@@ -159,7 +158,6 @@ It works well for exhibitors and event teams packing a stand, as well as for eve
     'Click "Clear packed". Expected: the ticked items are removed (for example "0/7 packed").',
     'Click "New", type "Trade show" in "Rename list" and click "Rename". Expected: a second list named "Trade show" is selected; you can switch lists with the dropdown.',
     'With "Trade show" selected, click "Delete list" and confirm the dialog. Expected: that list is removed and "Today’s bag" is shown again. Clicking "Delete list" when only one list remains shows "Keep at least one list" instead.',
-    'The footer link "More: branded tote bags for event marketing" opens the GoPromotional tote bags page in a new tab. It is a plain link; no data is sent.',
    ]),
  'travel-mugs':dict(slug='mug-tap',name='Mug Tap',key='mug_tap_v2',
    cws_summary='Log reusable vs disposable cups in one tap and see your weekly reusable rate and streak. Stored locally, no tracking.',
@@ -178,7 +176,7 @@ Privacy
 Mug Tap keeps your log in your browser's local extension storage and nowhere else. It makes no network requests, has no analytics and uses a single permission: storage.
 
 A simple nudge for anyone trying to cut down on single-use cups.''',
-   mention="Kitting out a team or an event? GoPromotional supplies branded travel mugs for event marketing: https://www.gopromotional.co.uk/branded-products/travel-mugs",
+   mention="",
    single='Mug Tap lets the user log whether each drink used a reusable or disposable cup and shows a simple daily/weekly habit summary inside the toolbar popup.',
    storage='Mug Tap uses storage.local to save the user\'s drink log: for each entry, reusable or disposable, the date and time of the tap, and an optional short note the user types. This is needed so today\'s count, weekly rate and streak survive closing the popup. The data never leaves the device; the extension makes no network requests.',
    amo_cat='Other', edge_cat='Productivity', cws_cat='Lifestyle → Well-being',
@@ -190,7 +188,6 @@ A simple nudge for anyone trying to cut down on single-use cups.''',
     'Close the popup and reopen it. Expected: the entry is still listed, saved via the storage permission.',
     'Click "Copy week summary" and paste into any text field. Expected: "Mug habit · last 7 days" with reusable/disposable counts, rate and streak; a green "Summary copied" message appears.',
     'Click "Clear week" and confirm the dialog. Expected: entries from the last 7 days are cleared and counts return to 0.',
-    'The footer link "More: branded travel mugs for event marketing" opens the GoPromotional travel mugs page in a new tab. It is a plain link; no data is sent.',
    ]),
 }
 CWS_PRIV_THEME='''- Permission justification: none requested (themes cannot request permissions)
@@ -203,7 +200,7 @@ def write(path,txt):
 
 for g,t in THEMES.items():
     slug=t['slug']; url=PAGES[g]
-    desc=t['body']+'\n\n'+t['mention']
+    desc=t['body']
     imgs=[img(f'{g}/store-images/chrome-theme/icon-128.png','128x128','CWS store icon'),
           img(f'{g}/store-images/chrome-theme/screenshot-1280x800.png','1280x800','CWS screenshot (photographic v2, matches theme)'),
           img(f'{g}/chrome-theme/images/store_screenshot.png','1280x800','optional 2nd screenshot'),
@@ -214,8 +211,9 @@ for g,t in THEMES.items():
     if g=='homepage':
         extra='\n> Do **not** use the loose `homepage/chrome 1280.png` / `chrome-440.png` (and their `(copy)` duplicates): they show the old illustrated harbour, not the photographic v2.0.0 theme.\n'
     feats='\n'.join(l for l in t['body'].split('\n\n')[1].split('\n') if '1920×1080' not in l)
-    fx_desc=t['fx_intro']+'\n\n'+feats+'\n\n'+t['fx_body_extra']+'\n\nTo switch back, open Add-ons and themes → Themes and enable the default theme.\n\n'+t['mention']
-    md=f'''# {t["name"]} — Chrome Web Store theme (+ optional Firefox theme)
+    fx_desc=(t['fx_intro']+'\n\n'+feats+'\n\n'+t['fx_body_extra']+
+             '\n\nTo switch back, open Add-ons and themes → Themes and enable the default theme.')
+    md=f'''# {t["name"]} — Chrome Web Store theme
 
 Page group: `{g}/` → `{url}`  ·  preferred anchor: **{ANCHOR[g]}**
 Source: `{g}/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
@@ -234,7 +232,7 @@ Source: `{g}/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
 | Mature content | No |
 
 {chk("Summary (CWS short description)",t["summary"],132)}
-{block("Full description (plain text; one GoPromotional mention, last paragraph)",desc)}
+{block("Full description (plain text; no vendor links or mentions)",desc)}
 **Privacy practices**
 - Single purpose: {t["single"]}
 {CWS_PRIV_THEME}
@@ -267,7 +265,7 @@ Built from the Chrome colours: `{g}/firefox-theme/` (MV2 static theme, gecko id 
 
 for g,e in EXTS.items():
     slug=e['slug']; url=PAGES[g]
-    desc=e['body']+'\n\n'+e['mention']
+    desc=e['body']
     im=f'store-kit/{g}/images/{slug}'
     edge_logo=f'{g}/edge-extension/store-logo-300.png' if g!='tote-bags' else f'{im}-logo-300x300.png'
     imgs=[img(f'{im}-screenshot-01-1280x800.png','1280x800','GENERATED: real popup render (CWS/Edge/AMO screenshot 1)'),
@@ -281,19 +279,19 @@ for g,e in EXTS.items():
     notes+=f'\n\nPermissions: "storage" only, used for storage.local to keep the data above on the device. No host permissions, no content scripts, no background script, no remote code, no network requests. No account or login is needed.\nPrivacy policy: {EDGE_PRIV}'
     amo_notes=f'''{e["name"]} is a self-contained toolbar popup (popup.html / popup.js / popup.css, no build step, no minification, no third-party libraries), so no source code upload is needed.
 It requests only the "storage" permission and stores data with storage.local under the key "{e["key"]}". It makes no network requests and declares data_collection_permissions: {{"required": ["none"]}}.
-The only external URL is a plain footer link (target=_blank) to {url}.
+There are no external URLs in the popup UI.
 To test: click the toolbar icon and follow these steps:
 ''' + '\n'.join(f'{i}. {s}' for i,s in enumerate(e['tests'][1:],1))
-    md=f'''# {e["name"]} — Firefox AMO + Microsoft Edge Add-ons (+ optional Chrome Web Store)
+    md=f'''# {e["name"]} — Firefox AMO + Microsoft Edge Add-ons
 
 Page group: `{g}/` → `{url}`  ·  preferred anchor: **{ANCHOR[g]}**
-Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.0. Nothing has been submitted.
+Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup code; Firefox adds the gecko block). Version 1.1.1. Nothing has been submitted.
 
 ## Shared listing copy
 
 {chk("Summary — CWS / Edge short description",e["cws_summary"],132)}
 {chk("Summary — AMO",e["amo_summary"],250)}
-{block("Full description (plain text; one GoPromotional mention, last paragraph)",desc)}
+{block("Full description (plain text; no vendor links or mentions)",desc)}
 **Single-purpose statement**
 
 > {e["single"]}
@@ -320,7 +318,7 @@ Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup
 |---|---|---|---|---|
 {chr(10).join(imgs)}
 
-> Not used: `{g}/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded {"SipLog" if g=="water-bottles" else "BagPack" if g=="tote-bags" else "MugDay"}), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data and the new footer link), padded onto a 1280×800 canvas.
+> Not used: `{g}/store-images/extension/screenshot-*`, `promo-440x280.png` and `marquee-1400x560.png`. They show the **Android app** (phone mockups branded {"SipLog" if g=="water-bottles" else "BagPack" if g=="tote-bags" else "MugDay"}), not this browser extension, which risks a "misleading listing" rejection. The two generated screenshots are real headless-Chrome renders of `popup.html` (with demo data), padded onto a 1280×800 canvas.
 
 ## Firefox AMO
 
@@ -357,10 +355,7 @@ Sources: `{g}/firefox-extension/` and `{g}/edge-extension/` (identical MV3 popup
 Edge's description field needs at least 250 characters; the full description above is {len(desc)} characters.
 
 {block("NOTES_FOR_CERTIFICATION (paste into 'Notes for certification')",notes)}
-## Chrome Web Store extension (optional)
 
-Built from the Edge folder (same MV3 code, no gecko block): {zipinfo(f"store-kit/{g}/dist/{slug}-chrome-extension.zip")}.
-Use the shared copy above with category **{e["cws_cat"]}**, the 128 icon, both screenshots and the 440×280 tile. Privacy policy URL: **leave blank**. Privacy tab: single purpose and storage justification as above, remote code **No**, no data types ticked, all three certifications ticked.
 '''
     write(f'{K}/{g}/{slug}.md',md)
 print('\n'.join(problems) or 'no problems')

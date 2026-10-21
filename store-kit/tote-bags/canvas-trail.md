@@ -1,4 +1,4 @@
-# Canvas Trail — Chrome Web Store theme (+ optional Firefox theme)
+# Canvas Trail — Chrome Web Store theme
 
 Page group: `tote-bags/` → `https://www.gopromotional.co.uk/branded-products/tote-bags`  ·  preferred anchor: **branded tote bags for event marketing**
 Source: `tote-bags/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
@@ -22,7 +22,7 @@ Source: `tote-bags/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitte
 A warm photographic golden-hour trail theme for Chrome: sunlit grass, soft rolling hills and an open evening sky.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Canvas Trail is a warm, light theme based on a photograph of a dirt trail winding through golden grass and gentle hills in late-afternoon sun, with a lone tree on the skyline. The tab strip is a soft linen grey, the toolbar a warm off-white, and text is a deep brown for comfortable contrast.
@@ -34,8 +34,6 @@ What you get
 • Theme only: no permissions, no scripts and no data collection
 
 To switch back at any time, open Settings → Appearance → Reset to default.
-
-Canvas Trail is part of a small set of free themes published alongside GoPromotional, who supply branded tote bags for event marketing: https://www.gopromotional.co.uk/branded-products/tote-bags
 ```
 
 **Privacy practices**
@@ -58,7 +56,7 @@ Canvas Trail is part of a small set of free themes published alongside GoPromoti
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `tote-bags/firefox-theme/` (MV2 static theme, gecko id `canvas-trail-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
+Built from the Chrome colours: `tote-bags/firefox-theme/` (MV2 static theme, gecko id `canvas-trail-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none).
 
 | Field | Value |
 |---|---|
@@ -90,8 +88,6 @@ What you get
 Firefox themes cannot set a new-tab background image, so the Firefox version carries the Canvas Trail colours and a golden-hour header behind the tab strip.
 
 To switch back, open Add-ons and themes → Themes and enable the default theme.
-
-Canvas Trail is part of a small set of free themes published alongside GoPromotional, who supply branded tote bags for event marketing: https://www.gopromotional.co.uk/branded-products/tote-bags
 ```
 
 **Notes to reviewer (AMO)**

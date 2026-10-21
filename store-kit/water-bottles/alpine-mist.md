@@ -1,4 +1,4 @@
-# Alpine Mist — Chrome Web Store theme (+ optional Firefox theme)
+# Alpine Mist — Chrome Web Store theme
 
 Page group: `water-bottles/` → `https://www.gopromotional.co.uk/branded-products/branded-water-bottles`  ·  preferred anchor: **branded water bottles for event marketing**
 Source: `water-bottles/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been submitted.
@@ -22,7 +22,7 @@ Source: `water-bottles/chrome-theme/` (MV3 theme, v2.0.0). Nothing has been subm
 A calm photographic alpine lake theme for Chrome: misty turquoise water, cool morning light and soft mountain haze.
 ```
 
-**Full description (plain text; one GoPromotional mention, last paragraph)**
+**Full description (plain text; no vendor links or mentions)**
 
 ```
 Alpine Mist is a light, cool-toned theme built around a photograph of a still alpine lake at dawn: turquoise water, drifting mist, pine forest and distant peaks in soft morning light. The tab strip is a pale blue-white with deep teal text, and the toolbar stays white so pages and the address bar remain easy to read.
@@ -34,8 +34,6 @@ What you get
 • Theme only: no permissions, no scripts and no data collection
 
 To switch back at any time, open Settings → Appearance → Reset to default.
-
-Alpine Mist is part of a small set of free themes published alongside GoPromotional, who supply branded water bottles for event marketing: https://www.gopromotional.co.uk/branded-products/branded-water-bottles
 ```
 
 **Privacy practices**
@@ -58,7 +56,7 @@ Alpine Mist is part of a small set of free themes published alongside GoPromotio
 
 ## Firefox AMO theme (optional)
 
-Built from the Chrome colours: `water-bottles/firefox-theme/` (MV2 static theme, gecko id `alpine-mist-theme@gopromotional.co.uk`, strict_min_version 140.0 (+ gecko_android 142.0), data_collection_permissions none).
+Built from the Chrome colours: `water-bottles/firefox-theme/` (MV2 static theme, gecko id `alpine-mist-theme@gopromotional.co.uk`, strict_min_version 140.0, gecko_android 142.0, data_collection_permissions none).
 
 | Field | Value |
 |---|---|
@@ -90,8 +88,6 @@ What you get
 Firefox themes cannot set a new-tab background image, so the Firefox version carries the Alpine Mist colours and a misty-lake header behind the tab strip.
 
 To switch back, open Add-ons and themes → Themes and enable the default theme.
-
-Alpine Mist is part of a small set of free themes published alongside GoPromotional, who supply branded water bottles for event marketing: https://www.gopromotional.co.uk/branded-products/branded-water-bottles
 ```
 
 **Notes to reviewer (AMO)**
