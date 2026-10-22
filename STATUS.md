@@ -100,14 +100,14 @@ Built and tested, waiting on an account or token:
 
 ### Directory listings (Product Hunt)
 
-Submitted manually by the user from the `directory-kits/<page>/` copy. Link type Nofollow (PH DA 95 / DR 91). Sheet status "Pending Review" until each launch goes live.
+Submitted manually by the user from the `directory-kits/<page>/` copy. Link type Nofollow (PH DA 95 / DR 91). All four launches verified publicly live on 2026-10-22 12:4x PKT (pages load with launch content); sheet status set to "Live".
 
 | Page | Directory | Item URL | Status |
 |---|---|---|---|
-| homepage | Product Hunt | https://www.producthunt.com/products/gopromotional-2 | Pending Review: scheduled launch 2026-10-21 12:01 PM PKT |
-| water-bottles | Product Hunt | https://www.producthunt.com/products/gopromotional-water-bottles | Pending Review: scheduled launch 2026-10-21 12:01 PM PKT |
-| tote-bags | Product Hunt | https://www.producthunt.com/products/gopromotional-tote-bags | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
-| travel-mugs | Product Hunt | https://www.producthunt.com/products/gopromotional-travel-mugs | Pending Review: scheduled launch 2026-10-22 12:01 PM PKT |
+| homepage | Product Hunt | https://www.producthunt.com/products/gopromotional-2 | Live (launched 2026-10-21 12:01 PM PKT; verified 2026-10-22) |
+| water-bottles | Product Hunt | https://www.producthunt.com/products/gopromotional-water-bottles | Live (launched 2026-10-21 12:01 PM PKT; verified 2026-10-22) |
+| tote-bags | Product Hunt | https://www.producthunt.com/products/gopromotional-tote-bags | Live (launched 2026-10-22 12:01 PM PKT; verified 2026-10-22) |
+| travel-mugs | Product Hunt | https://www.producthunt.com/products/gopromotional-travel-mugs | Live (launched 2026-10-22 12:01 PM PKT; verified 2026-10-22) |
 
 ### Directory listings (Indie Hackers)
 
@@ -122,17 +122,17 @@ Created manually by the user under the Indie Hackers account `nbkshing`, from th
 
 ## Browser stores (21 Oct 2026)
 
-All 10 uploads were submitted by the user from `store-kit/` (see `store-kit/SUBMIT.md`). Status: **submitted, in review** (sheet status "Pending Review"). Extensions are v1.1.1, themes are v2.0.0.
+All 10 uploads were submitted by the user from `store-kit/` (see `store-kit/SUBMIT.md`). Status: **submitted, in review** (sheet status "Pending Review"), except Edge Pack Quick and Edge Sip Quick, which are live (sheet status "Live" as of 2026-10-22). Extensions are v1.1.1, themes are v2.0.0.
 
 | Page | Store | Item | Item URL | IDs | Status |
 |---|---|---|---|---|---|
 | homepage | Chrome Web Store | Harbor Dusk (theme) | https://chromewebstore.google.com/detail/pbhgdahgkigmpflogdmiafncnlnkdpbh | CWS id pbhgdahgkigmpflogdmiafncnlnkdpbh | submitted, in review |
 | water-bottles | Chrome Web Store | Alpine Mist (theme) | https://chromewebstore.google.com/detail/kflfodmgbbdhkpikoomebopbfbhodfcl | CWS id kflfodmgbbdhkpikoomebopbfbhodfcl | submitted, in review |
 | water-bottles | Mozilla Add-ons | Sip Quick (extension) | https://addons.mozilla.org/en-US/firefox/addon/sip-quick/ | gecko id sip-quick@gopromotional.co.uk | submitted, in review |
-| water-bottles | Microsoft Edge Add-ons | Sip Quick (extension) | public URL not known until live | Product ID 0b8c4bfc-1d80-4f07-9dc6-f1e77bad5c20 · Store ID 0RDCKBRS38CF | submitted, in review |
+| water-bottles | Microsoft Edge Add-ons | Sip Quick (extension) | https://microsoftedge.microsoft.com/addons/detail/jkopfgffoijcncmglafhpgpkbkmaekem | Product ID 0b8c4bfc-1d80-4f07-9dc6-f1e77bad5c20 · Store ID 0RDCKBRS38CF · crx id jkopfgffoijcncmglafhpgpkbkmaekem | live (v1.1.1, website link to /branded-products/branded-water-bottles, checked 2026-10-22 12:4x PKT) |
 | tote-bags | Chrome Web Store | Canvas Trail (theme) | https://chromewebstore.google.com/detail/demnhebpjflkiigbjiaafanimnbbfkda | CWS id demnhebpjflkiigbjiaafanimnbbfkda | submitted, in review |
 | tote-bags | Mozilla Add-ons | Pack Quick (extension) | https://addons.mozilla.org/en-US/firefox/addon/pack-quick/ | gecko id pack-quick@gopromotional.co.uk | submitted, in review |
-| tote-bags | Microsoft Edge Add-ons | Pack Quick (extension) | https://microsoftedge.microsoft.com/addons/detail/mhjpfmdlafmjihpnjknkichaklpgaogj | Product ID d038dd45-5040-4901-8c25-1961c99080dc · Store ID 0RDCKBFBBMD2 · crx id mhjpfmdlafmjihpnjknkichaklpgaogj | submitted, in review |
+| tote-bags | Microsoft Edge Add-ons | Pack Quick (extension) | https://microsoftedge.microsoft.com/addons/detail/mhjpfmdlafmjihpnjknkichaklpgaogj | Product ID d038dd45-5040-4901-8c25-1961c99080dc · Store ID 0RDCKBFBBMD2 · crx id mhjpfmdlafmjihpnjknkichaklpgaogj | live (v1.1.1, website link to /branded-products/tote-bags, checked 2026-10-22 08:40 PKT) |
 | travel-mugs | Chrome Web Store | Ember Steam (theme) | https://chromewebstore.google.com/detail/npikdfifgofdlamkcmpaoodooklondfo | CWS id npikdfifgofdlamkcmpaoodooklondfo | submitted, in review |
 | travel-mugs | Mozilla Add-ons | Mug Tap (extension) | https://addons.mozilla.org/en-US/firefox/addon/mug-tap/ | gecko id mug-tap@gopromotional.co.uk | submitted, in review |
 | travel-mugs | Microsoft Edge Add-ons | Mug Tap (extension) | public URL not known until live | Product ID 8dd70e50-92d4-4c8c-bffa-a3efac22bf25 · Store ID 0RDCKCNRW2BD | submitted, in review |
@@ -143,4 +143,4 @@ Rules learned:
 - No site link inside the extensions or in descriptions; the target URL goes only in the store URL fields (homepage/website, support, privacy).
 - The homepage extension (Event Snapshot) is already live on another account (https://addons.mozilla.org/en-US/firefox/addon/event-snapshot/), so it was not submitted again.
 
-Link type: sheet keeps CWS and AMO as Nofollow, Edge as Dofollow (existing values). AMO homepage links go through AMO's outgoing redirector (`prod.outgoing.prod.webservices.mozgcp.net`, checked via the AMO API on 2026-10-21), so they pass no direct link. The CWS and Edge items are not public yet, so their rel attributes could not be checked.
+Link type: sheet keeps CWS and AMO as Nofollow, Edge as Dofollow (existing values). AMO homepage links go through AMO's outgoing redirector (`prod.outgoing.prod.webservices.mozgcp.net`, checked via the AMO API on 2026-10-21), so they pass no direct link. The CWS items are not public yet, so their rel attributes could not be checked. On the live Edge listings (Pack Quick, Sip Quick) the developer website link is rendered with target="_blank" and no rel attribute, i.e. dofollow (checked 2026-10-22).
