@@ -155,3 +155,8 @@ Rules learned:
 - The homepage extension (Event Snapshot) is already live on another account (https://addons.mozilla.org/en-US/firefox/addon/event-snapshot/), so it was not submitted again.
 
 Link type: sheet keeps CWS and AMO as Nofollow, Edge as Dofollow (existing values). AMO homepage links go through AMO's outgoing redirector (`prod.outgoing.prod.webservices.mozgcp.net`, checked via the AMO API on 2026-10-21), so they pass no direct link. On the live CWS theme listings (verified 2026-10-23), the support link is rendered with `rel="ugc nofollow"` and no developer website link is displayed on theme pages. On the live Edge listings (Pack Quick, Sip Quick) the developer website link is rendered with target="_blank" and no rel attribute, i.e. dofollow (checked 2026-10-22).
+
+
+## Smithery check (3 Nov 2026, PKT)
+
+- Smithery entries above that were Live are kept as Live (Nazzal's rule: only pending Smithery entries are removed). As of 3 Nov 2026 every `smithery.ai/skills/...` page, including the whole `/skills` section, returns HTTP 404 "Not found · Smithery" after Smithery's 31 Oct shutdown (https://smithery.ai/future), so the link no longer resolves. Nazzal to decide whether to drop these rows too.
