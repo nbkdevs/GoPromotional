@@ -160,3 +160,56 @@ Link type: sheet keeps CWS and AMO as Nofollow, Edge as Dofollow (existing value
 ## Smithery check (3 Nov 2026, PKT)
 
 - As of 3 Nov 2026 every `smithery.ai/skills/...` page, including the whole `/skills` section, returns HTTP 404 "Not found · Smithery" after Smithery's 31 Oct shutdown (https://smithery.ai/future). Nazzal approved removing them: the Smithery entries above are marked "Removed: page 404 after Smithery shutdown; sheet row deleted 2026-11-03" and their rows were deleted from the tracking sheet on 3 Nov 2026.
+
+
+## Link check 4 Nov 2026 (PKT)
+
+Design Nominees → Live (Dofollow): Home row 18, Tote row 16, Travel Mugs row 16, Water Bottles row 16.
+
+Home new rows (Live):
+- Row 38: Libraries io (Python Package, Nofollow) https://libraries.io/pypi/gopromotional-event-planner
+- Row 39: PyPI Stats (Python Package, Dofollow) https://pypistats.org/packages/gopromotional-event-planner
+- Row 40: Libraries io (Rust package, Nofollow) https://libraries.io/cargo/gopromotional-event-planner
+- Row 41: Docs rs (Rust package, Dofollow) https://docs.rs/gopromotional-event-planner/latest/gopromotional_event_planner/index.html
+- Row 42: Docs rs (Rust package, Dofollow) https://docs.rs/crate/gopromotional-event-planner/latest
+- Row 43: Libraries io (NPM Package, Nofollow) https://libraries.io/npm/gopromotional-event-planner
+- Row 44: Libraries io (Dart Package, Nofollow) https://libraries.io/pub/gopromotional_event_planner
+- Row 45: Libraries io (C Package, Nofollow) https://libraries.io/nuget/GoPromotional.EventPlanner
+- Row 46: Libraries io (Ruby Package, Nofollow) https://libraries.io/rubygems/gopromotional-event-planner
+- Row 47: Libraries io (Php Package, Nofollow) https://libraries.io/packagist/gopromotional%2Fevent-planner
+
+Tote Bags Page new rows (Live):
+- Row 35: Libraries io (Python Package, Nofollow) https://libraries.io/pypi/gopromotional-packlist
+- Row 36: PyPI Stats (Python Package, Dofollow) https://pypistats.org/packages/gopromotional-packlist
+- Row 37: Libraries io (Rust package, Nofollow) https://libraries.io/cargo/gopromotional-packlist
+- Row 38: Docs rs (Rust package, Dofollow) https://docs.rs/gopromotional-packlist/latest/gopromotional_packlist/index.html
+- Row 39: Docs rs (Rust package, Dofollow) https://docs.rs/crate/gopromotional-packlist/latest
+- Row 40: Libraries io (NPM Package, Nofollow) https://libraries.io/npm/gopromotional-packlist
+- Row 41: Libraries io (Dart Package, Nofollow) https://libraries.io/pub/gopromotional_packlist
+- Row 42: Libraries io (Ruby Package, Nofollow) https://libraries.io/rubygems/gopromotional-packlist
+- Row 43: Libraries io (Php Package, Nofollow) https://libraries.io/packagist/gopromotional%2Fpacklist
+
+Travel Mugs Page new rows (Live):
+- Row 35: Libraries io (Python Package, Nofollow) https://libraries.io/pypi/gopromotional-mugday
+- Row 36: PyPI Stats (Python Package, Dofollow) https://pypistats.org/packages/gopromotional-mugday
+- Row 37: Libraries io (Rust package, Nofollow) https://libraries.io/cargo/gopromotional-mugday
+- Row 38: Docs rs (Rust package, Dofollow) https://docs.rs/gopromotional-mugday/latest/gopromotional_mugday/index.html
+- Row 39: Docs rs (Rust package, Dofollow) https://docs.rs/crate/gopromotional-mugday/latest
+- Row 40: Libraries io (NPM Package, Nofollow) https://libraries.io/npm/gopromotional-mugday
+- Row 41: Libraries io (Dart Package, Nofollow) https://libraries.io/pub/gopromotional_mugday
+- Row 42: Libraries io (Ruby Package, Nofollow) https://libraries.io/rubygems/gopromotional-mugday
+- Row 43: Libraries io (Php Package, Nofollow) https://libraries.io/packagist/gopromotional%2Fmugday
+
+Water Bottles Page new rows (Live):
+- Row 34: Libraries io (Python Package, Nofollow) https://libraries.io/pypi/gopromotional-siplog
+- Row 35: PyPI Stats (Python Package, Dofollow) https://pypistats.org/packages/gopromotional-siplog
+- Row 36: Libraries io (Rust package, Nofollow) https://libraries.io/cargo/gopromotional-siplog
+- Row 37: Docs rs (Rust package, Dofollow) https://docs.rs/gopromotional-siplog/latest/gopromotional_siplog/index.html
+- Row 38: Docs rs (Rust package, Dofollow) https://docs.rs/crate/gopromotional-siplog/latest
+- Row 39: Libraries io (NPM Package, Nofollow) https://libraries.io/npm/gopromotional-siplog
+- Row 40: Libraries io (Dart Package, Nofollow) https://libraries.io/pub/gopromotional_siplog
+- Row 41: Libraries io (Ruby Package, Nofollow) https://libraries.io/rubygems/gopromotional-siplog
+- Row 42: Libraries io (Php Package, Nofollow) https://libraries.io/packagist/gopromotional%2Fsiplog
+
+Couldn't verify: AMO pack-quick / mug-tap / sip-quick (Client Challenge; AMO API says public v1.1.1). Edge Mug Tap has no public URL yet. libraries.io nuget PackList/MugDay/SipLog 404 (not added).
+- socket.dev: Cloudflare 403 from curl, couldn't verify (not added).
