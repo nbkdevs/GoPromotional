@@ -146,7 +146,7 @@ All 10 uploads were submitted by the user from `store-kit/` (see `store-kit/SUBM
 | tote-bags | Microsoft Edge Add-ons | Pack Quick (extension) | https://microsoftedge.microsoft.com/addons/detail/mhjpfmdlafmjihpnjknkichaklpgaogj | Product ID d038dd45-5040-4901-8c25-1961c99080dc · Store ID 0RDCKBFBBMD2 · crx id mhjpfmdlafmjihpnjknkichaklpgaogj | live (v1.1.1, website link to /branded-products/tote-bags, checked 2026-10-22 08:40 PKT) |
 | travel-mugs | Chrome Web Store | Ember Steam (theme) | https://chromewebstore.google.com/detail/npikdfifgofdlamkcmpaoodooklondfo | CWS id npikdfifgofdlamkcmpaoodooklondfo | live (v2.0.0, updated 2026-10-22, verified 2026-10-23) |
 | travel-mugs | Mozilla Add-ons | Mug Tap (extension) | https://addons.mozilla.org/en-US/firefox/addon/mug-tap/ | gecko id mug-tap@gopromotional.co.uk | submitted, in review |
-| travel-mugs | Microsoft Edge Add-ons | Mug Tap (extension) | public URL not known until live | Product ID 8dd70e50-92d4-4c8c-bffa-a3efac22bf25 · Store ID 0RDCKCNRW2BD | submitted, in review |
+| travel-mugs | Microsoft Edge Add-ons | Mug Tap (extension) | https://microsoftedge.microsoft.com/addons/detail/dlokjeleogbpoklheocbdjonilloldbp | Product ID 8dd70e50-92d4-4c8c-bffa-a3efac22bf25 · Store ID 0RDCKCNRW2BD | live (verified 2026-11-04) |
 
 Rules learned:
 - Chrome Web Store: themes only (no extensions submitted there).
