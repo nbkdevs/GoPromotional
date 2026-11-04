@@ -213,3 +213,40 @@ Water Bottles Page new rows (Live):
 
 Couldn't verify: AMO pack-quick / mug-tap / sip-quick (Client Challenge; AMO API says public v1.1.1). Edge Mug Tap has no public URL yet. libraries.io nuget PackList/MugDay/SipLog 404 (not added).
 - socket.dev: Cloudflare 403 from curl, couldn't verify (not added).
+
+## One link per domain (4 Nov 2026, PKT)
+
+Nazzal's rule: only ONE row per domain in each sheet/tab. Duplicate auto-created rows were deleted from the tracking sheet (row numbers in the link-check list above are now stale). Kept: Dofollow > Live > libraries.io PyPI page > docs.rs /latest/<crate>/index.html.
+
+Home tab: kept https://libraries.io/pypi/gopromotional-event-planner and https://docs.rs/gopromotional-event-planner/latest/gopromotional_event_planner/index.html. Removed:
+- Docs rs https://docs.rs/crate/gopromotional-event-planner/latest
+- Libraries io https://libraries.io/cargo/gopromotional-event-planner
+- Libraries io https://libraries.io/npm/gopromotional-event-planner
+- Libraries io https://libraries.io/pub/gopromotional_event_planner
+- Libraries io https://libraries.io/nuget/GoPromotional.EventPlanner
+- Libraries io https://libraries.io/rubygems/gopromotional-event-planner
+- Libraries io https://libraries.io/packagist/gopromotional%2Fevent-planner
+
+Tote Bags Page tab: kept https://libraries.io/pypi/gopromotional-packlist and https://docs.rs/gopromotional-packlist/latest/gopromotional_packlist/index.html. Removed:
+- Docs rs https://docs.rs/crate/gopromotional-packlist/latest
+- Libraries io https://libraries.io/cargo/gopromotional-packlist
+- Libraries io https://libraries.io/npm/gopromotional-packlist
+- Libraries io https://libraries.io/pub/gopromotional_packlist
+- Libraries io https://libraries.io/rubygems/gopromotional-packlist
+- Libraries io https://libraries.io/packagist/gopromotional%2Fpacklist
+
+Travel Mugs Page tab: kept https://libraries.io/pypi/gopromotional-mugday and https://docs.rs/gopromotional-mugday/latest/gopromotional_mugday/index.html. Removed:
+- Docs rs https://docs.rs/crate/gopromotional-mugday/latest
+- Libraries io https://libraries.io/cargo/gopromotional-mugday
+- Libraries io https://libraries.io/npm/gopromotional-mugday
+- Libraries io https://libraries.io/pub/gopromotional_mugday
+- Libraries io https://libraries.io/rubygems/gopromotional-mugday
+- Libraries io https://libraries.io/packagist/gopromotional%2Fmugday
+
+Water Bottles Page tab: kept https://libraries.io/pypi/gopromotional-siplog and https://docs.rs/gopromotional-siplog/latest/gopromotional_siplog/index.html. Removed:
+- Docs rs https://docs.rs/crate/gopromotional-siplog/latest
+- Libraries io https://libraries.io/cargo/gopromotional-siplog
+- Libraries io https://libraries.io/npm/gopromotional-siplog
+- Libraries io https://libraries.io/pub/gopromotional_siplog
+- Libraries io https://libraries.io/rubygems/gopromotional-siplog
+- Libraries io https://libraries.io/packagist/gopromotional%2Fsiplog
